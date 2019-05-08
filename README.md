@@ -35,7 +35,7 @@
 
 All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s coding standard & style-guide: **Norminette**.
 
-## Functions <a name="functions"></a>
+## Standard C Library Functions <a name="functions"></a>
 
 | Stdio_42         | Stdlib_42         | String_42      | Ctype_42     | Math_42       |
 |:------------------|:-------------------|:----------------|:--------------|:---------------|
@@ -84,7 +84,7 @@ All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s codin
 |                  |                   |                |              |               |
 
 
-## Data Structures <a name="functions"></a>
+## Data Structure Implementations <a name="functions"></a>
 
 | Lists-Stacks-Queues   | Binary Trees          | Tries          | Hashtables         |
 |:----------------------|:----------------------|:---------------|:-------------------|
