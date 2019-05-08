@@ -1,4 +1,4 @@
-# Open Libft
+# 42Libc
 
 ![logo](resources/libft-logo.svg.png)
 
