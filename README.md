@@ -32,7 +32,7 @@ By developing this library, I gained very deep and thorough understanding of the
 
 ## Norminette <a name="norminette"></a>
 
-All the library functions follow [42 Silicon Valley](https://www.42.us.org/)'s coding standard & style-guide: **Norminette**.
+All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s coding standard & style-guide: **Norminette**.
 
 ## Install <a name="install"></a>
 
