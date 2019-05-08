@@ -23,7 +23,7 @@
 It includes:
 
  * **Recreated Standard C Library functions** _(`stdio`, `stdlib`, `string`, `ctype`, `math`)_
- * **Implementation of Data Structures** (`binary trees`, `linked lists`, `stacks`, `queues`, `tries`, `hashtables/dictionaries`)
+ * **Implementation of Data Structures** (`binary trees`, `linked lists`, `stacks`, `queues`, `tries`, `hashtables`)
  * **Implementation of** `BigInt` (an infinetly big number type)
  * **Bit Manipulation Functions**
  * **and more !**
