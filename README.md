@@ -20,7 +20,7 @@
 
 An open source library with over **200 functions**.
 
-#### It includes:
+>##### It includes:
 
  * **Recreated Standard C Library functions** _(`stdio`, `stdlib`, `string`)_
  * **Implementation of Data Structures** (binary trees, linked lists, stacks, queues, tries, hashtables/dictionaries)
