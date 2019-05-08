@@ -17,7 +17,7 @@
 
 ## About <a name="about-libft"></a>
 
-**Libft** is an open source **C** library with over **200+ functions**.
+**42Libft** is an open source **C** library with over **200+ functions**.
 
 #### It includes:
 
