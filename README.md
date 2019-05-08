@@ -31,7 +31,7 @@
 
 ## Norminette <a name="norminette"></a>
 
-All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s coding standard & style-guide: **[Norminette](Norminette.en.pdf)**.
+All library functions follow [42 Silicon Valley's](https://www.42.us.org/) coding standard & style-guide: **[Norminette](Norminette.en.pdf)**.
 
 ----
 ## Functions <a name="functions"></a>
