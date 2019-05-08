@@ -23,9 +23,10 @@
 It includes:
 
  * **Recreated Standard C Library functions** _(`stdio`, `stdlib`, `string`, `ctype`, `math`)_
- * **Implementation of Data Structures** (`binary trees`, `linked lists`, `stacks`, `queues`, `tries`, `hashtables`)
- * **Implementation of** `BigInt` (an infinetly big number type)
- * **Bit Manipulation Functions**
+ * **Implementations of Data Structures** (`binary trees`, `linked lists`, `stacks`, `queues`, `tries`, `hashtables`)
+ * **Implementations of Sorting Algorithms** (`bubble sort`, `insertion sort`, `selection sort`, `merge sort`)
+ * An **Implementation of** `BigInt` (an infinetly big number type)
+ * Implementation of **Bit Manipulation Functions**
  * **and more !**
  
 By developing this library, I gained very deep and thorough understanding of the C Language, its Standard Library functions and also of data structures, algorithms, unit testing, continuous integration, troubleshooting, and proper documentation.
