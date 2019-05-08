@@ -31,12 +31,12 @@
 
 ## Norminette <a name="norminette"></a>
 
-All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s coding standard & style-guide: **Norminette**.
+All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s coding standard & style-guide: **[Norminette](Norminette.en.pdf)**.
 
 ----
 ## Functions <a name="functions"></a>
 
-| Stdio_42         | Stdlib_42         | String_42      | Ctype_42     | Math_42       |
+| [Stdio_42](Includes/stdio_42.h)         | [Stdlib_42](Includes/stdlib_42.h)         | [String_42](Includes/string_42.h)      | [Ctype_42](Includes/ctype_42.h)     | [Math_42](Includes/math_42.h)       |
 |:------------------|:-------------------|:----------------|:--------------|:---------------|
 | [ft_printf](Stdio/ft_printf.c)         | [ft_atoi](Stdlib/ft_atoi.c)            | [ft_strnew](String/ft_strnew.c)       | [ft_isalnum](Ctype/ft_isalnum.c)    | [ft_max](Math/ft_max.c)         |
 | [ft_dprintf](Stdio/ft_dprintf.c)        | [ft_atoi_base](Stdlib/ft_atoi_base.c)       | [ft_strclr](String/ft_strclr.c)       | [ft_isalpha](Ctype/ft_isalpha.c)    | [ft_min](Math/ft_min.c)         |
@@ -82,10 +82,12 @@ All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s codin
 |                  |                   | [ft_strnrstrip](String/ft_strnrstrip.c)   |              |               |
 |                  |                   |                |              |               |
 
+### ...and there's even MORE !
+
 ----
 ## Data Structures <a name="datastructures"></a>
 
-| Lists-Stacks-Queues   | Binary Trees          | Tries          | Hashtables         |
+| [Lists-Stacks-Queues](Includes/list.h)   | [Binary Trees](Includes/btree.h)          | [Tries](Includes/trie.h)          | [Hashtables](Includes/hashtable.h)         |
 |:----------------------|:----------------------|:---------------|:-------------------|
 | [list_append](Lists-Stacks-Queues/list_append.c)         | [btree_apply_infix](Binary-Trees/btree_apply_infix.c)   | [trie_clear](Tries/trie_clear.c)   | [hashtab_clear](Hashtables/hashtab_clear.c)    |
 | [list_append_both](Lists-Stacks-Queues/list_append_both.c)    | [btree_apply_prefix](Binary-Trees/btree_apply_prefix.c)  | [trie_count](Tries/trie_count.c)   | [hashtab_count](Hashtables/hashtab_count.c)    |
