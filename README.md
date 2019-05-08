@@ -45,59 +45,53 @@ Also, some of the functions included don't exist in the Standard C Library,
 but I still kept them defined by there behavior.
 For example, ft_strnew can also be in ft_string.h.
 
-| stdio_42.h        | stdlib_42.h        | string_42.h     | ctype_42.h    | math_42.h      |
+**| Stdio_42         | Stdlib_42         | String_42      | Ctype_42     | Math_42       |**
 |:------------------|:-------------------|:----------------|:--------------|:---------------|
-| [ft_printf](Stdio/ft_printf)         | [ft_atoi](Stdlib/ft_atoi)            | [ft_strnew](String/ft_strnew)       | [ft_isalnum](Ctype/ft_isalnum)    | [ft_max](Math/ft_max)         |
-| [ft_dprintf](Stdio/ft_dprintf)        | [ft_atoi_base](Stdlib/ft_atoi_base)       | [ft_strclr](String/ft_strclr)       | [ft_isalpha](Ctype/ft_isalpha)    | [ft_min](Math/ft_min)         |
-| [ft_sprintf](Stdio/ft_sprintf)        | [ft_itoa](Stdlib/ft_itoa)            | [ft_strdel](String/ft_strdel)       | [ft_isascii](Ctype/ft_isascii)    | [ft_pow](Math/ft_pow)         |
-| [ft_asprintf](Stdio/ft_asprintf)       | [ft_ftoa](Stdlib/ft_ftoa)            | [ft_strrev](String/ft_strrev)       | [ft_isblank](Ctype/ft_isblank)    | [ft_powl](Math/ft_powl)        |
-| [ft_vprintf](Stdio/ft_vprintf)        | [ft_itoa_base](Stdlib/ft_itoa_base)       | [ft_strmap](String/ft_strmap)       | [ft_iscntrl](Ctype/ft_iscntrl)    | [ft_powll](Math/ft_powll)       |
-| [ft_vdprintf](Stdio/ft_vdprintf)       | [ft_utoa_base](Stdlib/ft_utoa_base)       | [ft_strmapi](String/ft_strmapi)      | [ft_isdigit](Ctype/ft_isdigit)    | [ft_sqrt](Math/ft_sqrt)        |
-| [ft_vsprintf](Stdio/ft_vsprintf)       | [ft_ftoa_base](Stdlib/ft_ftoa_base)       | [ft_strequ](String/ft_strequ)       | [ft_isgraph](Ctype/ft_isgraph)    | [ft_round](Math/ft_round)       |
-| [ft_vasprintf](Stdio/ft_vasprintf)      | [ft_dtoa_base](Stdlib/ft_dtoa_base)       | [ft_strnequ](String/ft_strnequ)      | [ft_islower](Ctype/ft_islower)    | [ft_sum](Math/ft_sum)         |
-| [ft_readfile](Stdio/ft_readfile)       | [ft_ldtoa_base](Stdlib/ft_ldtoa_base)      | [ft_striter](String/ft_striter)      | [ft_isprime](Ctype/ft_isprime)    | [ft_sum_generic](Math/ft_sum_generic) |
-| [ft_readline](Stdio/ft_readline)       | [ft_convert_base](Stdlib/ft_convert_base)    | [ft_striteri](String/ft_striteri)     | [ft_isprint](Ctype/ft_isprint)    |      .         |
-|                   | [ft_malloc](Stdlib/ft_malloc)          | [ft_strchr](String/ft_strchr)       | [ft_ispunct](Ctype/ft_ispunct)    |      .         |
-| [ft_putbits](Stdio/ft_putbits)        | [ft_realloc](Stdlib/ft_realloc)         | [ft_strchrs](String/ft_strchrs)      | [ft_isspace](Ctype/ft_isspace)    |      .         |
-| [ft_putchar](Stdio/ft_putchar)        | [ft_bzero](Stdlib/ft_bzero)           | [ft_strrchr](String/ft_strrchr)      | [ft_isupper](Ctype/ft_isupper)    |      .         |
-| [ft_putstr](Stdio/ft_putstr)         | [ft_memalloc](Stdlib/ft_memalloc)        | [ft_strstr](String/ft_strstr)       | [ft_ischarset](Ctype/ft_ischarset)  |      .         |
-| [ft_putstrtab](Stdio/ft_putstrtab)      | [ft_memccpy](Stdlib/ft_memccpy)         | [ft_strnstr](String/ft_strnstr)      |               |      .         |
-| [ft_putendl](Stdio/ft_putendl)        | [ft_memchr](Stdlib/ft_memchr)          | [ft_strcmp](String/ft_strcmp)       | [ft_tolower](Ctype/ft_tolower)    |      .         |
-| [ft_putnbr](Stdio/ft_putnbr)         | [ft_memcmp](Stdlib/ft_memcmp)          | [ft_strncmp](String/ft_strncmp)      | [ft_toupper](Ctype/ft_toupper)    |      .         |
-| [ft_putnbr_base](Stdio/ft_putnbr_base)    | [ft_memcpy](Stdlib/ft_memcpy)          | [ft_strcat](String/ft_strcat)       |      .        |      .         |
-| [ft_putchar_fd](Stdio/ft_putchar_fd)     | [ft_memdel](Stdlib/ft_memdel)          | [ft_strncat](String/ft_strncat)      |      .        |      .         |
-| [ft_putendl_fd](Stdio/ft_putendl_fd)     | [ft_memmove](Stdlib/ft_memmove)         | [ft_strlcat](String/ft_strlcat)      |      .        |      .         |
-| [ft_putnbr_fd](Stdio/ft_putnbr_fd)      | [ft_memset](Stdlib/ft_memset)          | [ft_strcpy](String/ft_strcpy)       |      .        |      .         |
-| [ft_putnbr_base_fd](Stdio/ft_putnbr_base_fd) | [ft_intlen](Stdlib/ft_intlen)          | [ft_strncpy](String/ft_strncpy)      |      .        |      .         |
-| [ft_putstr_fd](Stdio/ft_putstr_fd)      | [ft_intmaxlen_base](Stdlib/ft_intmaxlen_base)  | [ft_strlcpy](String/ft_strlcpy)      |      .        |      .         |
-| [ft_putstrtab_fd](Stdio/ft_putstrtab_fd)   | [ft_uintmaxlen_base](Stdlib/ft_uintmaxlen_base) | [ft_strcpy_until](String/ft_strcpy_until) |      .        |      .         |
-| .                 | [ft_swap_char](Stdlib/ft_swap_char)       | [ft_strdup](String/ft_strdup)       |      .        |      .         |
-| .                 | [ft_swap_int](Stdlib/ft_swap_int)        | [ft_strndup](String/ft_strndup)      |      .        |      .         |
-| .                 | [ft_swap_item](Stdlib/ft_swap_item)       | [ft_strsub](String/ft_strsub)       |      .        |      .         |
-| .                 | [ft_swap_str](Stdlib/ft_swap_str)        | [ft_strnlen](String/ft_strnlen)      |      .        |      .         |
-| .                 | [ft_padding](Stdlib/ft_padding)         | [ft_strlen](String/ft_strlen)       |      .        |      .         |
-| .                 | [ft_wcount](Stdlib/ft_wcount)          | [ft_strsplit](String/ft_strsplit)     |      .        |      .         |
-| .                 | [ft_chrcount](Stdlib/ft_chrcount)        | [ft_strjoin](String/ft_strjoin)      |      .        |      .         |
-| .                 | [ft_matrix_clear](Stdlib/ft_matrix_clear)    | [ft_strappend](String/ft_strappend)    |      .        |      .         |
-| .                 | [ft_matrix_new](Stdlib/ft_matrix_new)      | [ft_strprepend](String/ft_strprepend)   |      .        |      .         |
-| .                 | [ft_find_next_prime](Stdlib/ft_find_next_prime) | [ft_strnjoin](String/ft_strnjoin)     |      .        |      .         |
-| .                 | .                  | [ft_strnappend](String/ft_strnappend)   |      .        |      .         |
-| .                 | .                  | [ft_strnprepend](String/ft_strnprepend)  |      .        |      .         |
-| .                 | .                  | [ft_strtrim](String/ft_strtrim)      |      .        |      .         |
-| .                 | .                  | [ft_strstrip](String/ft_strstrip)     |      .        |      .         |
-| .                 | .                  | [ft_strlstrip](String/ft_strlstrip)    |      .        |      .         |
-| .                 | .                  | [ft_strrstrip](String/ft_strrstrip)    |      .        |      .         |
-| .                 | .                  | [ft_strnlstrip](String/ft_strnlstrip)   |      .        |      .         |
-| .                 | .                  | [ft_strnrstrip](String/ft_strnrstrip)   |      .        |      .         |
-| .                 | .                  | .               |      .        |      .         |
-| .                 | .                  | .               |      .        |      .         |
-| .                 | .                  | .               |      .        |      .         |
-| .                 | .                  | .               |      .        |      .         |
-| .                 | .                  | .               |      .        |      .         |
-| .                 | .                  | .               |      .        |      .         |
-| .                 | .                  | .               |      .        |      .         |
-| .                 | .                  | .               |      .        |      .         |
-| .                 | .                  | .               |      .        |      .         |
+| [ft_printf](Stdio/ft_printf.c)         | [ft_atoi](Stdlib/ft_atoi.c)            | [ft_strnew](String/ft_strnew.c)       | [ft_isalnum](Ctype/ft_isalnum.c)    | [ft_max](Math/ft_max.c)         |
+| [ft_dprintf](Stdio/ft_dprintf.c)        | [ft_atoi_base](Stdlib/ft_atoi_base.c)       | [ft_strclr](String/ft_strclr.c)       | [ft_isalpha](Ctype/ft_isalpha.c)    | [ft_min](Math/ft_min.c)         |
+| [ft_sprintf](Stdio/ft_sprintf.c)        | [ft_itoa](Stdlib/ft_itoa.c)            | [ft_strdel](String/ft_strdel.c)       | [ft_isascii](Ctype/ft_isascii.c)    | [ft_pow](Math/ft_pow.c)         |
+| [ft_asprintf](Stdio/ft_asprintf.c)       | [ft_ftoa](Stdlib/ft_ftoa.c)            | [ft_strrev](String/ft_strrev.c)       | [ft_isblank](Ctype/ft_isblank.c)    | [ft_powl](Math/ft_powl.c)        |
+| [ft_vprintf](Stdio/ft_vprintf.c)        | [ft_itoa_base](Stdlib/ft_itoa_base.c)       | [ft_strmap](String/ft_strmap.c)       | [ft_iscntrl](Ctype/ft_iscntrl.c)    | [ft_powll](Math/ft_powll.c)       |
+| [ft_vdprintf](Stdio/ft_vdprintf.c)       | [ft_utoa_base](Stdlib/ft_utoa_base.c)       | [ft_strmapi](String/ft_strmapi.c)      | [ft_isdigit](Ctype/ft_isdigit.c)    | [ft_sqrt](Math/ft_sqrt.c)        |
+| [ft_vsprintf](Stdio/ft_vsprintf.c)       | [ft_ftoa_base](Stdlib/ft_ftoa_base.c)       | [ft_strequ](String/ft_strequ.c)       | [ft_isgraph](Ctype/ft_isgraph.c)    | [ft_round](Math/ft_round.c)       |
+| [ft_vasprintf](Stdio/ft_vasprintf.c)      | [ft_dtoa_base](Stdlib/ft_dtoa_base.c)       | [ft_strnequ](String/ft_strnequ.c)      | [ft_islower](Ctype/ft_islower.c)    | [ft_sum](Math/ft_sum.c)         |
+| [ft_readfile](Stdio/ft_readfile.c)       | [ft_ldtoa_base](Stdlib/ft_ldtoa_base.c)      | [ft_striter](String/ft_striter.c)      | [ft_isprime](Ctype/ft_isprime.c)    | [ft_sum_generic](Math/ft_sum_generic.c) |
+| [ft_readline](Stdio/ft_readline.c)       | [ft_convert_base](Stdlib/ft_convert_base.c)    | [ft_striteri](String/ft_striteri.c)     | [ft_isprint](Ctype/ft_isprint.c)    |               |
+|                   | [ft_malloc](Stdlib/ft_malloc.c)          | [ft_strchr](String/ft_strchr.c)       | [ft_ispunct](Ctype/ft_ispunct.c)    |               |
+| [ft_putbits](Stdio/ft_putbits.c)        | [ft_realloc](Stdlib/ft_realloc.c)         | [ft_strchrs](String/ft_strchrs.c)      | [ft_isspace](Ctype/ft_isspace.c)    |               |
+| [ft_putchar](Stdio/ft_putchar.c)        | [ft_bzero](Stdlib/ft_bzero.c)           | [ft_strrchr](String/ft_strrchr.c)      | [ft_isupper](Ctype/ft_isupper.c)    |               |
+| [ft_putstr](Stdio/ft_putstr.c)         | [ft_memalloc](Stdlib/ft_memalloc.c)        | [ft_strstr](String/ft_strstr.c)       | [ft_ischarset](Ctype/ft_ischarset.c)  |               |
+| [ft_putstrtab](Stdio/ft_putstrtab.c)      | [ft_memccpy](Stdlib/ft_memccpy.c)         | [ft_strnstr](String/ft_strnstr.c)      |               |               |
+| [ft_putendl](Stdio/ft_putendl.c)        | [ft_memchr](Stdlib/ft_memchr.c)          | [ft_strcmp](String/ft_strcmp.c)       | [ft_tolower](Ctype/ft_tolower.c)    |               |
+| [ft_putnbr](Stdio/ft_putnbr.c)         | [ft_memcmp](Stdlib/ft_memcmp.c)          | [ft_strncmp](String/ft_strncmp.c)      | [ft_toupper](Ctype/ft_toupper.c)    |               |
+| [ft_putnbr_base](Stdio/ft_putnbr_base.c)    | [ft_memcpy](Stdlib/ft_memcpy.c)          | [ft_strcat](String/ft_strcat.c)       |              |               |
+| [ft_putchar_fd](Stdio/ft_putchar_fd.c)     | [ft_memdel](Stdlib/ft_memdel.c)          | [ft_strncat](String/ft_strncat.c)      |              |               |
+| [ft_putendl_fd](Stdio/ft_putendl_fd.c)     | [ft_memmove](Stdlib/ft_memmove.c)         | [ft_strlcat](String/ft_strlcat.c)      |              |               |
+| [ft_putnbr_fd](Stdio/ft_putnbr_fd.c)      | [ft_memset](Stdlib/ft_memset.c)          | [ft_strcpy](String/ft_strcpy.c)       |              |               |
+| [ft_putnbr_base_fd](Stdio/ft_putnbr_base_fd.c) | [ft_intlen](Stdlib/ft_intlen.c)          | [ft_strncpy](String/ft_strncpy.c)      |              |               |
+| [ft_putstr_fd](Stdio/ft_putstr_fd.c)      | [ft_intmaxlen_base](Stdlib/ft_intmaxlen_base.c)  | [ft_strlcpy](String/ft_strlcpy.c)      |              |               |
+| [ft_putstrtab_fd](Stdio/ft_putstrtab_fd.c)   | [ft_uintmaxlen_base](Stdlib/ft_uintmaxlen_base.c) | [ft_strcpy_until](String/ft_strcpy_until.c) |              |               |
+|                  | [ft_swap_char](Stdlib/ft_swap_char.c)       | [ft_strdup](String/ft_strdup.c)       |              |               |
+|                  | [ft_swap_int](Stdlib/ft_swap_int.c)        | [ft_strndup](String/ft_strndup.c)      |              |               |
+|                  | [ft_swap_item](Stdlib/ft_swap_item.c)       | [ft_strsub](String/ft_strsub.c)       |              |               |
+|                  | [ft_swap_str](Stdlib/ft_swap_str.c)        | [ft_strnlen](String/ft_strnlen.c)      |              |               |
+|                  | [ft_padding](Stdlib/ft_padding.c)         | [ft_strlen](String/ft_strlen.c)       |              |               |
+|                  | [ft_wcount](Stdlib/ft_wcount.c)          | [ft_strsplit](String/ft_strsplit.c)     |              |               |
+|                  | [ft_chrcount](Stdlib/ft_chrcount.c)        | [ft_strjoin](String/ft_strjoin.c)      |              |               |
+|                  | [ft_matrix_clear](Stdlib/ft_matrix_clear.c)    | [ft_strappend](String/ft_strappend.c)    |              |               |
+|                  | [ft_matrix_new](Stdlib/ft_matrix_new.c)      | [ft_strprepend](String/ft_strprepend.c)   |              |               |
+|                  | [ft_find_next_prime](Stdlib/ft_find_next_prime.c) | [ft_strnjoin](String/ft_strnjoin.c)     |              |               |
+|                  |                   | [ft_strnappend](String/ft_strnappend.c)   |              |               |
+|                  |                   | [ft_strnprepend](String/ft_strnprepend.c)  |              |               |
+|                  |                   | [ft_strtrim](String/ft_strtrim.c)      |              |               |
+|                  |                   | [ft_strstrip](String/ft_strstrip.c)     |              |               |
+|                  |                   | [ft_strlstrip](String/ft_strlstrip.c)    |              |               |
+|                  |                   | [ft_strrstrip](String/ft_strrstrip.c)    |              |               |
+|                  |                   | [ft_strnlstrip](String/ft_strnlstrip.c)   |              |               |
+|                  |                   | [ft_strnrstrip](String/ft_strnrstrip.c)   |              |               |
+|                  |                   |                |              |               |
+
+
 
 
 ## Install <a name="install"></a>
