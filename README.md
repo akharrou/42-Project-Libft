@@ -82,7 +82,7 @@ All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s codin
 |                  |                   | [ft_strnrstrip](String/ft_strnrstrip.c)   |              |               |
 |                  |                   |                |              |               |
 
-### ...and there's even MORE !
+#### ...and there's even MORE !
 
 ----
 ## Data Structures <a name="datastructures"></a>
