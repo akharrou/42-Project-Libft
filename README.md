@@ -29,7 +29,7 @@
  * **Implementation of Bit Manipulation Functions**
  * **and more !**
  
-By developing this library, I gained a very deep and thorough understanding of the C Language, its Standard Library functions but also of data structures, algorithms, unit testing, continuous integration, troubleshooting, and proper documentation.
+>By developing this library, I gained a very deep and thorough understanding of the C Language, its Standard Library functions but also of data structures, algorithms, unit testing, continuous integration, troubleshooting, and proper documentation.
 
 ## Norminette <a name="norminette"></a>
 
