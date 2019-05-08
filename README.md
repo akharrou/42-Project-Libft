@@ -23,13 +23,9 @@ An open source library with over **200 functions**.
 #### It includes:
 
  * **Recreated Standard C Library functions** _(`stdio`, `stdlib`, `string`)_
- 
  * **Implementation of Data Structures** (binary trees, linked lists, stacks, queues, tries, hashtables/dictionaries)
- 
  * **Implementation of** `BigInt` (an infinetly big number type)
- 
  * **Bit Manipulation Functions**
- 
  * **and more !**
  
 By developing this library, I gained very understanding of data structures, algorithms,
@@ -37,18 +33,18 @@ unit testing, continuous integration, troubleshooting, and proper documentation.
 
 ## Norminette <a name="norminette"></a>
 
-All of these functions follow the coding standard & style-guide of [42 Silicon Valley](https://www.42.us.org/) dubbed: **"Norminette"**.
+All the library functions follow [42 Silicon Valley](https://www.42.us.org/)'s coding standard & style-guide: **Norminette**.
 
 ## Install <a name="install"></a>
 
-### Local <a name="local"></a>
+#### Local <a name="local"></a>
 
 Copy the `includes/` directory into the root of your project, and
 make sure to compile your source code with the following flags:
 
 	gcc libft.a -I./includes <your_file.c> -o <output_name>
 
-### Global <a name="global"></a>
+#### Global <a name="global"></a>
 
 Run the following command :
 
@@ -56,7 +52,7 @@ Run the following command :
 
 Now you can add the `<libft.h>` header in your .c files!
 
+----
 ## License <a name="license"></a>
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE/)
-file for details.
+This project is licensed under the MIT License - see [LICENSE](LICENSE/) for details.
