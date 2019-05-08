@@ -45,18 +45,44 @@ Also, some of the functions included don't exist in the Standard C Library,
 but I still kept them defined by there behavior.
 For example, ft_strnew can also be in ft_string.h.
 
-| stdio_42.h         | stdlib_42.h | string_42.h | ctype_42.h | math_42.h | btree.h | list.h |
-|:------------------|:------------|:------------|:-----------|:----------|:--------|:-------|
-| [ft_printf](Stdio/ft_printf.c)          |     .       |      .      |      .     |      .    |     .   |    .   |
-| [ft_dprintf](Stdio/ft_dprintf.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
-| [ft_sprintf](Stdio/ft_sprintf.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
-| [ft_asprintf](Stdio/ft_asprintf.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
-| [ft_vprintf](Stdio/ft_vprintf.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
-| [ft_vdprintf](Stdio/ft_vdprintf.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
-| [ft_vsprintf](Stdio/ft_vsprintf.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
-| [ft_vasprintf](Stdio/ft_vasprintf.c)       |     .       |      .      |      .     |      .    |     .   |    .   |
-| [ft_readfile](Stdio/ft_readfile.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
-| [ft_readline](Stdio/ft_readline.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
+| stdio_42.h   | stdlib_42.h        | string_42.h | ctype_42.h | math_42.h | btree.h | list.h |
+|:-------------|:-------------------|:------------|:-----------|:----------|:--------|:-------|
+| ft_printf    | ft_atoi            |      .      |      .     |      .    |     .   |    .   |
+| ft_dprintf   | ft_ftoa            |      .      |      .     |      .    |     .   |    .   |
+| ft_sprintf   | ft_itoa            |      .      |      .     |      .    |     .   |    .   |
+| ft_asprintf  | ft_atoi_base       |      .      |      .     |      .    |     .   |    .   |
+| ft_vprintf   | ft_itoa_base       |      .      |      .     |      .    |     .   |    .   |
+| ft_vdprintf  | ft_utoa_base       |      .      |      .     |      .    |     .   |    .   |
+| ft_vsprintf  | ft_ftoa_base       |      .      |      .     |      .    |     .   |    .   |
+| ft_vasprintf | ft_dtoa_base       |      .      |      .     |      .    |     .   |    .   |
+| ft_readfile  | ft_ldtoa_base      |      .      |      .     |      .    |     .   |    .   |
+| ft_readline  | ft_convert_base    |      .      |      .     |      .    |     .   |    .   |
+|              | ft_malloc          |      .      |      .     |      .    |     .   |    .   |
+|              | ft_realloc         |      .      |      .     |      .    |     .   |    .   |
+|              | ft_bzero           |      .      |      .     |      .    |     .   |    .   |
+|              | ft_memalloc        |      .      |      .     |      .    |     .   |    .   |
+|              | ft_memccpy         |      .      |      .     |      .    |     .   |    .   |
+|              | ft_memchr          |      .      |      .     |      .    |     .   |    .   |
+|              | ft_memcmp          |      .      |      .     |      .    |     .   |    .   |
+|              | ft_memcpy          |      .      |      .     |      .    |     .   |    .   |
+|              | ft_memdel          |      .      |      .     |      .    |     .   |    .   |
+|              | ft_memmove         |      .      |      .     |      .    |     .   |    .   |
+|              | ft_memset          |      .      |      .     |      .    |     .   |    .   |
+|              | ft_intlen          |      .      |      .     |      .    |     .   |    .   |
+|              | ft_intmaxlen_base  |      .      |      .     |      .    |     .   |    .   |
+|              | ft_uintmaxlen_base |      .      |      .     |      .    |     .   |    .   |
+|              | ft_swap_char       |      .      |      .     |      .    |     .   |    .   |
+|              | ft_swap_int        |      .      |      .     |      .    |     .   |    .   |
+|              | ft_swap_item       |      .      |      .     |      .    |     .   |    .   |
+|              | ft_swap_str        |      .      |      .     |      .    |     .   |    .   |
+|              | ft_padding         |      .      |      .     |      .    |     .   |    .   |
+|              | ft_wcount          |      .      |      .     |      .    |     .   |    .   |
+|              | ft_chrcount        |      .      |      .     |      .    |     .   |    .   |
+|              | ft_matrix_clear    |      .      |      .     |      .    |     .   |    .   |
+|              | ft_matrix_new      |      .      |      .     |      .    |     .   |    .   |
+|              | ft_find_next_prime |      .      |      .     |      .    |     .   |    .   |
+|              |     .              |      .      |      .     |      .    |     .   |    .   |
+
 
 
 ## Install <a name="install"></a>
