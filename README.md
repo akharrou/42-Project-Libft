@@ -20,7 +20,7 @@
 
 **42CLib** is an open source **C** library with over **200 functions**.
 
-It includes:
+#### It includes:
 
  * **Recreated Standard C Library functions** (`stdio`, `stdlib`, `string`, `ctype`, `math`)
  * **Implementations of Data Structures** (`binary trees`, `linked lists`, `stacks`, `queues`, `tries`, `hashtables`)
