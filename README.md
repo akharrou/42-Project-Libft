@@ -45,7 +45,7 @@ Also, some of the functions included don't exist in the Standard C Library,
 but I still kept them defined by there behavior.
 For example, ft_strnew can also be in ft_string.h.
 
-**| Stdio_42         | Stdlib_42         | String_42      | Ctype_42     | Math_42       |**
+| Stdio_42         | Stdlib_42         | String_42      | Ctype_42     | Math_42       |
 |:------------------|:-------------------|:----------------|:--------------|:---------------|
 | [ft_printf](Stdio/ft_printf.c)         | [ft_atoi](Stdlib/ft_atoi.c)            | [ft_strnew](String/ft_strnew.c)       | [ft_isalnum](Ctype/ft_isalnum.c)    | [ft_max](Math/ft_max.c)         |
 | [ft_dprintf](Stdio/ft_dprintf.c)        | [ft_atoi_base](Stdlib/ft_atoi_base.c)       | [ft_strclr](String/ft_strclr.c)       | [ft_isalpha](Ctype/ft_isalpha.c)    | [ft_min](Math/ft_min.c)         |
