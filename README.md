@@ -11,10 +11,12 @@
 
 1. [About](#about-libft)
 2. [Norminette](#norminette)
-3. [Install](#install)
+3. [Functions](#functions)
+4. [Data Structures](#datastructures)
+5. [Install](#install)
 	1. [local](#local)
 	2. [global](#global)
-4. [License](#license)
+6. [License](#license)
 
 ## About <a name="about-libft"></a>
 
@@ -84,7 +86,7 @@ All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s codin
 |                  |                   |                |              |               |
 
 
-## Data Structure Implementations <a name="functions"></a>
+## Data Structure Implementations <a name="datastructures"></a>
 
 | Lists-Stacks-Queues   | Binary Trees          | Tries          | Hashtables         |
 |:----------------------|:----------------------|:---------------|:-------------------|
