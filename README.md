@@ -45,43 +45,72 @@ Also, some of the functions included don't exist in the Standard C Library,
 but I still kept them defined by there behavior.
 For example, ft_strnew can also be in ft_string.h.
 
-| stdio_42.h        | stdlib_42.h        | string_42.h | ctype_42.h | math_42.h | btree.h | list.h |
-|:------------------|:-------------------|:------------|:-----------|:----------|:--------|:-------|
-| ft_printf         | ft_atoi            |      .      |      .     |      .    |     .   |    .   |
-| ft_dprintf        | ft_atoi_base       |      .      |      .     |      .    |     .   |    .   |
-| ft_sprintf        | ft_itoa            |      .      |      .     |      .    |     .   |    .   |
-| ft_asprintf       | ft_ftoa            |      .      |      .     |      .    |     .   |    .   |
-| ft_vprintf        | ft_itoa_base       |      .      |      .     |      .    |     .   |    .   |
-| ft_vdprintf       | ft_utoa_base       |      .      |      .     |      .    |     .   |    .   |
-| ft_vsprintf       | ft_ftoa_base       |      .      |      .     |      .    |     .   |    .   |
-| ft_vasprintf      | ft_dtoa_base       |      .      |      .     |      .    |     .   |    .   |
-| ft_readfile       | ft_ldtoa_base      |      .      |      .     |      .    |     .   |    .   |
-| ft_readline       | ft_convert_base    |      .      |      .     |      .    |     .   |    .   |
-|                   | ft_malloc          |      .      |      .     |      .    |     .   |    .   |
-| ft_putbits        | ft_realloc         |      .      |      .     |      .    |     .   |    .   |
-| ft_putchar        | ft_bzero           |      .      |      .     |      .    |     .   |    .   |
-| ft_putstr         | ft_memalloc        |      .      |      .     |      .    |     .   |    .   |
-| ft_putstrtab      | ft_memccpy         |      .      |      .     |      .    |     .   |    .   |
-| ft_putendl        | ft_memchr          |      .      |      .     |      .    |     .   |    .   |
-| ft_putnbr         | ft_memcmp          |      .      |      .     |      .    |     .   |    .   |
-| ft_putnbr_base    | ft_memcpy          |      .      |      .     |      .    |     .   |    .   |
-| ft_putchar_fd     | ft_memdel          |      .      |      .     |      .    |     .   |    .   |
-| ft_putendl_fd     | ft_memmove         |      .      |      .     |      .    |     .   |    .   |
-| ft_putnbr_fd      | ft_memset          |      .      |      .     |      .    |     .   |    .   |
-| ft_putnbr_base_fd | ft_intlen          |      .      |      .     |      .    |     .   |    .   |
-| ft_putstr_fd      | ft_intmaxlen_base  |      .      |      .     |      .    |     .   |    .   |
-| ft_putstrtab_fd   | ft_uintmaxlen_base |      .      |      .     |      .    |     .   |    .   |
-|                   | ft_swap_char       |      .      |      .     |      .    |     .   |    .   |
-|                   | ft_swap_int        |      .      |      .     |      .    |     .   |    .   |
-|                   | ft_swap_item       |      .      |      .     |      .    |     .   |    .   |
-|                   | ft_swap_str        |      .      |      .     |      .    |     .   |    .   |
-|                   | ft_padding         |      .      |      .     |      .    |     .   |    .   |
-|                   | ft_wcount          |      .      |      .     |      .    |     .   |    .   |
-|                   | ft_chrcount        |      .      |      .     |      .    |     .   |    .   |
-|                   | ft_matrix_clear    |      .      |      .     |      .    |     .   |    .   |
-|                   | ft_matrix_new      |      .      |      .     |      .    |     .   |    .   |
-|                   | ft_find_next_prime |      .      |      .     |      .    |     .   |    .   |
-|                   |     .              |      .      |      .     |      .    |     .   |    .   |
+| stdio_42.h        | stdlib_42.h        | string_42.h     | ctype_42.h | math_42.h | btree.h | list.h |
+|:------------------|:-------------------|:----------------|:-----------|:----------|:--------|:-------|
+| ft_printf         | ft_atoi            | ft_strnew       |      .     |      .    |     .   |    .   |
+| ft_dprintf        | ft_atoi_base       | ft_strclr       |      .     |      .    |     .   |    .   |
+| ft_sprintf        | ft_itoa            | ft_strdel       |      .     |      .    |     .   |    .   |
+| ft_asprintf       | ft_ftoa            | ft_strrev       |      .     |      .    |     .   |    .   |
+| ft_vprintf        | ft_itoa_base       | ft_strmap       |      .     |      .    |     .   |    .   |
+| ft_vdprintf       | ft_utoa_base       | ft_strmapi      |      .     |      .    |     .   |    .   |
+| ft_vsprintf       | ft_ftoa_base       | ft_strequ       |      .     |      .    |     .   |    .   |
+| ft_vasprintf      | ft_dtoa_base       | ft_strnequ      |      .     |      .    |     .   |    .   |
+| ft_readfile       | ft_ldtoa_base      | ft_striter      |      .     |      .    |     .   |    .   |
+| ft_readline       | ft_convert_base    | ft_striteri     |      .     |      .    |     .   |    .   |
+|                   | ft_malloc          |                 |      .     |      .    |     .   |    .   |
+| ft_putbits        | ft_realloc         | ft_strchr       |      .     |      .    |     .   |    .   |
+| ft_putchar        | ft_bzero           | ft_strchrs      |      .     |      .    |     .   |    .   |
+| ft_putstr         | ft_memalloc        | ft_strrchr      |      .     |      .    |     .   |    .   |
+| ft_putstrtab      | ft_memccpy         |                 |      .     |      .    |     .   |    .   |
+| ft_putendl        | ft_memchr          | ft_strstr       |      .     |      .    |     .   |    .   |
+| ft_putnbr         | ft_memcmp          | ft_strnstr      |      .     |      .    |     .   |    .   |
+| ft_putnbr_base    | ft_memcpy          |                 |      .     |      .    |     .   |    .   |
+| ft_putchar_fd     | ft_memdel          | ft_strcmp       |      .     |      .    |     .   |    .   |
+| ft_putendl_fd     | ft_memmove         | ft_strncmp      |      .     |      .    |     .   |    .   |
+| ft_putnbr_fd      | ft_memset          |                 |      .     |      .    |     .   |    .   |
+| ft_putnbr_base_fd | ft_intlen          | ft_strcat       |      .     |      .    |     .   |    .   |
+| ft_putstr_fd      | ft_intmaxlen_base  | ft_strncat      |      .     |      .    |     .   |    .   |
+| ft_putstrtab_fd   | ft_uintmaxlen_base | ft_strlcat      |      .     |      .    |     .   |    .   |
+|                   | ft_swap_char       |                 |      .     |      .    |     .   |    .   |
+|                   | ft_swap_int        | ft_strcpy       |      .     |      .    |     .   |    .   |
+|                   | ft_swap_item       | ft_strncpy      |      .     |      .    |     .   |    .   |
+|                   | ft_swap_str        | ft_strlcpy      |      .     |      .    |     .   |    .   |
+|                   | ft_padding         | ft_strcpy_until |      .     |      .    |     .   |    .   |
+|                   | ft_wcount          |                 |      .     |      .    |     .   |    .   |
+|                   | ft_chrcount        | ft_strdup       |      .     |      .    |     .   |    .   |
+|                   | ft_matrix_clear    | ft_strndup      |      .     |      .    |     .   |    .   |
+|                   | ft_matrix_new      | ft_strsub       |      .     |      .    |     .   |    .   |
+|                   | ft_find_next_prime |                 |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strnlen      |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strlen       |      .     |      .    |     .   |    .   |
+|                   |     .              |                 |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strsplit     |      .     |      .    |     .   |    .   |
+|                   |     .              |                 |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strjoin      |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strappend    |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strprepend   |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strnjoin     |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strnappend   |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strnprepend  |      .     |      .    |     .   |    .   |
+|                   |     .              |                 |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strtrim      |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strstrip     |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strlstrip    |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strrstrip    |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strnlstrip   |      .     |      .    |     .   |    .   |
+|                   |     .              | ft_strnrstrip   |      .     |      .    |     .   |    .   |
+|                   |     .              |      .          |      .     |      .    |     .   |    .   |
+|                   |     .              |      .          |      .     |      .    |     .   |    .   |
+|                   |     .              |      .          |      .     |      .    |     .   |    .   |
+|                   |     .              |      .          |      .     |      .    |     .   |    .   |
+|                   |     .              |      .          |      .     |      .    |     .   |    .   |
+|                   |     .              |      .          |      .     |      .    |     .   |    .   |
+|                   |     .              |      .          |      .     |      .    |     .   |    .   |
+|                   |     .              |      .          |      .     |      .    |     .   |    .   |
+|                   |     .              |      .          |      .     |      .    |     .   |    .   |
+|                   |     .              |      .          |      .     |      .    |     .   |    .   |
+|                   |     .              |      .          |      .     |      .    |     .   |    .   |
+
 
 
 
