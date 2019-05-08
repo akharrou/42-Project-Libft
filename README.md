@@ -33,6 +33,7 @@
 
 All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s coding standard & style-guide: **Norminette**.
 
+----
 ## Standard C Library Functions <a name="functions"></a>
 
 | Stdio_42         | Stdlib_42         | String_42      | Ctype_42     | Math_42       |
@@ -81,7 +82,7 @@ All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s codin
 |                  |                   | [ft_strnrstrip](String/ft_strnrstrip.c)   |              |               |
 |                  |                   |                |              |               |
 
-
+----
 ## Data Structure Implementations <a name="datastructures"></a>
 
 | Lists-Stacks-Queues   | Binary Trees          | Tries          | Hashtables         |
@@ -122,7 +123,7 @@ All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s codin
 |                       |                       |                |                    |
 
 
-
+----
 ## Usage <a name="usage"></a>
 
 Git clone the repository :
