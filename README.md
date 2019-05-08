@@ -26,12 +26,14 @@ An open source library with over **200 functions**.
 
  * **Recreated Standard C Library functions** _(`stdio`, `stdlib`, `string`)_
  
- * **Data Structure Implementations** (binary tree, linked list, stack, queue, trie, hashtable/dictionary)
+ * **Implementation of Data Structures** (binary trees, linked lists, stacks, queues, tries, hashtables/dictionaries)
  
- * **`BigInt` Implementation** (an infinetly big number type)
+ * **Implementation of** `BigInt` (an infinetly big number type)
  
- * Other functions such as bit manipulation functions, and more
-
+ * **Bit Manipulation Functions**
+ 
+ * **and more !**
+ 
 By developing this library, I gained very understanding of data structures, algorithms,
 unit testing, continuous integration, troubleshooting, and proper documentation.
 
