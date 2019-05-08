@@ -135,7 +135,7 @@ Build the Library :
 
 Copy/Move the `Includes/` directory & the Executable into the root of your project :
 
-	cp Includes libft.a <root_of_your_project> 
+	cp -R Includes libft.a <root_of_your_project> 
 
 Compile your source code with the Library binary:
 
