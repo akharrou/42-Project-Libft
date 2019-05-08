@@ -1,4 +1,4 @@
-# OPENLibft
+# 42Libft
 
 ![logo]()
 
