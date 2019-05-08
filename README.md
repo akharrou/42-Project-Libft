@@ -125,22 +125,27 @@ All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s codin
 
 
 
-## Install <a name="install"></a>
+## Usage <a name="download"></a>
 
-#### Local <a name="local"></a>
+1) Git clone the repository:
 
-Copy the `includes/` directory into the root of your project, and
-make sure to compile your source code with the following flags:
+	git clone 
 
-	gcc libft.a -I./includes <your_file.c> -o <output_name>
+2) Build the Library:
 
-#### Global <a name="global"></a>
+	make 
 
-Run the following command :
+3) Copy/Move the Executable into the root of your project:
 
-	make install
+	cp libft.a <root_of_your_project> 
 
-Now you can add the `<libft.h>` header in your .c files!
+4) Copy/Move the `includes/` directory into the root of your project:
+
+	cp Includes <root_of_your_project>
+
+5) Compile your source code with the Library binary:
+
+	gcc libft.a <your_file.c>
 
 ----
 ## License <a name="license"></a>
