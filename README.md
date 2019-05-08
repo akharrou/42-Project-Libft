@@ -20,7 +20,7 @@
 
 An open source library with over **200 functions**.
 
->##### It includes:
+It includes:
 
  * **Recreated Standard C Library functions** _(`stdio`, `stdlib`, `string`)_
  * **Implementation of Data Structures** (binary trees, linked lists, stacks, queues, tries, hashtables/dictionaries)
@@ -28,8 +28,7 @@ An open source library with over **200 functions**.
  * **Bit Manipulation Functions**
  * **and more !**
  
-By developing this library, I gained very understanding of data structures, algorithms,
-unit testing, continuous integration, troubleshooting, and proper documentation.
+By developing this library, I gained very deep and thorough understanding of the C Language, its Standard Library functions and also of data structures, algorithms, unit testing, continuous integration, troubleshooting, and proper documentation.
 
 ## Norminette <a name="norminette"></a>
 
