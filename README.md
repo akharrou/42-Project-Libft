@@ -24,11 +24,11 @@ An open source library with over **200 functions**.
 
 #### It includes:
 
- * **Recreated Standard C Library functions** (`stdio`, `stdlib`, `string`)
+ * **Recreated Standard C Library functions** _(`stdio`, `stdlib`, `string`)_
  
- * **Data-structure functions** (binary tree, linked list, stack, queue, trie, hashtable/dictionary)
+ * **Data Structure Implementations** (binary tree, linked list, stack, queue, trie, hashtable/dictionary)
  
- * An **implementation of `BigInt`** _(an infinetly big number type)_
+ * **`BigInt` Implementation** (an infinetly big number type)
  
  * Other functions such as bit manipulation functions, and more
 
