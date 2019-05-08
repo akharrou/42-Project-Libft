@@ -45,35 +45,20 @@ Also, some of the functions included don't exist in the Standard C Library,
 but I still kept them defined by there behavior.
 For example, ft_strnew can also be in ft_string.h.
 
-stdio_42.h         | stdlib_42.h | string_42.h | ctype_42.h | math_42.h | btree.h | list.h |
-:------------------|:------------|:------------|:-----------|:----------|:--------|:-------|
-[ft_asprintf](Stdio/ft_asprintf.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_dprintf](Stdio/ft_dprintf.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_printf](Stdio/ft_printf.c)          |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putbits](Stdio/ft_putbits.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putbyte](Stdio/ft_putbyte.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putbyte_fd](Stdio/ft_putbyte_fd.c)      |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putbytes](Stdio/ft_putbytes.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putbytes_fd](Stdio/ft_putbytes_fd.c)     |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putchar](Stdio/ft_putchar.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putchar_fd](Stdio/ft_putchar_fd.c)      |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putendl](Stdio/ft_putendl.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putendl_fd](Stdio/ft_putendl_fd.c)      |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putnbr](Stdio/ft_putnbr.c)          |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putnbr_base](Stdio/ft_putnbr_base.c)     |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putnbr_base_fd](Stdio/ft_putnbr_base_fd.c)  |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putnbr_fd](Stdio/ft_putnbr_fd.c)       |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putstr](Stdio/ft_putstr.c)          |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putstr_fd](Stdio/ft_putstr_fd.c)       |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putstrtab](Stdio/ft_putstrtab.c)       |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_putstrtab_fd](Stdio/ft_putstrtab_fd.c)    |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_readfile](Stdio/ft_readfile.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_readline](Stdio/ft_readline.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_sprintf](Stdio/ft_sprintf.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_vasprintf](Stdio/ft_vasprintf.c)       |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_vdprintf](Stdio/ft_vdprintf.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_vprintf](Stdio/ft_vprintf.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
-[ft_vsprintf](Stdio/ft_vsprintf.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
+| stdio_42.h         | stdlib_42.h | string_42.h | ctype_42.h | math_42.h | btree.h | list.h |
+|:------------------|:------------|:------------|:-----------|:----------|:--------|:-------|
+| [ft_printf](Stdio/ft_printf.c)          |     .       |      .      |      .     |      .    |     .   |    .   |
+| [ft_dprintf](Stdio/ft_dprintf.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
+| [ft_sprintf](Stdio/ft_sprintf.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
+| [ft_asprintf](Stdio/ft_asprintf.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
+| [ft_vprintf](Stdio/ft_vprintf.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
+| [ft_vdprintf](Stdio/ft_vdprintf.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
+| [ft_vsprintf](Stdio/ft_vsprintf.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
+| [ft_vasprintf](Stdio/ft_vasprintf.c)       |     .       |      .      |      .     |      .    |     .   |    .   |
+| [ft_readfile](Stdio/ft_readfile.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
+| [ft_readline](Stdio/ft_readline.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
+| [ft_putbits](Stdio/ft_putbits.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
+
 
 ## Install <a name="install"></a>
 
