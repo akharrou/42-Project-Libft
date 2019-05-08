@@ -9,16 +9,14 @@
 
 ## Table of Content
 
-1. [About Open Libft](#about-libft)
+1. [About](#about-libft)
 2. [Norminette](#norminette)
-3. [Functions](#functions)
-4. [Setup](#setup)
-5. [Install](#install)
+3. [Install](#install)
 	1. [local](#local)
 	2. [global](#global)
-7. [License](#license)
+4. [License](#license)
 
-## About Open Libft <a name="about-libft"></a>
+## About <a name="about-libft"></a>
 
 An open source library with over **200 functions**.
 
