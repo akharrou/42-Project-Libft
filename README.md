@@ -12,9 +12,7 @@
 2. [Norminette](#norminette)
 3. [Functions](#functions)
 4. [Data Structures](#datastructures)
-5. [Install](#install)
-	1. [local](#local)
-	2. [global](#global)
+5. [Usage](#usage)
 6. [License](#license)
 
 ## About <a name="about-libft"></a>
@@ -125,7 +123,7 @@ All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s codin
 
 
 
-## Usage <a name="download"></a>
+## Usage <a name="usage"></a>
 
 Git clone the repository :
 
