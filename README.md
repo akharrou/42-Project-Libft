@@ -1,6 +1,6 @@
 # 42CLib
 
-![logo](resources/libft-logo.svg.png)
+![logo](https://www.google.com/search?safe=active&biw=1408&bih=1307&tbm=isch&sa=1&ei=szvTXPiwDIqy0wKrh6aQDg&q=42&oq=42&gs_l=img.3..35i39l2j0l2j0i67l2j0l4.5317.5620..5909...0.0..0.58.115.2......1....1..gws-wiz-img.3GLIVDcF3Hg#imgrc=XnIp7noVf71zNM:)
 
 ![Standard](https://img.shields.io/badge/Standard-ANSI%20C89-red.svg)
 ![Build Status](https://img.shields.io/badge/Build-Pass-lightred.svg)
