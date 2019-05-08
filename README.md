@@ -3,8 +3,7 @@
 ![logo]()
 
 ![Standard](https://img.shields.io/badge/Standard-ANSI%20C89-red.svg)
-![Build Status](https://img.shields.io/badge/Build-Pass-lightred.svg)
-![Norminette](https://img.shields.io/badge/Norminette-Pass-lightred.svg)
+![Norminette](https://img.shields.io/badge/Norminette-Checked-lightred.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Table of Content
