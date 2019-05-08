@@ -1,4 +1,4 @@
-# 42Libc
+# 42LibC
 
 ![logo](resources/libft-logo.svg.png)
 
@@ -18,7 +18,7 @@
 
 ## About <a name="about-libft"></a>
 
-An open source library with over **200 functions**.
+**42LibC** is an open source **C** library with over **200 functions**.
 
 It includes:
 
