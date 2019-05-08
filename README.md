@@ -37,14 +37,6 @@ All library functions follow [42 Silicon Valley](https://www.42.us.org/)'s codin
 
 ## Functions <a name="functions"></a>
 
-For the sake of keeping everything neat and in order, I separated the functions'
-declarations into different header files, corresponding to the behavior of
-such functions.
-For instance, ft_strlen can be found in ft_string.h.
-Also, some of the functions included don't exist in the Standard C Library,
-but I still kept them defined by there behavior.
-For example, ft_strnew can also be in ft_string.h.
-
 | Stdio_42         | Stdlib_42         | String_42      | Ctype_42     | Math_42       |
 |:------------------|:-------------------|:----------------|:--------------|:---------------|
 | [ft_printf](Stdio/ft_printf.c)         | [ft_atoi](Stdlib/ft_atoi.c)            | [ft_strnew](String/ft_strnew.c)       | [ft_isalnum](Ctype/ft_isalnum.c)    | [ft_max](Math/ft_max.c)         |
@@ -91,6 +83,45 @@ For example, ft_strnew can also be in ft_string.h.
 |                  |                   | [ft_strnrstrip](String/ft_strnrstrip.c)   |              |               |
 |                  |                   |                |              |               |
 
+
+## Data Structures <a name="functions"></a>
+
+| Lists-Stacks-Queues   | Binary Trees          | Tries          | Hashtables         |
+|:----------------------|:----------------------|:---------------|:-------------------|
+| [list_append](Lists-Stacks-Queues/list_append.c)         | [btree_apply_infix](Binary-Trees/btree_apply_infix.c)   | [trie_clear](Tries/trie_clear.c)   | [hashtab_clear](Hashtables/hashtab_clear.c)    |
+| [list_append_both](Lists-Stacks-Queues/list_append_both.c)    | [btree_apply_prefix](Binary-Trees/btree_apply_prefix.c)  | [trie_count](Tries/trie_count.c)   | [hashtab_count](Hashtables/hashtab_count.c)    |
+| [list_append_tail](Lists-Stacks-Queues/list_append_tail.c)    | [btree_apply_suffix](Binary-Trees/btree_apply_suffix.c)  | [trie_getitem](Tries/trie_getitem.c) | [hashtab_destroy](Hashtables/hashtab_destroy.c)  |
+| [list_clear](Lists-Stacks-Queues/list_clear.c)          | [btree_getitem](Binary-Trees/btree_getitem.c)       | [trie_insert](Tries/trie_insert.c)  | [hashtab_getentry](Hashtables/hashtab_getentry.c) |
+| [list_count](Lists-Stacks-Queues/list_count.c)          | [btree_insert](Binary-Trees/btree_insert.c)        | [trie_newnode](Tries/trie_newnode.c) | [hashtab_getitem](Hashtables/hashtab_getitem.c)  |
+| [list_elem_at](Lists-Stacks-Queues/list_elem_at.c)        | [btree_level_count](Binary-Trees/btree_level_count.c)   | [trie_remove](Tries/trie_remove.c)  | [hashtab_grow](Hashtables/hashtab_grow.c)     |
+| [list_extend](Lists-Stacks-Queues/list_extend.c)         | [btree_newnode](Binary-Trees/btree_newnode.c)       |                | [hashtab_init](Hashtables/hashtab_init.c)     |
+| [list_extend_tail](Lists-Stacks-Queues/list_extend_tail.c)    |                       |                | [hashtab_insert](Hashtables/hashtab_insert.c)   |
+| [list_extendleft](Lists-Stacks-Queues/list_extendleft.c)     |                       |                | [hashtab_new](Hashtables/hashtab_new.c)      |
+| [list_getelem](Lists-Stacks-Queues/list_getelem.c)        |                       |                | [hashtab_popitem](Hashtables/hashtab_popitem.c)  |
+| [list_getitem](Lists-Stacks-Queues/list_getitem.c)        |                       |                | [hashtab_remove](Hashtables/hashtab_remove.c)   |
+| [list_insert](Lists-Stacks-Queues/list_insert.c)         |                       |                | [hashtab_shrink](Hashtables/hashtab_shrink.c)   |
+| [list_insert_at](Lists-Stacks-Queues/list_insert_at.c)      |                       |                |                    |
+| [list_item_at](Lists-Stacks-Queues/list_item_at.c)        |                       |                |                    |
+| [list_iter](Lists-Stacks-Queues/list_iter.c)           |                       |                |                    |
+| [list_iteri](Lists-Stacks-Queues/list_iteri.c)          |                       |                |                    |
+| [list_last_elem](Lists-Stacks-Queues/list_last_elem.c)      |                       |                |                    |
+| [list_last_item](Lists-Stacks-Queues/list_last_item.c)      |                       |                |                    |
+| [list_map](Lists-Stacks-Queues/list_map.c)            |                       |                |                    |
+| [list_merge](Lists-Stacks-Queues/list_merge.c)          |                       |                |                    |
+| [list_newelem](Lists-Stacks-Queues/list_newelem.c)        |                       |                |                    |
+| [list_pop](Lists-Stacks-Queues/list_pop.c)            |                       |                |                    |
+| [list_pop_item](Lists-Stacks-Queues/list_pop_item.c)       |                       |                |                    |
+| [list_pop_item_at](Lists-Stacks-Queues/list_pop_item_at.c)    |                       |                |                    |
+| [list_pop_tail](Lists-Stacks-Queues/list_pop_tail.c)       |                       |                |                    |
+| [list_popleft](Lists-Stacks-Queues/list_popleft.c)        |                       |                |                    |
+| [list_prepend](Lists-Stacks-Queues/list_prepend.c)        |                       |                |                    |
+| [list_remove_elem](Lists-Stacks-Queues/list_remove_elem.c)    |                       |                |                    |
+| [list_remove_elem_at](Lists-Stacks-Queues/list_remove_elem_at.c) |                       |                |                    |
+| [list_remove_item](Lists-Stacks-Queues/list_remove_item.c)    |                       |                |                    |
+| [list_remove_item_at](Lists-Stacks-Queues/list_remove_item_at.c) |                       |                |                    |
+| [list_reverse](Lists-Stacks-Queues/list_reverse.c)        |                       |                |                    |
+| [list_sort](Lists-Stacks-Queues/list_sort.c)           |                       |                |                    |
+|                       |                       |                |                    |
 
 
 
