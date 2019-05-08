@@ -57,7 +57,6 @@ For example, ft_strnew can also be in ft_string.h.
 | [ft_vasprintf](Stdio/ft_vasprintf.c)       |     .       |      .      |      .     |      .    |     .   |    .   |
 | [ft_readfile](Stdio/ft_readfile.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
 | [ft_readline](Stdio/ft_readline.c)        |     .       |      .      |      .     |      .    |     .   |    .   |
-| [ft_putbits](Stdio/ft_putbits.c)         |     .       |      .      |      .     |      .    |     .   |    .   |
 
 
 ## Install <a name="install"></a>
