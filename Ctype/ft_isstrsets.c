@@ -6,14 +6,14 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 12:32:48 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/09 12:39:23 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/09 12:40:51 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/ctype_42.h"
 #include <stdarg.h>
 
-int		ft_isstrsets(char *str, int sets, ...)
+int		ft_isstrsets(const char *str, int sets, ...)
 {
 	va_list		args;
 	const char	**strset;
