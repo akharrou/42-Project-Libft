@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isstrset.c                                      :+:      :+:    :+:   */
+/*   ft_isstrsets.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/09 10:42:10 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/09 12:34:23 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/09 12:32:48 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/09 12:34:39 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/string_42.h"
-#include "../Includes/stdint_42.h"
+#include "../Includes/ctype_42.h"
+#include <stdarg.h>
 
-int			ft_isstrset(const char *str, const char **strset)
+int		ft_isstrsets(char *str, int sets, ...)
 {
-	int8_t	i;
+	va_list		args;
+	const char	**strset;
+	int			verdict;
+	int			i;
 
-	if (strset && str)
+	verdict = 0;
+	va_start(args, sets);
+	i = 0;
+	while (sets > i)
 	{
-		i = -1;
-		while (strset[++i])
-			if (ft_strcmp(strset[i], str) == 0)
-				return (1);
+		strset = va_arg(args, const char **);
+		if (ft_isstrset(str, strset))
+		{
+			verdict = 1;
+			break ;
+		}
+		++i;
 	}
-	return (0);
+	va_end(args);
+	return (verdict);
 }
