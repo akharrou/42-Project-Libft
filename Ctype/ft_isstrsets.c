@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 12:32:48 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/09 12:34:39 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/09 12:39:23 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,21 @@ int		ft_isstrsets(char *str, int sets, ...)
 	int			i;
 
 	verdict = 0;
-	va_start(args, sets);
-	i = 0;
-	while (sets > i)
+	if (str)
 	{
-		strset = va_arg(args, const char **);
-		if (ft_isstrset(str, strset))
+		va_start(args, sets);
+		i = 0;
+		while (sets > i)
 		{
-			verdict = 1;
-			break ;
+			strset = va_arg(args, const char **);
+			if (ft_isstrset(str, strset))
+			{
+				verdict = 1;
+				break ;
+			}
+			++i;
 		}
-		++i;
+		va_end(args);
 	}
-	va_end(args);
 	return (verdict);
 }
