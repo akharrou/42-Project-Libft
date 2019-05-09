@@ -44,7 +44,7 @@ int	ft_iscntrl(int c);
 int	ft_isprint(int c);
 int	ft_isprime(int n);
 int	ft_ischarset(int c, const char *seperators);
-int ft_isstrset(const char *str, const char **strtab);
+int	ft_isstrset(const char *str, const char **strtab);
 
 int	ft_toupper(int c);
 int	ft_tolower(int c);
