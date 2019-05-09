@@ -52,7 +52,7 @@ All library functions follow [42 Silicon Valley's](https://www.42.us.org/) codin
 | [ft_putbits](Stdio/ft_putbits.c)        | [ft_realloc](Stdlib/ft_realloc.c)         | [ft_strchrs](String/ft_strchrs.c)      | [ft_isspace](Ctype/ft_isspace.c)    |               |
 | [ft_putchar](Stdio/ft_putchar.c)        | [ft_bzero](Stdlib/ft_bzero.c)           | [ft_strrchr](String/ft_strrchr.c)      | [ft_isupper](Ctype/ft_isupper.c)    |               |
 | [ft_putstr](Stdio/ft_putstr.c)         | [ft_memalloc](Stdlib/ft_memalloc.c)        | [ft_strstr](String/ft_strstr.c)       | [ft_ischarset](Ctype/ft_ischarset.c)  |               |
-| [ft_putstrtab](Stdio/ft_putstrtab.c)      | [ft_memccpy](Stdlib/ft_memccpy.c)         | [ft_strnstr](String/ft_strnstr.c)      |               |               |
+| [ft_putstrtab](Stdio/ft_putstrtab.c)      | [ft_memccpy](Stdlib/ft_memccpy.c)         | [ft_strnstr](String/ft_strnstr.c)      |       [ft_isstrset](Ctype/ft_isstrset.c)  |               |
 | [ft_putendl](Stdio/ft_putendl.c)        | [ft_memchr](Stdlib/ft_memchr.c)          | [ft_strcmp](String/ft_strcmp.c)       | [ft_tolower](Ctype/ft_tolower.c)    |               |
 | [ft_putnbr](Stdio/ft_putnbr.c)         | [ft_memcmp](Stdlib/ft_memcmp.c)          | [ft_strncmp](String/ft_strncmp.c)      | [ft_toupper](Ctype/ft_toupper.c)    |               |
 | [ft_putnbr_base](Stdio/ft_putnbr_base.c)    | [ft_memcpy](Stdlib/ft_memcpy.c)          | [ft_strcat](String/ft_strcat.c)       |              |               |
