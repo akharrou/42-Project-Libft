@@ -130,19 +130,19 @@ All library functions follow [42 Silicon Valley's](https://www.42.us.org/) codin
 
 Git clone the repository :
 
-	git clone https://github.com/akharrou/42-Project-Libft.git Libft && cd Libft
+	$> git clone https://github.com/akharrou/42-Project-Libft.git Libft && cd Libft
 
 Build the Library :
 
-	make 
+	$> make 
 
 Copy/Move the `Includes/` Directory & the `libft.a` Executable into the Root of your Project :
 
-	cp -R Includes libft.a <root_of_your_project> 
+	$> cp -R Includes libft.a <root_of_your_project> 
 
 Compile your source code with the Library binary:
 
-	gcc libft.a <your_file.c>
+	$> gcc libft.a <your_file.c>
 
 ----
 ## License <a name="license"></a>
