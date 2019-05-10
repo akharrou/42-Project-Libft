@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_readfile.c                                      :+:      :+:    :+:   */
+/*   ft_readfiledes.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/26 22:53:51 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/10 10:35:28 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/10 07:00:10 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/10 10:34:24 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         ft_readfile -- read file into a buffer
+**         ft_readfiledes -- read file from a descriptor into a buffer
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         char	*
-**         ft_readfile(char *filename);
+**         ft_readfiledes(int filedes);
 **
 **    PARAMETERS
 **
-**         char *filename       Name of the file from which to
-**                              read.
+**         int filedes          File descriptor from which to
+**                              read file.
 **
 **    DESCRIPTION
-**         Reads file 'filename' and stores its contents in a
-**         buffer.
+**         Reads file from given file descriptor and stores
+**         the contents of the file into a buffer.
 **
 **    RETURN VALUES
 **         If successful returns a pointer to the buffer in
@@ -37,16 +37,13 @@
 #include "../Includes/stdlib_42.h"
 #include "../Includes/string_42.h"
 #include "../Includes/stdio_42.h"
-#include <fcntl.h>
 
-char	*ft_readfile(char *filename)
+char	*ft_readfiledes(int filedes)
 {
 	char	*file;
 	char	*line;
 	int		status;
-	int		filedes;
 
-	filedes = open(filename, O_RDONLY);
 	if (filedes >= 0)
 	{
 		file = ft_strdup("");

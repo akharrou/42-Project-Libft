@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:39:25 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/08 07:59:57 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/10 07:01:31 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	ft_putnbr_base(int nbr, char *base);
 void	ft_putnbr_base_fd(int nbr, char *base, int fd);
 
 int		ft_readline(const int fd, char **line);
-char	*ft_readfile(int filedes);
+char	*ft_readfile(char *filename);
+char	*ft_readfiledes(int filedes);
 
 #endif

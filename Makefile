@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/09 12:34:56 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/10 10:45:21 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ SOURCES     =   $(STDIO)                                                      \
 
 STDIO       =   Stdio/ft_readline.c                                           \
                 Stdio/ft_readfile.c                                           \
+                Stdio/ft_readfiledes.c                                        \
                                                                               \
                 Stdio/ft_printf.c                                             \
                 Stdio/ft_dprintf.c                                            \
@@ -202,7 +203,9 @@ STRING      =   String/ft_strlen.c                                            \
                 String/ft_strnlstrip.c                                        \
                 String/ft_strrstrip.c                                         \
                 String/ft_strnrstrip.c                                        \
-
+                                                                              \
+                String/ft_strtabnew.c                                         \
+                String/ft_strtablen.c                                         \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
