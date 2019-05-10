@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/10 10:45:21 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/10 12:36:44 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -204,8 +204,12 @@ STRING      =   String/ft_strlen.c                                            \
                 String/ft_strrstrip.c                                         \
                 String/ft_strnrstrip.c                                        \
                                                                               \
+                String/ft_strtab.c                                            \
                 String/ft_strtabnew.c                                         \
                 String/ft_strtablen.c                                         \
+                String/ft_strtabnlen.c                                        \
+                String/ft_strtabdup.c                                         \
+                String/ft_strtabndup.c                                        \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
