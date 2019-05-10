@@ -6,18 +6,39 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 10:37:36 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/10 10:38:05 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/10 12:36:16 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/stdlib_42.h"
-#include "../Includes/string_42.h"
-#include <stdarg.h>
+/*
+**    NAME
+**         ft_strtabnew -- create an empty and NULL'ed out string table
+**                         (array) of a certain size
+**
+**    SYNOPSIS
+**         #include <libft.h>
+**
+**         char **
+**         ft_strtabnew(int size);
+**
+**    PARAMETERS
+**
+**         int size        Size of string table.
+**
+**    DESCRIPTION
+**         Creates an array of strings of size 'size' and points each
+**         of its pointers to NULL.
+**
+**    RETURN VALUES
+**         If successful returns a pointer to the string table (array);
+**         otherwise NULL.
+*/
 
-char 	**ft_strtabnew(int size, ...)
+#include "../Includes/stdlib_42.h"
+
+char 	**ft_strtabnew(int size)
 {
 	char		**strtab;
-	va_list		args;
 	int32_t		i;
 
 	strtab = NULL;
@@ -26,12 +47,9 @@ char 	**ft_strtabnew(int size, ...)
 		strtab = (char **)malloc(sizeof(char *) * (size + 1));
 		if (strtab)
 		{
-			va_start(args, size);
 			i = -1;
-			while (++i < size)
-				strtab[i] = ft_strdup(va_arg(args, char *));
-			strtab[i] = NULL;
-			va_end(args);
+			while (++i <= size)
+				strtab[i] = NULL;
 		}
 	}
 	return (strtab);
