@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 12:27:41 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/10 12:33:28 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/10 16:44:10 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@
 #include "../Includes/string_42.h"
 #include <stdarg.h>
 
-char 	**ft_strtab(int size, ...)
+char			**ft_strtab(int size, ...)
 {
 	char		**strtab;
 	va_list		args;
