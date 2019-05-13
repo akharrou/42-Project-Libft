@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 09:07:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/11 16:30:09 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/13 10:21:53 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,10 @@
 
 # ifndef EXIT
 #  define EXIT(func) { func; exit(EXIT_FAILURE); }
+# endif
+
+# ifndef RETURN
+#  define RETURN(func, ret) { func; return(ret); }
 # endif
 
 # ifndef FLUSH

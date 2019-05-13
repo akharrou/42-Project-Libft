@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/12 17:50:44 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/13 15:25:49 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -159,6 +159,8 @@ STDLIB      =   Stdlib/ft_bzero.c                                             \
                 Stdlib/ft_swap_str.c                                          \
                 Stdlib/ft_swap_item.c                                         \
                 Stdlib/ft_hash.c                                              \
+                                                                              \
+                Stdlib/ft_reverse_bytes.c                                     \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
@@ -234,8 +236,11 @@ CTYPE       =   Ctype/ft_isupper.c                                            \
                 Ctype/ft_ischarset.c                                          \
                 Ctype/ft_isstrset.c                                           \
                 Ctype/ft_isstrsets.c                                          \
+                                                                              \
                 Ctype/ft_toupper.c                                            \
                 Ctype/ft_tolower.c                                            \
+                Ctype/ft_to_big_endian.c                                      \
+                Ctype/ft_to_little_endian.c                                   \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:35:17 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/08 07:59:42 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/13 15:22:21 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,7 @@ char			*ft_ldtoa_base(long double n, char *base, int width,
 char			*ft_convert_base(char *nbr, char *base_from, char *base_to);
 
 unsigned int	ft_hash(const char *str);
+
+void			ft_reverse_bytes(void *data, size_t size);
 
 #endif

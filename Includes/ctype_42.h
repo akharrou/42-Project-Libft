@@ -6,12 +6,14 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:31:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/09 12:40:48 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/13 15:26:45 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CTYPE_42_H
 # define CTYPE_42_H
+
+# include <string.h>
 
 # define ISBLANK(c) (c == ' ' || c == '\t')
 # define ISSPACE(c) (ISBLANK (c) || c >= 10 && c <= 13)
@@ -30,24 +32,26 @@
 # define ISLESSER(x, y)   (x < y)
 # define ISEQUAL(x, y)    (x == y)
 
-int	ft_isupper(int c);
-int	ft_islower(int c);
-int	ft_isblank(int c);
-int	ft_isspace(int c);
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isgraph(int c);
-int	ft_ispunct(int c);
-int	ft_iscntrl(int c);
-int	ft_isprint(int c);
-int	ft_isprime(int n);
-int	ft_ischarset(int c, const char *seperators);
-int ft_isstrset(const char *str, const char **strset);
-int ft_isstrsets(const char *str, int sets, ...);
+int		ft_isupper(int c);
+int		ft_islower(int c);
+int		ft_isblank(int c);
+int		ft_isspace(int c);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isgraph(int c);
+int		ft_ispunct(int c);
+int		ft_iscntrl(int c);
+int		ft_isprint(int c);
+int		ft_isprime(int n);
+int		ft_ischarset(int c, const char *seperators);
+int		ft_isstrset(const char *str, const char **strset);
+int		ft_isstrsets(const char *str, int sets, ...);
 
-int	ft_toupper(int c);
-int	ft_tolower(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+void	ft_to_big_endian(void *data, size_t size);
+void	ft_to_little_endian(void *data, size_t size);
 
 #endif
