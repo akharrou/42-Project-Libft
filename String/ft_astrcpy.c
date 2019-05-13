@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_astrcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/17 16:20:29 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/11 16:29:56 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/12 09:20:56 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/12 09:46:59 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "../Includes/stdlib_42.h"
 
-# include "stdio_42.h"
-# include "stdlib_42.h"
-# include "string_42.h"
-# include "ctype_42.h"
-# include "stdint_42.h"
-# include "macros_42.h"
-# include "math_42.h"
+void	ft_astrcpy(char **dst, const char *src)
+{
+	unsigned int i;
 
-# include "bigint.h"
+	i = 0;
+	while (*src)
+		(*dst)[i++] = *src++;
+	(*dst)[i] = *src;
+}
 
-# include "list.h"
-# include "btree.h"
-# include "trie.h"
-# include "hashtable.h"
-# include "dict.h"
-
-# include <errno.h>
-
-#endif
+void	ft_astrcpyfre(char **dst, const char *src, int free_src)
+{
+	ft_astrcpy(dst, src);
+	if (free_src && src)
+		free((char *)src);
+}

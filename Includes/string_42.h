@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:38:09 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/10 16:43:59 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/12 17:50:14 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t size);
 char		*ft_strcpy_until(char *dest, const char *src, char *charset);
 char		*ft_strcpyfre(char *dst, const char *src, int free_dst,
 			int free_src);
+void		ft_astrcpy(char **dst, const char *src);
+void		ft_astrcpyfre(char **dst, const char *src, int free_src);
+void		ft_astrncpy(char **dst, const char *src, size_t len);
 char		*ft_strcat(char *dst, const char *src);
 char		*ft_strncat(char *dst, const char *src, size_t n);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
@@ -70,6 +73,9 @@ char		*ft_strnappend(char const *s1, char const *s2, size_t len,
 			int free_str);
 char		*ft_strnprepend(char const *s1, char const *s2, size_t len,
 			int free_str);
+
+char		*ft_strhex(const char *str);
+char		*ft_strhexfre(const char *str);
 
 char		**ft_strtab(int size, ...);
 char		**ft_strtabnew(int size);

@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_astrncpy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/17 16:20:29 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/11 16:29:56 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/12 09:20:30 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/12 09:20:38 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "../Includes/string_42.h"
 
-# include "stdio_42.h"
-# include "stdlib_42.h"
-# include "string_42.h"
-# include "ctype_42.h"
-# include "stdint_42.h"
-# include "macros_42.h"
-# include "math_42.h"
+void	ft_astrncpy(char **dst, const char *src, size_t len)
+{
+	size_t i;
 
-# include "bigint.h"
-
-# include "list.h"
-# include "btree.h"
-# include "trie.h"
-# include "hashtable.h"
-# include "dict.h"
-
-# include <errno.h>
-
-#endif
+	i = 0;
+	while (i < len && *src)
+		(*dst)[i++] = *src++;
+	while (i < len)
+		(*dst)[i++] = '\0';
+}

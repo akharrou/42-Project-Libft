@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 12:03:50 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/06 18:31:08 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/11 14:42:18 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdbool.h>
 # include <stddef.h>
 # include <stdint.h>
+
+typedef unsigned char	*POINTER;
 
 typedef union			u_double
 {

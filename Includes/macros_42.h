@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 09:07:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/08 07:59:43 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/11 16:30:09 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@
 # endif
 
 # ifndef EXIT
-#  define EXIT(error_msg) { ft_putendl(error_msg); exit(EXIT_FAILURE); }
+#  define EXIT(func) { func; exit(EXIT_FAILURE); }
 # endif
 
 # ifndef FLUSH
