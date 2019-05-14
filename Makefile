@@ -6,16 +6,27 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/13 15:25:49 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/13 16:09:36 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
-DEBUG_FLAGS = -O0 -g -fsanitize=address -fsanitize=undefined
+DEBUG_FLAGS = -g                                                              \
+                                                                              \
+              -fsanitize=address                                              \
+              -fsanitize=undefined                                            \
+              -fsanitize=bounds                                               \
+              -fsanitize=integer                                              \
+              -fsanitize=nullability-arg                                      \
+              -fsanitize=nullability-return                                   \
+              -fsanitize=nullability-assign                                   \
+              -fsanitize=undefined                                            \
+              -fsanitize-address-use-after-scope                              \
+            #   -fsanitize=object-size                                          \
 
 CC          =   gcc
-CFLAGS      =   -Wall -Wextra -Werror # $(DEBUG_FLAGS)
+CFLAGS      =   -Wall -Wextra -Werror $(DEBUG_FLAGS)
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 

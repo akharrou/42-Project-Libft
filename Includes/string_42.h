@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:38:09 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/12 17:50:14 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/13 17:38:30 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ char		*ft_strnappend(char const *s1, char const *s2, size_t len,
 char		*ft_strnprepend(char const *s1, char const *s2, size_t len,
 			int free_str);
 
-char		*ft_strhex(const char *str);
-char		*ft_strhexfre(const char *str);
+char		*ft_strhex(const char *str, size_t size);
+char		*ft_strhexfre(const char *str, size_t size);
 
 char		**ft_strtab(int size, ...);
 char		**ft_strtabnew(int size);
