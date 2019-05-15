@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/13 16:09:36 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/14 12:25:22 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ DEBUG_FLAGS = -g                                                              \
             #   -fsanitize=object-size                                          \
 
 CC          =   gcc
-CFLAGS      =   -Wall -Wextra -Werror $(DEBUG_FLAGS)
+CFLAGS      =   -Wall -Wextra -Werror #$(DEBUG_FLAGS)
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
