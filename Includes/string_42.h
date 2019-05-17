@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:38:09 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/13 17:38:30 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/17 12:40:58 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,10 @@ size_t		ft_strtablen(const char **strtab);
 size_t		ft_strtabnlen(const char **strtab, long n);
 char		**ft_strtabdup(const char **strtab);
 char		**ft_strtabndup(const char **strtab, long n);
+char		**ft_strtabcat(char **dst, char **src);
+char		**ft_strtabncat(char **dst, char **src, long n);
+char		**ft_strtab_appendstr(const char **strtab, char *str);
+char		**ft_strtab_appendstrfre(const char **strtab, char *str,
+			int free_s1, int free_s2);
 
 #endif

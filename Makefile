@@ -6,13 +6,16 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/14 12:25:22 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/17 12:46:52 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC          =   gcc
+CFLAGS      =   -Wall -Wextra -Werror #$(DEBUG_FLAGS)
+
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
-DEBUG_FLAGS = -g                                                              \
+DEBUG_FLAGS = -O0 -g                                                          \
                                                                               \
               -fsanitize=address                                              \
               -fsanitize=undefined                                            \
@@ -23,10 +26,7 @@ DEBUG_FLAGS = -g                                                              \
               -fsanitize=nullability-assign                                   \
               -fsanitize=undefined                                            \
               -fsanitize-address-use-after-scope                              \
-            #   -fsanitize=object-size                                          \
-
-CC          =   gcc
-CFLAGS      =   -Wall -Wextra -Werror #$(DEBUG_FLAGS)
+            #   -fsanitize=object-size                                        \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
@@ -228,6 +228,9 @@ STRING      =   String/ft_strlen.c                                            \
                 String/ft_strtabnlen.c                                        \
                 String/ft_strtabdup.c                                         \
                 String/ft_strtabndup.c                                        \
+                String/ft_strtabcat.c                                         \
+                String/ft_strtabncat.c                                        \
+                String/ft_strtab_appendstr.c                                  \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
