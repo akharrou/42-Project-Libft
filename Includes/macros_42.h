@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 09:07:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/16 20:00:02 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/17 11:33:02 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 # define MACROS_42_H
 
 /*
-** Useful Macros
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+** Available Characters.
 */
-
-# define INT(c, base) (ft_strchr(base, c) - base)
-
-# define STDIN  0
-# define STDOUT 1
-# define STDERR 2
 
 # define DIGITS          "0123456789"
 # define ALPHABET_LOWER  "abcdefghijklmnopqrstuvwxyz"
 # define ALPHABET_UPPER  "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+** Base(s).
+*/
 
 # define BINARY_BASE     "01"
 # define OCTAL_BASE      "01234567"
@@ -33,9 +33,27 @@
 # define HEX_LOWER_BASE  "0123456789abcdef"
 # define HEX_UPPER_BASE  "0123456789ABCDEF"
 
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+** Limit Constant(s).
+*/
+
 # ifndef BUFF_SIZE
 #  define BUFF_SIZE 256
 # endif
+
+# ifndef MAX_FDS
+#  define MAX_FDS 65536
+# endif
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+** Aliase(s).
+*/
+
+# define STDIN  0
+# define STDOUT 1
+# define STDERR 2
 
 # ifndef TRUE
 #  define TRUE 1
@@ -45,8 +63,8 @@
 #  define FALSE 0
 # endif
 
-# ifndef _NULL
-#  define _NULL (void *)0
+# ifndef NULL_
+#  define NULL_ (void *)0
 # endif
 
 # ifndef SUCCESS
@@ -67,19 +85,8 @@
 #  define EXIT_FAILURE 1
 # endif
 
-# ifndef EXIT
-#  define EXIT(func) { func; exit(EXIT_FAILURE); }
-# endif
-
-# ifndef RETURN
-#  define RETURN(func, ret) { func; return(ret); }
-# endif
-
-# ifndef FLUSH
-#  define FLUSH(buffer) if (buffer != NULL) { free(buffer); buffer = NULL; }
-# endif
-
 /*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
 ** Bit Manipulation
 */
 
@@ -108,7 +115,25 @@
 # define ROTR_64BITS(x, n)  ROTATE_64BITS_RIGHT(x, n)
 
 /*
-** Guard/Check Macros
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+** Convenient Macro(s).
+*/
+
+# ifndef INT
+#  define INT(c, base) (ft_strchr(base, c) - base)
+# endif
+
+# ifndef EXIT
+#  define EXIT(func) { func; exit(EXIT_FAILURE); }
+# endif
+
+# ifndef FLUSH
+#  define FLUSH(buffer) if (buffer != NULL) { free(buffer); buffer = NULL; }
+# endif
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+** Guard/Check Macro(s).
 */
 
 # ifndef ASSERT
@@ -132,99 +157,165 @@
 # endif
 
 /*
-** MAX & MINS
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+** Type MAX & MIN Constants
 */
 
 # ifndef CHAR_MIN
-#  define CHAR_MIN -128
+#  define CHAR_MIN (-128)
 # endif
 
 # ifndef CHAR_MAX
-#  define CHAR_MAX 127
+#  define CHAR_MAX (127)
 # endif
 
 # ifndef UCHAR_MAX
-#  define UCHAR_MAX 255
+#  define UCHAR_MAX (255)
 # endif
 
 # ifndef SHORT_MIN
-#  define SHORT_MIN -32768
+#  define SHORT_MIN (-32768)
 # endif
 
 # ifndef SHORT_MAX
-#  define SHORT_MAX 32767
+#  define SHORT_MAX (32767)
 # endif
 
 # ifndef USHORT_MAX
-#  define USHORT_MAX 65535
+#  define USHORT_MAX (65535)
 # endif
 
 # ifndef INT_MIN
-#  define INT_MIN -2147483648
+#  define INT_MIN (-2147483648)
 # endif
 
 # ifndef INT_MAX
-#  define INT_MAX 2147483647
+#  define INT_MAX (2147483647)
 # endif
 
 # ifndef UINT_MAX
-#  define UINT_MAX 4294967295
+#  define UINT_MAX (4294967295)
 # endif
 
 # ifndef LONG_MIN
-#  define LONG_MIN -9223372036854775808
+#  define LONG_MIN (-9223372036854775808)
 # endif
 
 # ifndef LONG_MAX
-#  define LONG_MAX 9223372036854775807
+#  define LONG_MAX (9223372036854775807)
 # endif
 
 # ifndef LLONG_MIN
-#  define LLONG_MIN -9223372036854775808
+#  define LLONG_MIN (-9223372036854775808)
 # endif
 
 # ifndef LLONG_MAX
-#  define LLONG_MAX 9223372036854775807
+#  define LLONG_MAX (9223372036854775807)
 # endif
 
 # ifndef ULONG_MAX
-#  define ULONG_MAX 18446744073709551615
+#  define ULONG_MAX (18446744073709551615)
 # endif
 
 # ifndef ULLONG_MAX
-#  define ULLONG_MAX 18446744073709551615
-# endif
-
-# ifndef SIZE_MAX
-#  define SIZE_MAX 18446744073709551615
+#  define ULLONG_MAX (18446744073709551615)
 # endif
 
 # ifndef FLT_MAX
-#  define FLT_MAX 3.40282347e+38F
+#  define FLT_MAX (3.40282347e+38F)
 # endif
 
 # ifndef FLT_MIN
-#  define FLT_MIN 1.17549435e-38F
+#  define FLT_MIN (1.17549435e-38F)
 # endif
 
 # ifndef DBL_MAX
-#  define DBL_MAX 1.7976931348623157e+308
+#  define DBL_MAX (1.7976931348623157e+308)
 # endif
 
 # ifndef DBL_MIN
-#  define DBL_MIN 2.2250738585072014e-308
+#  define DBL_MIN (2.2250738585072014e-308)
 # endif
 
 # ifndef LDBL_MAX
-#  define LDBL_MAX 1.18973149535723176502e+4932L
+#  define LDBL_MAX (1.18973149535723176502e+4932L)
 # endif
 
 # ifndef LDBL_MIN
-#  define LDBL_MIN 3.36210314311209350626e-4932L
+#  define LDBL_MIN (3.36210314311209350626e-4932L)
 # endif
 
-# ifndef MAX_FDS
-#  define MAX_FDS 65536
+# ifndef SIZE_MAX
+#  define SIZE_MAX (18446744073709551615)
 # endif
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+** Bit Size MAX & MIN Constants
+*/
+
+# ifndef INT8_MAX
+#  define INT8_MAX (127)
+# endif
+
+# ifndef INT8_MIN
+#  define INT8_MIN (-INT8_MAX - 1)
+# endif
+
+# ifndef UINT8_MAX
+#  define UINT8_MAX (255)
+# endif
+
+# ifndef INT16_MAX
+#  define INT16_MAX (32767)
+# endif
+
+# ifndef INT16_MIN
+#  define INT16_MIN (-INT16_MAX - 1)
+# endif
+
+# ifndef UINT16_MAX
+#  define UINT16_MAX (65535)
+# endif
+
+# ifndef INT32_MAX
+#  define INT32_MAX (2147483647)
+# endif
+
+# ifndef INT32_MIN
+#  define INT32_MIN (-INT32_MAX - 1)
+# endif
+
+# ifndef UINT32_MAX
+#  define UINT32_MAX (4294967295U)
+# endif
+
+# ifndef INT64_MAX
+#  define INT64_MAX (9223372036854775807LL)
+# endif
+
+# ifndef INT64_MIN
+#  define INT64_MIN (-INT64_MAX - 1)
+# endif
+
+# ifndef UINT64_MAX
+#  define UINT64_MAX (18446744073709551615ULL)
+# endif
+
+# ifndef INT128_MAX
+#  define INT128_MAX (0x80000000000000000000000000000000)
+# endif
+
+# ifndef INT128_MIN
+#  define INT128_MIN (-INT128_MAX - 1)
+# endif
+
+# ifndef UINT128_MAX
+#  define UINT128_MAX (0x100000000000000000000000000000000)
+# endif
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 #endif
