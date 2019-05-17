@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 09:07:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/13 10:21:53 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/16 20:00:02 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,34 @@
 # ifndef FLUSH
 #  define FLUSH(buffer) if (buffer != NULL) { free(buffer); buffer = NULL; }
 # endif
+
+/*
+** Bit Manipulation
+*/
+
+# define ROTATE_8BITS_LEFT(x, n)    (((x) << (n)) | ((x) >> (8 - (n))))
+# define ROTATE_8BITS_RIGHT(x, n)   (((x) >> (n)) | ((x) << (8 - (n))))
+
+# define ROTATE_16BITS_LEFT(x, n)   (((x) << (n)) | ((x) >> (16 - (n))))
+# define ROTATE_16BITS_RIGHT(x, n)  (((x) >> (n)) | ((x) << (16 - (n))))
+
+# define ROTATE_32BITS_LEFT(x, n)   (((x) << (n)) | ((x) >> (32 - (n))))
+# define ROTATE_32BITS_RIGHT(x, n)  (((x) >> (n)) | ((x) << (32 - (n))))
+
+# define ROTATE_64BITS_LEFT(x, n)   (((x) << (n)) | ((x) >> (64 - (n))))
+# define ROTATE_64BITS_RIGHT(x, n)  (((x) >> (n)) | ((x) << (64 - (n))))
+
+# define ROTL_8BITS(x, n)   ROTATE_8BITS_LEFT(x, n)
+# define ROTR_8BITS(x, n)   ROTATE_8BITS_RIGHT(x, n)
+
+# define ROTL_16BITS(x, n)  ROTATE_16BITS_LEFT(x, n)
+# define ROTR_16BITS(x, n)  ROTATE_16BITS_RIGHT(x, n)
+
+# define ROTL_32BITS(x, n)  ROTATE_32BITS_LEFT(x, n)
+# define ROTR_32BITS(x, n)  ROTATE_32BITS_RIGHT(x, n)
+
+# define ROTL_64BITS(x, n)  ROTATE_64BITS_LEFT(x, n)
+# define ROTR_64BITS(x, n)  ROTATE_64BITS_RIGHT(x, n)
 
 /*
 ** Guard/Check Macros
