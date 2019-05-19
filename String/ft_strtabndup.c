@@ -6,14 +6,14 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 12:18:52 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/10 12:19:04 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/19 10:45:21 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/string_42.h"
 #include "../Includes/stdlib_42.h"
 
-char 	**ft_strtabndup(const char **strtab, long n)
+char		**ft_strtabndup(const char **strtab, long n)
 {
 	char	**strtabdup;
 	int		len;

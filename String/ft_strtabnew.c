@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/10 10:37:36 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/10 12:36:16 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/19 10:44:26 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/19 10:44:27 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@
 
 #include "../Includes/stdlib_42.h"
 
-char 	**ft_strtabnew(int size)
+char			**ft_strtabnew(int size)
 {
 	char		**strtab;
 	int32_t		i;

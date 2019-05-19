@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/10 11:01:31 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/10 12:18:20 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/19 10:43:48 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/19 10:44:06 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/stdlib_42.h"
 #include "../Includes/string_42.h"
 
-char 	**ft_strtabdup(const char **strtab)
+char		**ft_strtabdup(const char **strtab)
 {
 	char	**strtabdup;
 	int		len;
