@@ -6,28 +6,35 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 15:14:55 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/02 19:40:46 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/19 11:50:16 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/stdlib_42.h"
 #include "../Includes/string_42.h"
 
-char	*ft_strndup(const char *src, size_t n)
+char	*ft_strndup(const char *s1, size_t n)
 {
-	char	*dst;
+	char	*dest;
+	size_t	len;
 	size_t	i;
 
-	if (!(dst = (char *)malloc(ft_strnlen(src, n) + 1)))
-		return (NULL);
-	i = 0;
-	while (i < n)
+	dest = NULL;
+	if (s1)
 	{
-		dst[i] = src[i];
-		i++;
+		len = ft_strnlen(s1, n);
+		dest = malloc(len + 1);
+		if (!dest)
+			return (NULL);
+		i = 0;
+		while (len--)
+		{
+			dest[i] = s1[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	dst[i] = '\0';
-	return (dst);
+	return (dest);
 }
 
 char	*ft_strndupfre(const char *src, size_t n, int free_src)
