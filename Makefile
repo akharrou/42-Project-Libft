@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/17 12:46:52 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/18 07:54:02 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -124,6 +124,8 @@ STDIO       =   Stdio/ft_readline.c                                           \
                 Stdio/ft_putnbr_fd.c                                          \
                 Stdio/ft_putnbr_base.c                                        \
                 Stdio/ft_putnbr_base_fd.c                                     \
+                                                                              \
+                Stdio/ft_open.c                                               \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 

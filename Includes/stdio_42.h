@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:39:25 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/10 07:01:31 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/18 07:56:41 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define STDIO_42_H
 
 # include <unistd.h>
+# include <string.h>
 # include <stdarg.h>
+# include <fcntl.h>
 
 int		ft_printf(const char *format, ...);
 int		ft_dprintf(int filedes, const char *format, ...);
@@ -47,5 +49,7 @@ void	ft_putnbr_base_fd(int nbr, char *base, int fd);
 int		ft_readline(const int fd, char **line);
 char	*ft_readfile(char *filename);
 char	*ft_readfiledes(int filedes);
+
+int		ft_open(char *filename, int oflag);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 09:07:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/17 11:33:02 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/18 11:18:01 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,18 @@
 
 # define ROTL_64BITS(x, n)  ROTATE_64BITS_LEFT(x, n)
 # define ROTR_64BITS(x, n)  ROTATE_64BITS_RIGHT(x, n)
+
+# define ROTL_8B(x, n)   ROTATE_8BITS_LEFT(x, n)
+# define ROTR_8B(x, n)   ROTATE_8BITS_RIGHT(x, n)
+
+# define ROTL_16B(x, n)  ROTATE_16BITS_LEFT(x, n)
+# define ROTR_16B(x, n)  ROTATE_16BITS_RIGHT(x, n)
+
+# define ROTL_32B(x, n)  ROTATE_32BITS_LEFT(x, n)
+# define ROTR_32B(x, n)  ROTATE_32BITS_RIGHT(x, n)
+
+# define ROTL_64B(x, n)  ROTATE_64BITS_LEFT(x, n)
+# define ROTR_64B(x, n)  ROTATE_64BITS_RIGHT(x, n)
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
