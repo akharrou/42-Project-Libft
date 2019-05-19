@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:31:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/14 15:27:01 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/19 10:32:30 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ int		ft_isstrsets(const char *str, int sets, ...);
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+char	*ft_strtoupper(char *str);
+char	*ft_strtolower(char *str);
 void	*ft_to_big_endian(void *data, size_t size);
 void	*ft_to_little_endian(void *data, size_t size);
 

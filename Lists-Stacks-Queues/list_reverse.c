@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_reverse.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 19:32:42 by akharrou          #+#    #+#             */
-/*   Updated: 2019/03/04 13:17:20 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/19 10:33:25 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@
 
 int		list_reverse(t_list **head)
 {
-	int		size;
-	t_list	*last;
 	t_list	*after_last;
+	t_list	*last;
+	int		size;
 
 	if (head && (*head))
 	{
