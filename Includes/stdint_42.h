@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 12:03:50 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/19 10:36:27 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/20 12:08:05 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdbool.h>
 # include <stddef.h>
 # include <stdint.h>
+# include <stdarg.h>
 
 typedef unsigned char	*t_ptr;
 

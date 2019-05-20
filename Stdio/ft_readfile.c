@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 22:53:51 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/20 10:47:10 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/20 11:25:17 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
 #include <errno.h>
 #include <fcntl.h>
 
-char	*ft_readfile(char *filename)
+char		*ft_readfile(char *filename)
 {
 	int		filedes;
 	char	*file;
