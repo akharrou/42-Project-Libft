@@ -3,25 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup_range.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 15:09:44 by akharrou          #+#    #+#             */
-/*   Updated: 2019/03/04 13:17:20 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/19 20:07:48 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/stdlib_42.h"
+#include "../Includes/string_42.h"
 
-char	*ft_strdup_range(const char *str, int index, int end)
+char	*ft_strdup_range(const char *str, int start, int stop)
 {
-	int		i;
-	char	*dst;
-
-	if (!(dst = (char *)malloc(end - index + 1)))
-		return (NULL);
-	i = 0;
-	while (index < end)
-		dst[i++] = str[index++];
-	dst[i] = '\0';
-	return (dst);
+	return (ft_strndup(str + start, (stop - start)));
 }

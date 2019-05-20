@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 22:53:51 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/10 10:35:28 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/19 19:56:11 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,29 +37,19 @@
 #include "../Includes/stdlib_42.h"
 #include "../Includes/string_42.h"
 #include "../Includes/stdio_42.h"
+#include <errno.h>
 #include <fcntl.h>
 
 char	*ft_readfile(char *filename)
 {
-	char	*file;
-	char	*line;
-	int		status;
 	int		filedes;
+	char	*file;
 
+	file = NULL;
 	filedes = open(filename, O_RDONLY);
-	if (filedes >= 0)
-	{
-		file = ft_strdup("");
-		status = 1;
-		while (status > 0)
-		{
-			status = ft_readline(filedes, &line);
-			file = ft_strappend(file, line, 1, 1);
-		}
-		if (status < 0 && file)
-			free(file);
-		else
-			return (file);
-	}
-	return (NULL);
+	if (filedes < 0)
+		ft_printf("Error: %s{underlined}\n", strerror(errno));
+	else
+		file = ft_readfiledes(filedes);
+	return (file);
 }

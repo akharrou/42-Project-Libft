@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 10:43:11 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/19 10:43:12 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/19 19:42:05 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	if (s)
-		return (ft_strdup_range(s, start, start + len));
-	return (NULL);
+	return (ft_strndup(s + start, len));
 }

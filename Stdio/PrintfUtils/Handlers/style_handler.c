@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 18:56:25 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/08 10:25:33 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/19 21:22:34 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,50 +51,50 @@
 
 t_style g_styles_table[] =
 {
-	{"default", "0"},
+	{ "default", "0" },
 	\
-	{"underlined", "4"},
-	{"bold", "1"},
-	{"italic", "3"},
-	{"inverted", "7"},
-	{"dim", "2"},
-	{"hidden", "8"},
+	{ "underlined", "4" },
+	{ "bold", "1" },
+	{ "italic", "3" },
+	{ "inverted", "7" },
+	{ "dim", "2" },
+	{ "hidden", "8" },
 	\
-	{"black", "30"},
-	{"white", "97"},
-	{"gray", "90"},
-	{"red", "31"},
-	{"green", "32"},
-	{"yellow", "33"},
-	{"blue", "34"},
-	{"magenta", "35"},
-	{"cyan", "36"},
-	{"lgray", "37"},
-	{"lred", "91"},
-	{"lgreen", "92"},
-	{"lyellow", "93"},
-	{"lblue", "94"},
-	{"lmagenta", "95"},
-	{"lcyan", "96"},
+	{ "black", "30" },
+	{ "white", "97" },
+	{ "gray", "90" },
+	{ "red", "31" },
+	{ "green", "32" },
+	{ "yellow", "33" },
+	{ "blue", "34" },
+	{ "magenta", "35" },
+	{ "cyan", "36" },
+	{ "lgray", "37" },
+	{ "lred", "91" },
+	{ "lgreen", "92" },
+	{ "lyellow", "93" },
+	{ "lblue", "94" },
+	{ "lmagenta", "95" },
+	{ "lcyan", "96" },
 	\
-	{"bgblack", "40"},
-	{"bgwhite", "107"},
-	{"bggray", "100"},
-	{"bgred", "41"},
-	{"bggreen", "42"},
-	{"bgyellow", "43"},
-	{"bgblue", "44"},
-	{"bgmagenta", "45"},
-	{"bgcyan", "46"},
-	{"bglgray", "47"},
-	{"bglred", "101"},
-	{"bglgreen", "102"},
-	{"bglyellow", "103"},
-	{"bglblue", "104"},
-	{"bglmagenta", "105"},
-	{"bglcyan", "106"},
+	{ "bgblack", "40" },
+	{ "bgwhite", "107" },
+	{ "bggray", "100" },
+	{ "bgred", "41" },
+	{ "bggreen", "42" },
+	{ "bgyellow", "43" },
+	{ "bgblue", "44" },
+	{ "bgmagenta", "45" },
+	{ "bgcyan", "46" },
+	{ "bglgray", "47" },
+	{ "bglred", "101" },
+	{ "bglgreen", "102" },
+	{ "bglyellow", "103" },
+	{ "bglblue", "104" },
+	{ "bglmagenta", "105" },
+	{ "bglcyan", "106" },
 	\
-	{NULL, NULL}
+	{ NULL, NULL }
 };
 
 /*
@@ -134,13 +134,13 @@ t_style g_styles_table[] =
 
 char		*style_handler(t_format format, char *string)
 {
-	char	*style_str;
+	char	*style;
 	int8_t	i;
 	int8_t	j;
 
 	if (format.style == NULL)
 		return (string);
-	style_str = ft_strdup("\033[");
+	style = ft_strdup("\033[");
 	i = -1;
 	while (format.style[++i])
 	{
@@ -148,15 +148,15 @@ char		*style_handler(t_format format, char *string)
 		while (g_styles_table[++j].style)
 			if (ft_strcmp(format.style[i], g_styles_table[j].style) == 0)
 			{
-				style_str = ft_strappend(
-						style_str, g_styles_table[j].ansi_code, 1, 0);
+				style = ft_strappend(style, g_styles_table[j].ansi_code, 1, 0);
 				if (format.style[i + 1] != NULL)
-					style_str = ft_strappend(style_str, ";", 1, 0);
+					style = ft_strappend(style, ";", 1, 0);
 				free(format.style[i]);
+				break ;
 			}
 	}
 	free(format.style);
-	style_str = ft_strappend(style_str, "m", 1, 0);
-	string = ft_strprepend(string, style_str, 1, 1);
+	style = ft_strappend(style, "m", 1, 0);
+	string = ft_strprepend(string, style, 1, 1);
 	return (ft_strappend(string, "\033[0m", 1, 0));
 }

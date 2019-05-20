@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 18:29:48 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/08 09:09:00 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/19 19:53:28 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,20 @@ char			*apply_width(t_format format, char *str)
 
 t_handler g_table[] =
 {
-	{'%', &mod_handler},
-	{'c', &c_handler},
-	{'i', &i_handler},
-	{'u', &u_handler},
-	{'f', &f_handler},
-	{'b', &b_handler},
-	{'o', &o_handler},
-	{'d', &d_handler},
-	{'x', &x_handler},
-	{'X', &xx_handler},
-	{'s', &s_handler},
-	{'r', &r_handler},
-	{'p', &p_handler},
-	{'\0', NULL}
+	{ '%', &mod_handler },
+	{ 'c', &c_handler },
+	{ 'i', &i_handler },
+	{ 'u', &u_handler },
+	{ 'f', &f_handler },
+	{ 'b', &b_handler },
+	{ 'o', &o_handler },
+	{ 'd', &d_handler },
+	{ 'x', &x_handler },
+	{ 'X', &xx_handler },
+	{ 's', &s_handler },
+	{ 'r', &r_handler },
+	{ 'p', &p_handler },
+	{ '\0', NULL }
 };
 
 /*
@@ -90,8 +90,8 @@ char			**parse_style(const char *format, int8_t *i)
 		if (closing_bracket)
 		{
 			format = ft_strndup(
-						format + (*i) + 1,
-						closing_bracket - (format + (*i) + 1));
+				format + (*i) + 1,
+				closing_bracket - (format + (*i) + 1));
 			styles = ft_strsplit(format, ' ');
 		}
 		(*i) += ft_strlen(format) + 2;
@@ -226,10 +226,10 @@ t_data			extract_argument(t_format format, va_list *args)
 
 char			*formatter(const char **format, va_list *args, size_t *len)
 {
-	int32_t		i;
-	t_data		arg;
-	t_format	info;
 	char		*fstr;
+	t_format	info;
+	t_data		arg;
+	int32_t		i;
 
 	fstr = NULL;
 	info = parse_format((*format) + 1, args);

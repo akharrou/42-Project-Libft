@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 07:00:10 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/10 10:34:24 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/19 20:12:42 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,26 +37,31 @@
 #include "../Includes/stdlib_42.h"
 #include "../Includes/string_42.h"
 #include "../Includes/stdio_42.h"
+#include "../Includes/macros_42.h"
+#include <errno.h>
 
 char	*ft_readfiledes(int filedes)
 {
+	char	chunk[PAGE_SIZE + 1];
 	char	*file;
-	char	*line;
-	int		status;
+	int		ret;
 
-	if (filedes >= 0)
+	file = ft_strdup("");
+	ret = 1;
+	while (ret > 0)
 	{
-		file = ft_strdup("");
-		status = 1;
-		while (status > 0)
+		ret = read(filedes, &chunk, PAGE_SIZE);
+		if (ret >= 0)
 		{
-			status = ft_readline(filedes, &line);
-			file = ft_strappend(file, line, 1, 1);
+			chunk[ret] = '\0';
+			file = ft_strappend(file, chunk, 1, 0);
 		}
-		if (status < 0 && file)
-			free(file);
-		else
-			return (file);
 	}
-	return (NULL);
+	if (ret < 0 && file)
+	{
+		ft_printf("Error: %s{underlined}\n", strerror(errno));
+		free(file);
+		file = NULL;
+	}
+	return (file);
 }

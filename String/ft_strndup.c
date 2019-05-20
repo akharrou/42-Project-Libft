@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 15:14:55 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/19 11:50:16 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/19 20:05:04 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strndup(const char *s1, size_t n)
 		if (!dest)
 			return (NULL);
 		i = 0;
-		while (len--)
+		while (i < len)
 		{
 			dest[i] = s1[i];
 			i++;
