@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/12 17:49:08 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/13 17:39:52 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/20 12:45:44 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ char		*ft_strhex(const char *str, size_t len)
 			tmp = ft_itoa_base((uint8_t)str[i++], "0123456789abcdef", 2);
 			hexstr[j++] = tmp[0];
 			hexstr[j++] = tmp[1];
+			free(tmp);
 		}
-		free(tmp);
 	}
 	return (hexstr);
 }
