@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 09:07:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/19 17:09:28 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/19 21:48:14 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@
 # endif
 
 # ifndef NULL_
-#  define NULL_ (void *)0
+#  define NULL_ ((void *)0)
 # endif
 
 # ifndef SUCCESS

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 22:53:51 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/19 19:56:11 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/20 10:47:10 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,9 @@ char	*ft_readfile(char *filename)
 	if (filedes < 0)
 		ft_printf("Error: %s{underlined}\n", strerror(errno));
 	else
+	{
 		file = ft_readfiledes(filedes);
+		close(filedes);
+	}
 	return (file);
 }

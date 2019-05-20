@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/27 19:48:33 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/08 09:07:22 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/20 10:48:20 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@
 **         a buffer the size of the line, copies the line into the buffer
 **         and makes 'line' point to it.
 **
-**         NOTE: free'ing of what 'line' points to is not taken care of.
+**         NOTE: free'ing of what 'line' points to is the responsibility of
+**         the user.
 **
 **    RETURN VALUES
 **         If a line was successfully read, 1 is returned.

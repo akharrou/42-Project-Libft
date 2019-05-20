@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:31:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/19 10:32:30 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/20 10:31:31 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,10 @@ int		ft_ispunct(int c);
 int		ft_iscntrl(int c);
 int		ft_isprint(int c);
 int		ft_isprime(int n);
+
 int		ft_ischarset(int c, const char *seperators);
+int		ft_int_isany(int num1, int numbers, ...);
+int		ft_str_isany(const char *s1, int strings, ...);
 int		ft_isstrset(const char *str, const char **strset);
 int		ft_isstrsets(const char *str, int sets, ...);
 

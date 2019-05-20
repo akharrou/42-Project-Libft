@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/19 11:52:36 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/20 10:31:28 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -250,6 +250,8 @@ CTYPE       =   Ctype/ft_isupper.c                                            \
                 Ctype/ft_isprint.c                                            \
                 Ctype/ft_isprime.c                                            \
                 Ctype/ft_ischarset.c                                          \
+                Ctype/ft_int_isany.c                                          \
+                Ctype/ft_str_isany.c                                          \
                 Ctype/ft_isstrset.c                                           \
                 Ctype/ft_isstrsets.c                                          \
                                                                               \
