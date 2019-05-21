@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 11:48:01 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 12:31:00 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ int					vector_prepend(struct s_vector *self, void *data)
 int					vector_insert(struct s_vector *self, size_t i, void *data)
 int					vector_extend(struct s_vector *self, size_t n, ...)
 int					vector_extendleft(struct s_vector *self, size_t n, ...)
-int					*vector_pop(struct s_vector *self)
-int					*vector_popleft(struct s_vector *self)
-int					*vector_deque(struct s_vector *self)
+void				*vector_pop(struct s_vector *self)
+void				*vector_popleft(struct s_vector *self)
+void				*vector_deque(struct s_vector *self)
 int					vector_remove(struct s_vector *self, size_t i)
 int					vector_clear(struct s_vector *self)
 int					vector_resize(struct s_vector *self, size_t new_size)
