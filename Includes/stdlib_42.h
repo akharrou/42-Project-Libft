@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:35:17 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/14 15:27:13 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 10:10:40 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int				ft_memcmp(const void *dst, const void *src, size_t n);
 void			ft_memdel(void **ap);
 
 void			ft_bzero(void *str, size_t n);
+void			ft_bnull(void **array, size_t n);
 void			*ft_malloc(size_t size, char c);
 char			*ft_realloc(char *buffer, int init_size);
 
