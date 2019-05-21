@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_resize.c                                    :+:      :+:    :+:   */
+/*   vector_isfull.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 13:28:41 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 13:39:10 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/21 14:43:20 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/21 14:44:39 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_resize -- resize a vector to a new size
+**         vector_isfull -- check if a vector is full
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         vector_resize(struct s_vector *self);
+**         vector_isfull(struct s_vector *self);
 **
 **    PARAMETERS
 **
 **         struct s_vector *self     Pointer to a vector instance.
 **
-**         size_t new_size           The new size to which to resize
-**                                   the vector.
-**
 **    DESCRIPTION
-**         Description.
+**         Evaluates the load to capacity status of a vector and
+**         returns either full or not full, respectively 1 or
+**         0.
 **
 **    RETURN VALUES
-**         If successful returns 0; otherwise -1.
+**         If the vector is full 1 is returned; otherwise 0.
 */
 
 #include "../Includes/vector.h"
 
-int			vector_resize(struct s_vector *self, size_t new_size)
+int		vector_isfull(struct s_vector *self)
 {
-	return (0);
+	return ((*self).load >= (*self).capacity);
 }

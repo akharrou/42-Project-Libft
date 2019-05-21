@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_resize.c                                    :+:      :+:    :+:   */
+/*   vector_reverse.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 13:28:41 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 13:39:10 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/21 14:25:08 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/21 14:37:01 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_resize -- resize a vector to a new size
+**         vector_reverse -- reverse a vector in place
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         int
-**         vector_resize(struct s_vector *self);
+**         struct s_vector
+**         vector_reverse(struct s_vector vector);
 **
 **    PARAMETERS
 **
-**         struct s_vector *self     Pointer to a vector instance.
-**
-**         size_t new_size           The new size to which to resize
-**                                   the vector.
+**         struct s_vector vector    An instance of a vector.
 **
 **    DESCRIPTION
-**         Description.
+**         Reverses in place a vector and returns it.
 **
 **    RETURN VALUES
-**         If successful returns 0; otherwise -1.
+**         If successful returns the vector reversed; otherwise NULL.
 */
 
 #include "../Includes/vector.h"
 
-int			vector_resize(struct s_vector *self, size_t new_size)
+struct s_vector	vector_reverse(struct s_vector vector)
 {
-	return (0);
+	return (vector);
 }
+
+const struct s_vector_class vector = { .reverse = &vector_reverse };

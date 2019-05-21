@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 16:20:29 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/20 12:08:16 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 14:02:02 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 # include "trie.h"
 # include "hashtable.h"
 # include "dict.h"
+# include "vector.h"
 
 # include <fcntl.h>
 # include <sys/types.h>

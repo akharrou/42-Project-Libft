@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:53:27 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 11:54:18 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 14:46:55 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@
 
 int		vector_append(struct s_vector *self, void *data)
 {
+
 	return (0);
 }
