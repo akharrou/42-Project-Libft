@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:43:20 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 14:44:39 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 15:42:43 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@
 
 #include "../Includes/vector.h"
 
-int		vector_isfull(struct s_vector *self)
+inline int		vector_isfull(struct s_vector *self)
 {
 	return ((*self).load >= (*self).capacity);
 }

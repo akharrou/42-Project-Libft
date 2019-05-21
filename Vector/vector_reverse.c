@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:25:08 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 14:37:01 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 15:05:47 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,3 @@ struct s_vector	vector_reverse(struct s_vector vector)
 {
 	return (vector);
 }
-
-const struct s_vector_class vector = { .reverse = &vector_reverse };

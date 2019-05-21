@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:55:37 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 14:42:47 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 15:35:21 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@
 **         first free'd and then 'data' is inserted in its place.
 **
 **    RETURN VALUES
-**         If successful returns 0; otherwise -1.
+**         If successful returns 1; otherwise 0.
 */
 
 #include "../Includes/stdlib_42.h"
@@ -44,11 +44,11 @@
 
 int		vector_insert(struct s_vector *self, size_t i, void *data)
 {
-	if (i >= (*self).capacity)
-		return (-1);
-	if ((*self).vector[i] != NULL)
-		(*self).free((*self).vector[i]);
-	(*self).vector[i] = data;
-	(*self).load += 1;
-	return (0);
+	if (i >= self->capacity)
+		return (0);
+	if (self->vector[i] != NULL)
+		self->free(self->vector[i]);
+	self->vector[i] = data;
+	self->load += 1;
+	return (1);
 }

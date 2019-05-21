@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 07:25:17 by akharrou          #+#    #+#             */
-/*   Updated: 2019/04/26 23:38:01 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 15:52:43 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,18 @@ char		*ft_strnjoin(char const *s1, char const *s2, size_t len)
 	new_str = ft_strncat(new_str, s1, len);
 	if (len - s1_len > 0)
 		new_str = ft_strncat(new_str, s2, len - s1_len);
+	return (new_str);
+}
+
+char		*ft_strnjoinfre(char const *s1, char const *s2, size_t len,
+				int free_str)
+{
+	char	*new_str;
+
+	new_str = ft_strnjoin(s1, s2, len);
+	if (free_str & 1 && s1)
+		free((void *)s1);
+	if (free_str & 2 && s2)
+		free((void *)s2);
 	return (new_str);
 }

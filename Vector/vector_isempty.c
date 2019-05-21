@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:12:13 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 14:43:10 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 15:42:52 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@
 
 #include "../Includes/vector.h"
 
-int		vector_isempty(struct s_vector *self)
+inline int		vector_isempty(struct s_vector *self)
 {
 	return ((*self).load == 0);
 }

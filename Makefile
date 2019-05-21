@@ -6,12 +6,12 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/20 13:16:27 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/21 15:12:08 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC          =   gcc
-CFLAGS      =   -Wall -Wextra -Werror $(OPTIM_FLAGS)
+CFLAGS      =   -Wall -Wextra -Werror $(DEBUG_FLAGS)
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
@@ -73,6 +73,7 @@ SOURCES     =   $(STDIO)                                                      \
                                                                               \
                 $(BIGINT)                                                     \
                                                                               \
+                $(VECTOR)                                                     \
                 $(LIST)                                                       \
                 $(BTREE)                                                      \
                 $(TRIE)                                                       \
@@ -134,6 +135,7 @@ STDIO       =   Stdio/ft_readline.c                                           \
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
 STDLIB      =   Stdlib/ft_bzero.c                                             \
+                Stdlib/ft_bnull.c                                             \
                 Stdlib/ft_memset.c                                            \
                 Stdlib/ft_memset_addr.c                                       \
                 Stdlib/ft_memcpy.c                                            \
@@ -302,6 +304,17 @@ BIGINT      =   BigInt/bigint_add.c                                           \
                 BigInt/bigint_normalizer.c                                    \
                                                                               \
                 BigInt/arithmetic_dispatcher.c                                \
+
+# — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+
+VECTOR      =   Vector/vector_construct.c                                     \
+                                                                              \
+                Vector/vector_insert.c                                        \
+                Vector/vector_append.c                                        \
+                Vector/vector_isempty.c                                       \
+                Vector/vector_isfull.c                                        \
+                                                                              \
+                Vector/vector_reverse.c                                       \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 

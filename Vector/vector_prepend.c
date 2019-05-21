@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:54:53 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 11:55:22 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 14:51:54 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 **         Description.
 **
 **    RETURN VALUES
-**         If successful returns 0; otherwise -1.
+**         If successful returns 1; otherwise 0.
 */
 
 #include "../Includes/vector.h"

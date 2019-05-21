@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:05:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 12:25:42 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 14:51:54 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@
 **         the vector, they will be moved 'n' positions forward.
 **
 **    RETURN VALUES
-**         If successful returns 0; otherwise -1.
+**         If successful returns 1; otherwise 0.
 */
 
 #include "../Includes/vector.h"

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:53:27 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 14:46:55 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 15:52:28 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,24 @@
 **         Description.
 **
 **    RETURN VALUES
-**         If successful returns 0; otherwise -1.
+**         If successful returns 1; otherwise 0.
 */
 
 #include "../Includes/vector.h"
 
 int		vector_append(struct s_vector *self, void *data)
 {
+	int ret;
 
-	return (0);
+	ret = 1;
+	if (self->isfull(self))
+		ret = self->resize(self, self->capacity * VECTOR_SIZE_MULTIPLIER);
+	if (ret)
+	{
+		if (self->vector[self->load] != NULL)
+			self->free(self->vector[self->load]);
+		self->vector[self->load] = data;
+		self->load += 1;
+	}
+	return (ret);
 }

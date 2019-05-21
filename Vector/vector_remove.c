@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:13:51 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 13:15:51 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 14:51:54 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@
 **         at that index to point to NULL.
 **
 **    RETURN VALUES
-**         If successful returns 0; otherwise -1.
+**         If successful returns 1; otherwise 0.
 */
 
 #include "../Includes/vector.h"

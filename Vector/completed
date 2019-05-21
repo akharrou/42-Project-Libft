@@ -1,1 +1,4 @@
-vector_insert
+vector_insert.c
+vector_append.c
+vector_isempty.c
+vector_isfull.c
