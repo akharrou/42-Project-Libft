@@ -6,13 +6,13 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:43:20 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 15:42:43 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 10:41:04 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_isfull -- check if a vector is full
+**         vector_isfull -- check if a vector is at full capacity
 **
 **    SYNOPSIS
 **         #include <libft.h>

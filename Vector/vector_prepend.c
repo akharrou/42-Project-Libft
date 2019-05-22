@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:54:53 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 19:50:44 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 10:53:42 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,18 @@ int			vector_rightshift(struct s_vector *self, size_t n)
 	size_t	i;
 	size_t	j;
 
+	if (n > self->capacity)
+		n = self->capacity;
 	i = self->capacity - 1;
-	if (self->vector[i] != NULL)
-		self->load -= 1;
+	j = 0;
+	while (j < n)
+	{
+		if (self->vector[i - j] != NULL)
+			self->free(self->vector[i - j]);
+		++j;
+	}
 	while (i - (n - 1) > 0)
 	{
-		if (self->capacity)
-			self->free(self->vector[i]);
 		self->vector[i] = self->vector[i - n];
 		--i;
 	}
@@ -68,7 +73,18 @@ int			vector_rightshift(struct s_vector *self, size_t n)
 int			vector_leftshift(struct s_vector *self, size_t n)
 {
 	size_t	i;
+	size_t	j;
 
+	if (n > self->capacity)
+		n = self->capacity;
+	i = self->capacity - 1;
+	j = 0;
+	while (j < n)
+	{
+		if (self->vector[i - j] != NULL)
+			self->free(self->vector[i - j]);
+		++j;
+	}
 	i = 0;
 	if (i + n < self->capacity)
 	{
