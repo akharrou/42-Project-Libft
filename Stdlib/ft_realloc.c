@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 13:28:08 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 13:20:35 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 14:25:16 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,7 @@ void		*ft_realloc(void *ptr, size_t size)
 		return (NULL);
 	if (ptr)
 	{
-		ft_memcpy(new_memblock, ptr, size);
-		free(ptr);
+		new_memblock = ft_memcpy(new_memblock, ptr, size);
 		ptr = NULL;
 	}
 	return (new_memblock);

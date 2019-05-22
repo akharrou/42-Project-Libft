@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:28:41 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 13:25:30 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 14:27:12 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,15 @@
 #include "../Includes/stdlib_42.h"
 #include "../Includes/vector.h"
 
-struct s_vector			vector_resize(struct s_vector instance, size_t new_size)
+struct s_vector		vector_resize(struct s_vector instance, size_t new_size)
 {
-	struct s_vector		resized_vector;
+	void			*new_vector;
 
-	resized_vector = instance;
-	resized_vector.vector = ft_realloc(resized_vector.vector, new_size + 1);
-	if (resized_vector.vector != NULL)
-		resized_vector.capacity = new_size;
-	else
-		return (instance);
-	return (resized_vector);
+	new_vector = ft_realloc(instance.vector, ((new_size + 1) * sizeof(void *)));
+	if (new_vector != NULL)
+	{
+		instance.vector = new_vector;
+		instance.capacity = new_size;
+	}
+	return (instance);
 }

@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/22 13:30:07 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/22 15:54:38 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -321,8 +321,6 @@ VECTOR      =   Vector/vector_constructor.c                                   \
                 Vector/vector_insert.c                                        \
                 Vector/vector_extend.c                                        \
                 Vector/vector_extendleft.c                                    \
-                Vector/vector_getby_index.c                                   \
-                Vector/vector_getby_ref.c                                     \
                 Vector/vector_pop.c                                           \
                 Vector/vector_popleft.c                                       \
                 Vector/vector_deque.c                                         \
@@ -330,6 +328,9 @@ VECTOR      =   Vector/vector_constructor.c                                   \
                 Vector/vector_remove.c                                        \
                 Vector/vector_isfull.c                                        \
                 Vector/vector_isempty.c                                       \
+                # Vector/vector_getby_index.c                                 \
+                # Vector/vector_getby_ref.c                                   \
+                # Vector/vector_sort.c                                        \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 

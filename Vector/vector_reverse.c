@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:25:08 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 15:05:47 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 15:11:47 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,25 @@
 
 #include "../Includes/vector.h"
 
-struct s_vector	vector_reverse(struct s_vector vector)
+struct s_vector		vector_reverse(struct s_vector instance)
 {
-	return (vector);
+	void			*tmp;
+	size_t			len;
+	size_t			i;
+	size_t			j;
+
+	len = 0;
+	while (len < instance.length)
+	{
+		j = instance.length - len;
+		i = 0;
+		while (i < j)
+		{
+			tmp = instance.vector[i];
+			instance.vector[i] = instance.vector[i + 1];
+			instance.vector[i + 1] = tmp;
+		}
+		++len;
+	}
+	return (instance);
 }
