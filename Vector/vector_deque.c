@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:34:43 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 13:12:57 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 18:05:49 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@
 
 void		*vector_deque(struct s_vector *self)
 {
-	return (NULL);
+	return (self->popleft(self));
 }

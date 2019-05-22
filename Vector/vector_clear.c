@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:16:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 14:51:54 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 18:04:29 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,15 @@
 
 int			vector_clear(struct s_vector *self)
 {
-	return (0);
+	size_t	i;
+
+	i = 0;
+	while (i < self->capacity)
+	{
+		if (self->vector[i] != NULL)
+			self->free(self->vector[i]);
+		++i;
+	}
+	self->load = 0;
+	return (1);
 }

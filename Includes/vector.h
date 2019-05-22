@@ -6,12 +6,12 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 17:24:30 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 18:25:48 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-**  Header File -- Vector Class (i.e generic dynamic array)
+**  Header File -- Vector Class (i.e null terminated generic dynamic array)
 */
 
 #ifndef VECTOR_H

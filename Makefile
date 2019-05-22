@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/21 15:12:08 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/21 19:03:51 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -313,6 +313,13 @@ VECTOR      =   Vector/vector_construct.c                                     \
                 Vector/vector_append.c                                        \
                 Vector/vector_isempty.c                                       \
                 Vector/vector_isfull.c                                        \
+                Vector/vector_extend.c                                        \
+                Vector/vector_pop.c                                           \
+                Vector/vector_enque.c                                         \
+                Vector/vector_deque.c                                         \
+                Vector/vector_clear.c                                         \
+                Vector/vector_push.c                                          \
+                Vector/vector_remove.c                                        \
                                                                               \
                 Vector/vector_reverse.c                                       \
 

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:55:37 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 15:35:21 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 18:31:34 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,13 @@
 
 int		vector_insert(struct s_vector *self, size_t i, void *data)
 {
-	if (i >= self->capacity)
-		return (0);
-	if (self->vector[i] != NULL)
-		self->free(self->vector[i]);
-	self->vector[i] = data;
-	self->load += 1;
-	return (1);
+	if (i < self->capacity)
+	{
+		if (self->vector[i] != NULL)
+			self->free(self->vector[i]);
+		self->vector[i] = data;
+		self->load += 1;
+		return (1);
+	}
+	return (0);
 }

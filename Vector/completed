@@ -5,3 +5,8 @@ vector_isfull.c
 
 vector_extend.c
 vector_pop.c
+vector_enque.c
+vector_deque.c
+vector_clear.c
+vector_push.c
+vector_remove.c
