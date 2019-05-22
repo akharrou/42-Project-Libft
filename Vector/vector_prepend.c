@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:54:53 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 10:53:42 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 11:14:39 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,66 +39,4 @@ int		vector_prepend(struct s_vector *self, void *data)
 {
 
 	return (0);
-}
-
-int			vector_rightshift(struct s_vector *self, size_t n)
-{
-	size_t	i;
-	size_t	j;
-
-	if (n > self->capacity)
-		n = self->capacity;
-	i = self->capacity - 1;
-	j = 0;
-	while (j < n)
-	{
-		if (self->vector[i - j] != NULL)
-			self->free(self->vector[i - j]);
-		++j;
-	}
-	while (i - (n - 1) > 0)
-	{
-		self->vector[i] = self->vector[i - n];
-		--i;
-	}
-	j = 0;
-	while (j <= i)
-	{
-		self->vector[j] = NULL;
-		++j;
-	}
-	return (1);
-}
-
-int			vector_leftshift(struct s_vector *self, size_t n)
-{
-	size_t	i;
-	size_t	j;
-
-	if (n > self->capacity)
-		n = self->capacity;
-	i = self->capacity - 1;
-	j = 0;
-	while (j < n)
-	{
-		if (self->vector[i - j] != NULL)
-			self->free(self->vector[i - j]);
-		++j;
-	}
-	i = 0;
-	if (i + n < self->capacity)
-	{
-		while (self->vector[i + n] != NULL)
-		{
-			self->free(self->vector[i]);
-			self->vector[i] = self->vector[i + n];
-			++i;
-		}
-		while (self->vector[i] != NULL)
-		{
-			self->vector[i] = NULL;
-			++i;
-		}
-	}
-	return (1);
 }

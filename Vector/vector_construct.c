@@ -5,20 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 10:46:07 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 18:23:55 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/22 11:08:45 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/22 11:30:17 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_construct -- instantiate a vector
+**         vector_constructor -- instantiate a vector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         t_vector
-**         vector_construct(size_t capacity);
+**         vector_constructor(size_t capacity);
 **
 **    PARAMETERS
 **
@@ -35,13 +35,12 @@
 #include "../Includes/stdlib_42.h"
 #include "../Includes/vector.h"
 
-t_vector		vector_construct(size_t capacity, void (*vector_free)(void *))
+t_vector		vector_constructor(size_t capacity, void (*vector_free)(void *))
 {
 	t_vector	instance;
 
 	instance = (struct s_vector) {
-		.vector = (void **)malloc(sizeof(void *) * (capacity + 1)),
-		.load = 0, .capacity = 0,
+		.vector = NULL, .load = 0, .capacity = 0,
 		.push = &vector_push,
 		.enque = &vector_enque,
 		.append = &vector_append,
@@ -55,16 +54,21 @@ t_vector		vector_construct(size_t capacity, void (*vector_free)(void *))
 		.clear = &vector_clear,
 		.remove = &vector_remove,
 		.free = vector_free,
-		// .resize = &vector_resize,
 		.isempty = &vector_isempty, .isfull = &vector_isfull };
+	instance.vector = (void **)malloc(sizeof(void *) * (capacity + 1));
 	if (instance.vector != NULL)
+	{
 		instance.capacity = capacity;
-	if (instance.vector != NULL)
 		ft_bnull(instance.vector, instance.capacity + 1);
+	}
 	return (instance);
 }
 
-const struct s_vector_class vector = {
-	.construct = &vector_construct,
-	.reverse = &vector_reverse
+const struct s_vector_class vector =
+{
+	.constructor = &vector_constructor,
+	.reverse = &vector_reverse,
+	.resize = &vector_resize,
+	.rightshift = &vector_rightshift,
+	.leftshift = &vector_leftshift
 };

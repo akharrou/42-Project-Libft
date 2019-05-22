@@ -10,3 +10,6 @@ vector_deque.c
 vector_clear.c
 vector_push.c
 vector_remove.c
+
+vector_rightshift
+vector_leftshift
