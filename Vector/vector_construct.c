@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:08:45 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 11:30:17 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 13:26:10 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,17 @@ t_vector		vector_constructor(size_t capacity, void (*vector_free)(void *))
 	t_vector	instance;
 
 	instance = (struct s_vector) {
-		.vector = NULL, .load = 0, .capacity = 0,
+		.vector = NULL, .length = 0, .capacity = 0,
 		.push = &vector_push,
 		.enque = &vector_enque,
 		.append = &vector_append,
-		// .prepend = &vector_prepend,
+		.prepend = &vector_prepend,
 		.insert = &vector_insert,
 		.extend = &vector_extend,
-		// .extendleft = &vector_extendleft,
+		.extendleft = &vector_extendleft,
 		.pop = &vector_pop,
-		// .popleft = &vector_popleft,
-		// .deque = &vector_deque,
+		.popleft = &vector_popleft,
+		.deque = &vector_deque,
 		.clear = &vector_clear,
 		.remove = &vector_remove,
 		.free = vector_free,

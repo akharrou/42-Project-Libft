@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/21 19:03:51 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/22 13:30:07 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -307,21 +307,29 @@ BIGINT      =   BigInt/bigint_add.c                                           \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
-VECTOR      =   Vector/vector_construct.c                                     \
-                                                                              \
-                Vector/vector_insert.c                                        \
-                Vector/vector_append.c                                        \
-                Vector/vector_isempty.c                                       \
-                Vector/vector_isfull.c                                        \
-                Vector/vector_extend.c                                        \
-                Vector/vector_pop.c                                           \
-                Vector/vector_enque.c                                         \
-                Vector/vector_deque.c                                         \
-                Vector/vector_clear.c                                         \
-                Vector/vector_push.c                                          \
-                Vector/vector_remove.c                                        \
+VECTOR      =   Vector/vector_constructor.c                                   \
                                                                               \
                 Vector/vector_reverse.c                                       \
+                Vector/vector_resize.c                                        \
+                Vector/vector_rightshift.c                                    \
+                Vector/vector_leftshift.c                                     \
+                                                                              \
+                Vector/vector_push.c                                          \
+                Vector/vector_enque.c                                         \
+                Vector/vector_append.c                                        \
+                Vector/vector_prepend.c                                       \
+                Vector/vector_insert.c                                        \
+                Vector/vector_extend.c                                        \
+                Vector/vector_extendleft.c                                    \
+                Vector/vector_getby_index.c                                   \
+                Vector/vector_getby_ref.c                                     \
+                Vector/vector_pop.c                                           \
+                Vector/vector_popleft.c                                       \
+                Vector/vector_deque.c                                         \
+                Vector/vector_clear.c                                         \
+                Vector/vector_remove.c                                        \
+                Vector/vector_isfull.c                                        \
+                Vector/vector_isempty.c                                       \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 

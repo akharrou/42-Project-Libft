@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:35:17 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 10:10:40 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 12:59:32 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void			ft_memdel(void **ap);
 void			ft_bzero(void *str, size_t n);
 void			ft_bnull(void **array, size_t n);
 void			*ft_malloc(size_t size, char c);
-char			*ft_realloc(char *buffer, int init_size);
+void			*ft_realloc(void *ptr, size_t init_size);
 
 void			**ft_matrix_new(void **matrix, size_t height, size_t width,
 				size_t typesize);

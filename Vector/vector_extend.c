@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:02:57 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 17:30:38 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 12:19:31 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,5 @@ int		vector_extend(struct s_vector *self, size_t n, ...)
 		++i;
 	}
 	va_end(ap);
-	if (!ret)
-		return (0);
-	return (1);
+	return (ret);
 }

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:05:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 14:51:54 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 12:19:59 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,20 @@
 #include "../Includes/vector.h"
 #include <stdarg.h>
 
-/* TODO :
-**  - move every single element from the beginning by 'n'
-**  - insert the provided elements to the front of the vector
-*/
 int		vector_extendleft(struct s_vector *self, size_t n, ...)
 {
+	int		ret;
 	va_list	ap;
 	size_t	i;
 
 	va_start(ap, n);
+	ret = 1;
+	i = 0;
+	while (ret == 1 && i < n)
+	{
+		ret = self->prepend(self, va_arg(ap, void *));
+		++i;
+	}
 	va_end(ap);
-	return (0);
+	return (ret);
 }

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:13:51 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 18:17:30 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 12:14:13 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int		vector_remove(struct s_vector *self, size_t i)
 		{
 			self->free(self->vector[i]);
 			self->vector[i] = NULL;
-			self->load -= 1;
+			self->length -= 1;
 			return (1);
 		}
 	}

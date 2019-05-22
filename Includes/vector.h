@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 11:47:04 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 13:26:51 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
 typedef struct		s_vector
 {
 	void			**vector;
-	size_t			load;
+	size_t			length;
 	size_t			capacity;
 	\
 	int				(*insert)(struct s_vector *self, size_t i, void *data);

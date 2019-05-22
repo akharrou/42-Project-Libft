@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:16:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 18:04:29 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 12:08:33 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
 **         struct s_vector *self     Pointer to a vector instance.
 **
 **    DESCRIPTION
-**         Iterates over and frees every element of the vector pointing
-**         the pointers to NULL as its doing it.
+**         Iterates over and frees every element of the vector and
+**         each index of the vector is set to NULL.
 **
 **    RETURN VALUES
 **         If successful returns 1; otherwise 0.
@@ -43,8 +43,9 @@ int			vector_clear(struct s_vector *self)
 	{
 		if (self->vector[i] != NULL)
 			self->free(self->vector[i]);
+		self->vector[i] = NULL;
 		++i;
 	}
-	self->load = 0;
+	self->length = 0;
 	return (1);
 }

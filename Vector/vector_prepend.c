@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:54:53 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 11:14:39 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 12:21:14 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@
 
 int		vector_prepend(struct s_vector *self, void *data)
 {
-
+	if (self->isfull(self) == 1)
+		(*self) = vector.resize(*self, self->capacity * VECTOR_SIZE_MULTIPLIER);
+	(*self) = vector.rightshift(*self, 1);
+	if (self->isfull(self) == 0)
+		return (self->insert(self, 0, data));
 	return (0);
 }

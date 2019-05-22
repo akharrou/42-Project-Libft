@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:43:20 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 10:41:04 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 12:00:11 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 **         struct s_vector *self     Pointer to a vector instance.
 **
 **    DESCRIPTION
-**         Evaluates the load to capacity status of a vector and
+**         Evaluates the length to capacity status of a vector and
 **         returns either full or not full, respectively 1 or
 **         0.
 **
@@ -37,5 +37,5 @@
 
 inline int		vector_isfull(struct s_vector *self)
 {
-	return ((*self).load >= (*self).capacity);
+	return (self->length >= self->capacity);
 }
