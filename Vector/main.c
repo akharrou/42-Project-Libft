@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:52:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 15:54:52 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 17:19:37 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		main(int ac, char *av[])
 
 	t_vector students;
 
-	students = vector.construct(10, NULL);
+	students = vector.construct(10, &free);
 
 	i = 0;
 	while (i < students.capacity)
@@ -29,10 +29,10 @@ int		main(int ac, char *av[])
 		if (students.isempty(&students))
 			ft_printf("%s", "Is empty.\n");
 
-		// ft_asprintf(&value, "%s -- %i", "Jason", i);
-		students.append(&students, &"Jason");
+		ft_asprintf(&value, "%s -- %i", "Jason", i);
+		students.append(&students, value);
 
-		ft_printf("%i# -- %s\n", i, students.vector[i]);
+		ft_printf("%s\n", students.vector[i]);
 		i++;
 
 		if (students.isfull(&students))
@@ -44,6 +44,5 @@ int		main(int ac, char *av[])
 	(void)ret1;
 	(void)ret2;
 	(void)value;
-
 	return (0);
 }

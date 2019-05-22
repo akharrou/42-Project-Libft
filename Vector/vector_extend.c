@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:02:57 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 14:51:54 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 17:30:38 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,20 @@
 
 int		vector_extend(struct s_vector *self, size_t n, ...)
 {
+	int		ret;
 	va_list	ap;
 	size_t	i;
 
 	va_start(ap, n);
-
+	ret = 1;
+	i = 0;
+	while (ret == 1 && i < n)
+	{
+		ret = self->append(self, va_arg(ap, void *));
+		++i;
+	}
 	va_end(ap);
-	return (0);
+	if (!ret)
+		return (0);
+	return (1);
 }

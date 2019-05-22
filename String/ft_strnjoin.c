@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 07:25:17 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 15:52:43 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 17:17:14 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,17 @@ char		*ft_strnjoin(char const *s1, char const *s2, size_t len)
 {
 	char	*new_str;
 	size_t	s1_len;
-	size_t	src_len;
+	size_t	s2_len;
 
 	if (len < 1 && (!s1 && !s2))
 		return (NULL);
 	s1_len = ft_strlen(s1);
-	src_len = ft_strlen(s2);
-	if (len > s1_len + src_len)
-		len = s1_len + src_len;
-	if (!(new_str = malloc(len + 1)))
+	s2_len = ft_strnlen(s2, len);
+	if (len > s1_len + s2_len)
+		len = s1_len + s2_len;
+	if (!(new_str = (char *)ft_malloc(s1_len + len + 1, '\0')))
 		return (NULL);
-	ft_bzero(new_str, len);
-	new_str = ft_strncat(new_str, s1, len);
-	if (len - s1_len > 0)
-		new_str = ft_strncat(new_str, s2, len - s1_len);
-	return (new_str);
+	return (ft_strncat(ft_strcat(new_str, s1), s2, len));
 }
 
 char		*ft_strnjoinfre(char const *s1, char const *s2, size_t len,

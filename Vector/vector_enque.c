@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:34:53 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 14:51:54 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 17:40:19 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,6 @@ int		vector_enque(struct s_vector *self, void *data)
 {
 	return (0);
 }
+
+enque is the same as append
+and deque is the same as popleft

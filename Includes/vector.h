@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 15:01:23 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 17:24:30 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ typedef struct		s_vector
 	\
 	int				(*clear)(struct s_vector *self);
 	int				(*remove)(struct s_vector *self, size_t i);
-	int				(*free)(void *);
+	void			(*free)(void *);
 	\
 	int				(*isfull)(struct s_vector *self);
 	int				(*isempty)(struct s_vector *self);
@@ -61,17 +61,17 @@ void				*vector_popleft(struct s_vector *self);
 void				*vector_deque(struct s_vector *self);
 int					vector_clear(struct s_vector *self);
 int					vector_remove(struct s_vector *self, size_t i);
-int					vector_free(struct s_vector *self);
 int					vector_resize(struct s_vector *self, size_t new_size);
 int					vector_isfull(struct s_vector *self);
 int					vector_isempty(struct s_vector *self);
 
 extern const struct	s_vector_class {
-	struct s_vector	(*construct)(size_t capacity, int (*vector_free)(void *));
+	struct s_vector	(*construct)(size_t capacity, void (*vector_free)(void *));
 	struct s_vector	(*reverse)(struct s_vector vector);
 }					vector;
 
-struct s_vector		vector_construct(size_t capacity, int (*vector_free)(void *));
+struct s_vector		vector_construct(size_t capacity,
+					void (*vector_free)(void *));
 struct s_vector		vector_reverse(struct s_vector vector);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:46:07 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 15:20:24 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/21 17:24:47 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@
 #include "../Includes/stdlib_42.h"
 #include "../Includes/vector.h"
 
-t_vector		vector_construct(size_t capacity, int (*vector_free)(void *))
+t_vector		vector_construct(size_t capacity, void (*vector_free)(void *))
 {
 	t_vector	instance;
 
