@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:05:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 19:00:07 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 13:33:13 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int		vector_extendleft(struct s_vector *self, size_t n, ...)
 	i = 0;
 	while (ret == 1 && i < n)
 	{
-		ret = self->prepend(self, va_arg(ap, void *));
+		ret = self->prepend(self, va_arg(ap, void *));  /* TODO : optimize this is bad, move all elements by 'n' at once not at every append */
 		++i;
 	}
 	va_end(ap);
