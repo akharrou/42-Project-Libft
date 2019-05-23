@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/23 12:09:17 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/23 16:00:20 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,12 +53,14 @@ HEADERS     =   Includes/libft.h                                              \
                 Includes/math_42.h                                            \
                                                                               \
                 Includes/bigint.h                                             \
-                                                                              \
+                Includes/vector.h                                             \
                 Includes/list.h                                               \
                 Includes/btree.h                                              \
                 Includes/trie.h                                               \
                 Includes/hashtable.h                                          \
                 Includes/dict.h                                               \
+                                                                              \
+                Includes/crypt.h                                              \
                                                                               \
                 Includes/ft_readline.h                                        \
                 Includes/ft_printf.h                                          \

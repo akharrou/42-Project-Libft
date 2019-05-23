@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:39:25 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 10:18:46 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 16:00:35 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <string.h>
 # include <stdarg.h>
 # include <fcntl.h>
+
+int		ft_open(char *filename, int oflag);
+
+int		ft_readline(const int fd, char **line);
+char	*ft_readfile(char *filename);
+char	*ft_readfiledes(int filedes);
 
 int		ft_printf(const char *format, ...);
 int		ft_dprintf(int filedes, const char *format, ...);
@@ -45,11 +51,5 @@ void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putnbr_base(int nbr, char *base);
 void	ft_putnbr_base_fd(int nbr, char *base, int fd);
-
-int		ft_readline(const int fd, char **line);
-char	*ft_readfile(char *filename);
-char	*ft_readfiledes(int filedes);
-
-int		ft_open(char *filename, int oflag);
 
 #endif
