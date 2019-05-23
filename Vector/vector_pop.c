@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:27:29 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 12:48:03 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 16:28:16 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,12 @@ void		*vector_pop(struct s_vector *self)
 {
 	void	*element;
 
-	element = self->vector[self->length];
-	self->vector[self->length] = NULL;
-	self->length -= 1;
+	element = NULL;
+	if (self->length > 0)
+	{
+		element = self->vector[self->length - 1];
+		self->vector[self->length - 1] = NULL;
+		self->length -= 1;
+	}
 	return (element);
 }

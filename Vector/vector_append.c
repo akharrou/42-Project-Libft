@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:53:27 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 12:06:12 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 17:41:41 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 **         void *data                Pointer to some data.
 **
 **    DESCRIPTION
-**         Description.
+**         TODO .
 **
 **    RETURN VALUES
 **         If successful returns 1; otherwise 0.

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:31:25 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 12:49:26 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 16:16:05 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	*vector_popleft(struct s_vector *self)
 
 	element = self->vector[0];
 	self->vector[0] = NULL;
+	self->length -= 1;
 	(*self) = vector.leftshift(*self, 1);
 	return (element);
 }

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 13:28:08 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 14:25:16 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 18:40:49 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,23 @@
 **         #include <libft.h>
 **
 **         void *
-**         ft_realloc(void *ptr, size_t size);
+**         ft_realloc(void *ptr, size_t init_size, size_t new_size);
 **
 **    PARAMETERS
 **
-**         void *ptr       Pointer to a memory block previously
-**                         allocated with malloc or realloc.
+**         void *ptr            Pointer to a memory block previously
+**                              allocated with malloc or realloc.
 **
-**                         Alternatively, this can be a null
-**                         pointer, in which case a new block
-**                         is allocated (as if malloc was
-**                         called).
+**                              Alternatively, this can be a null
+**                              pointer, in which case a new block
+**                              is allocated (as if malloc was
+**                              called).
 **
-**         size_t size     New size for the memory block, in
-**                         bytes.
+**         size_t init_size     Size of the memory block that 'ptr'
+**                              points to, in bytes.
+**
+**         size_t new_size      New size for the new memory block,
+**                              in bytes.
 **
 **    DESCRIPTION
 **         The function may move the memory block to a new
@@ -41,7 +44,7 @@
 **         to the lesser of the new and old sizes, even if
 **         the block is moved to a new location. If the new
 **         size is larger, the value of the newly allocated
-**         portion is indeterminate.
+**         portion is zero'd out.
 **
 **         In case that 'ptr' is a null pointer, the function
 **         behaves like malloc, assigning a new block of
@@ -66,16 +69,18 @@
 #include "../Includes/stdlib_42.h"
 #include "../Includes/string_42.h"
 
-void		*ft_realloc(void *ptr, size_t size)
+void		*ft_realloc(void *ptr, size_t init_size, size_t new_size)
 {
 	char	*new_memblock;
 
-	new_memblock = (void *)malloc(size);
+	new_memblock = (void *)malloc(new_size);
 	if (!new_memblock)
 		return (NULL);
 	if (ptr)
 	{
-		new_memblock = ft_memcpy(new_memblock, ptr, size);
+		new_memblock = ft_memcpy(new_memblock, ptr, init_size);
+		bzero(new_memblock + init_size, new_size - init_size);
+		free(ptr);
 		ptr = NULL;
 	}
 	return (new_memblock);

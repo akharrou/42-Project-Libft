@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/22 15:54:38 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/22 17:37:41 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -425,7 +425,7 @@ $(NAME): $(OBJECTS)
 	@echo $(WHITE)
 
 %.o: %.c $(HEADERS)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -pipe -c $< -o $@
 	@echo "Compiling => " $<
 
 # House Keeping — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —

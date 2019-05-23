@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 13:31:27 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 18:56:32 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,10 @@ typedef struct		s_vector
 	int				(*isfull)(struct s_vector *self);
 	int				(*isempty)(struct s_vector *self);
 }					t_vector;
+
+typedef t_vector	t_array;
+typedef t_vector	t_stack;
+typedef t_vector	t_queue;
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **

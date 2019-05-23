@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:28:41 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 14:27:12 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 18:45:02 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,21 @@
 **                                     the vector.
 **
 **    DESCRIPTION
-**         Description.
+**         The function allocates a vector of 'new_size'
+**         size and copies over all the data of the vector
+**         into the newly allocated vector.
+**
+**         The content of the memory block is preserved up
+**         to the lesser of the new and old sizes. If the
+**         new size is larger, the newly allocated portion
+**         is zero'd out; i.e bzero()'d.
+**
+**         If the function fails to allocate the requested
+**         block of memory, the vector instance is returned
+**         unchanged.
 **
 **    RETURN VALUES
-**         Returns the vector resized.
+**         The vector resized is returned.
 */
 
 #include "../Includes/stdlib_42.h"
@@ -41,10 +52,13 @@ struct s_vector		vector_resize(struct s_vector instance, size_t new_size)
 {
 	void			*new_vector;
 
-	new_vector = ft_realloc(instance.vector, ((new_size + 1) * sizeof(void *)));
+	new_vector = ft_realloc(
+		instance.vector,
+		(sizeof(void *) * (instance.capacity + 1)),
+		(sizeof(void *) * (new_size + 1)));
 	if (new_vector != NULL)
 	{
-		instance.vector = new_vector;
+		instance.vector = (void **)new_vector;
 		instance.capacity = new_size;
 	}
 	return (instance);
