@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:08:45 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 17:07:17 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 19:45:42 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,14 @@ t_vector		vector_constructor(size_t capacity, void (*vector_free)(void *))
 	return (instance);
 }
 
+/*
+**  Definition of the Vector Class.
+*/
+
 const struct s_vector_class vector =
 {
 	.constructor = &vector_constructor,
+	.duplicate = &vector_duplicate,
 	.reverse = &vector_reverse,
 	.resize = &vector_resize,
 	.rightshift = &vector_rightshift,

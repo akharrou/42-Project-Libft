@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:35:17 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 17:54:22 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 19:43:12 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void			*ft_memalloc(size_t size);
 void			*ft_memset(void *dst, int c, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void			*ft_memdup(void *ptr, size_t size);
 void			*ft_memmove(void *dst, const void *src, size_t n);
 void			*ft_memchr(const void *str, int c, size_t n);
 int				ft_memcmp(const void *dst, const void *src, size_t n);
@@ -78,5 +79,8 @@ char			*ft_convert_base(char *nbr, char *base_from, char *base_to);
 unsigned int	ft_hash(const char *str);
 
 void			*ft_reverse_bytes(void *data, size_t size);
+
+// int				ft_mergesort(void **vector, size_t start, size_t end,
+// 					int (*cmp)(void *, void *)); /* TODO : implement this function */
 
 #endif

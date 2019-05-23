@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:02:57 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 12:19:31 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 18:59:11 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@
 **         to the (current) end of a vector.
 **
 **         If the vector does not contain enough space for the elements
-**         then the vector is resized first to accomodate them and then
-**         the elements are appended.
+**         then the vector is first resized to be able to accomodate them
+**         and then the elements are appended.
 **
 **    RETURN VALUES
 **         If successful returns 1; otherwise 0.

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:05:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 12:19:59 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 19:00:07 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,12 @@
 **    DESCRIPTION
 **         Adds multiple elements (in the order that they are given) to
 **         the front of the vector, if elements already exist at the front
-**         the vector, they will be moved 'n' positions forward.
+**         the vector, they will be shifted forward so as to not overwrite
+**         them.
+**
+**         If the vector does not contain enough space for the elements
+**         then the vector is first resized to be able to accomodate them
+**         and then the elements are prepended.
 **
 **    RETURN VALUES
 **         If successful returns 1; otherwise 0.

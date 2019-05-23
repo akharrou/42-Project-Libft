@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/22 17:37:41 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/22 19:48:42 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -140,6 +140,7 @@ STDLIB      =   Stdlib/ft_bzero.c                                             \
                 Stdlib/ft_memset_addr.c                                       \
                 Stdlib/ft_memcpy.c                                            \
                 Stdlib/ft_memccpy.c                                           \
+                Stdlib/ft_memdup.c                                            \
                 Stdlib/ft_memmove.c                                           \
                 Stdlib/ft_memchr.c                                            \
                 Stdlib/ft_memcmp.c                                            \
@@ -309,6 +310,7 @@ BIGINT      =   BigInt/bigint_add.c                                           \
 
 VECTOR      =   Vector/vector_constructor.c                                   \
                                                                               \
+                Vector/vector_duplicate.c                                     \
                 Vector/vector_reverse.c                                       \
                 Vector/vector_resize.c                                        \
                 Vector/vector_rightshift.c                                    \

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:25:08 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 15:11:47 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 19:29:39 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,14 @@ struct s_vector		vector_reverse(struct s_vector instance)
 	len = 0;
 	while (len < instance.length)
 	{
-		j = instance.length - len;
+		j = (instance.length - len) - 1;
 		i = 0;
 		while (i < j)
 		{
 			tmp = instance.vector[i];
 			instance.vector[i] = instance.vector[i + 1];
 			instance.vector[i + 1] = tmp;
+			++i;
 		}
 		++len;
 	}

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:28:41 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 18:45:02 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/22 19:08:47 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,16 @@
 **
 **    DESCRIPTION
 **         The function allocates a vector of 'new_size'
-**         size and copies over all the data of the vector
-**         into the newly allocated vector.
+**         size and copies over all the data of the old
+**         vector into the newly allocated vector.
 **
-**         The content of the memory block is preserved up
+**         The content of the old vector is preserved up
 **         to the lesser of the new and old sizes. If the
 **         new size is larger, the newly allocated portion
 **         is zero'd out; i.e bzero()'d.
 **
 **         If the function fails to allocate the requested
-**         block of memory, the vector instance is returned
-**         unchanged.
+**         vector, then the old vector is returned unchanged.
 **
 **    RETURN VALUES
 **         The vector resized is returned.
