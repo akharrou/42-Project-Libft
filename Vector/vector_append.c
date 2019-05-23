@@ -6,13 +6,13 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:53:27 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 17:41:41 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 11:04:00 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_append -- append an element to a vector
+**         vector_append -- add an element to the back of a vector
 **
 **    SYNOPSIS
 **         #include <libft.h>
@@ -27,7 +27,7 @@
 **         void *data                Pointer to some data.
 **
 **    DESCRIPTION
-**         TODO .
+**         Adds an element to end of the vector.
 **
 **    RETURN VALUES
 **         If successful returns 1; otherwise 0.

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:52:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 19:49:15 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 11:11:47 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int		main(int ac, char *av[])
 	/* RESIZING (ADDING WAY MORE THAN CAPACITY) */
 
 	i = 0;
-	while (i < 100)
+	while (i < 20)
 	{
 		ft_asprintf((char **)&value, "%s%i", "Jason", i);
 		students.enque(&students, value);
@@ -94,21 +94,73 @@ int		main(int ac, char *av[])
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
 
 
+	/* RIGHT SHIFTING */
+
+	// ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[RIGHT SHIFT START]-- -- -- -- -- -- -- -- --\n\n");
+
+	// ft_printf("%s", "BEFORE RIGHT SHIFT:\n\n");
+	// i = 0;
+	// while (i < students.length)
+	// {
+	// 	ft_printf("%3i: %-20s\n", i, students.vector[i]);
+	// 	++i;
+	// }
+
+	// students = vector.rightshift(students, 5);
+
+	// ft_printf("%s", "\n\nAFTER LEFT SHIFT:\n\n");
+	// i = 0;
+	// while (i < students.length)
+	// {
+	// 	ft_printf("%3i: %-20s\n", i, students.vector[i]);
+	// 	++i;
+	// }
+
+	// ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[RIGHT SHIFT END]-- -- -- -- -- -- -- -- --\n\n");
+
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
+
+
+	/* LEFT SHIFTING */
+
+	// ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[LEFT SHIFT START]-- -- -- -- -- -- -- -- --\n\n");
+
+	// ft_printf("%s", "BEFORE LEFT SHIFT:\n\n");
+	// i = 0;
+	// while (i < students.length)
+	// {
+	// 	ft_printf("%3i: %-20s\n", i, students.vector[i]);
+	// 	++i;
+	// }
+
+	// students = vector.leftshift(students, 5);
+
+	// ft_printf("%s", "\n\nAFTER LEFT SHIFT:\n\n");
+	// i = 0;
+	// while (i < students.length)
+	// {
+	// 	ft_printf("%3i: %-20s\n", i, students.vector[i]);
+	// 	++i;
+	// }
+
+	// ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[LEFT SHIFT END]-- -- -- -- -- -- -- -- --\n\n");
+
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
+
+
 	/* DUPLICATION */
 
-	t_vector students_dup = vector.duplicate(students); /* TODO : check that this works */
+	// t_vector students_dup = vector.duplicate(students);
 
-	i = 0;
-	while (students_dup.length != 0)
-	{
-		ft_printf("%3i: %-20s> Length: %-7i> Capacity: %i\n", students_dup.length - 1, students_dup.vector[students_dup.length - 1], students_dup.length, students_dup.capacity);
-		ft_printf("%3i: Popped ———>  %-20s\n\n", students_dup.length - 1, students_dup.pop(&students_dup));
-
-		if (students_dup.isempty(&students_dup))
-			ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[EMPTY]-- -- -- -- -- -- -- -- --\n\n");
-	}
-
-	ft_printf("%3i: Popped ———>  %-20s\n\n", students_dup.length - 1, students_dup.pop(&students_dup));
+	// ft_printf("\n\n|%3s:|      %-20s|      %-20s|\n\n", "IDX", "STUDENTS VECTOR", "DUPLICATE VECTOR");
+	// i = 0;
+	// while (i < students.length && i < students_dup.length)
+	// {
+	// 	ft_printf("|%3i:|      %p|      %p|\n\n", i, students.vector[i], students_dup.vector[i]);
+	// 	++i;
+	// }
 
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
@@ -167,17 +219,17 @@ int		main(int ac, char *av[])
 
 	/* POP'ING (NORMAL) */
 
-	i = 0;
-	while (students.length != 0)
-	{
-		ft_printf("%3i: %-20s> Length: %-7i> Capacity: %i\n", students.length - 1, students.vector[students.length - 1], students.length, students.capacity);
-		ft_printf("%3i: Popped ———>  %-20s\n\n", students.length - 1, students.pop(&students));
+	// i = 0;
+	// while (students.length != 0)
+	// {
+	// 	ft_printf("%3i: %-20s> Length: %-7i> Capacity: %i\n", students.length - 1, students.vector[students.length - 1], students.length, students.capacity);
+	// 	ft_printf("%3i: Popped ———>  %-20s\n\n", students.length - 1, students.pop(&students));
 
-		if (students.isempty(&students))
-			ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[EMPTY]-- -- -- -- -- -- -- -- --\n\n");
-	}
+	// 	if (students.isempty(&students))
+	// 		ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[EMPTY]-- -- -- -- -- -- -- -- --\n\n");
+	// }
 
-	ft_printf("%3i: Popped ———>  %-20s\n\n", students.length - 1, students.pop(&students));
+	// ft_printf("%3i: Popped ———>  %-20s\n\n", students.length - 1, students.pop(&students));
 
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */

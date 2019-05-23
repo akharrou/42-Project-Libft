@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:39:25 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/18 07:56:41 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 10:18:46 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		ft_vdprintf(int filedes, const char *format, va_list *args);
 int		ft_vsprintf(char *str, const char *format, va_list *args);
 int		ft_vasprintf(char **ret, const char *format, va_list *args);
 
-void	ft_putbits(unsigned long long num, int n_bits);
+void	ft_putbits(void *data, size_t size);
 void	ft_putbyte(int c);
 void	ft_putbyte_fd(int c, int fd);
 void	ft_putbytes(const char *byte_str);

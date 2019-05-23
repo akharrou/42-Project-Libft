@@ -6,13 +6,13 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:54:53 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 12:21:14 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 11:03:31 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_prepend -- brief
+**         vector_prepend -- add an element to the front of a vector
 **
 **    SYNOPSIS
 **         #include <libft.h>
@@ -27,7 +27,8 @@
 **         void *data                Pointer to some data.
 **
 **    DESCRIPTION
-**         Description.
+**         Adds an element to the beginning of the vector (i.e at
+**         index 0).
 **
 **    RETURN VALUES
 **         If successful returns 1; otherwise 0.

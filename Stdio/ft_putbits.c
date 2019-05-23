@@ -3,52 +3,63 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putbits.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/18 10:07:24 by akharrou          #+#    #+#             */
-/*   Updated: 2019/03/18 10:31:25 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 10:49:17 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         ft_putbits -- print integer in its bit form
+**         ft_putbits -- print bit representation of some data
 **
 **    SYNOPSIS
-**         #include "stdio_42.h"
+**         #include <libft.h>
 **
 **         void
-**         ft_putbits(unsigned long long num, int n_bits);
+**         ft_putbits(void *data, size_t size);
 **
 **    PARAMETERS
 **
-**         unsigned long long num     TODO
+**         void *data       Pointer to some data.
 **
-**         int n_bits                 TODO
+**         size_t size      Size of the data.
 **
 **    DESCRIPTION
-**         TODO.
+**         Prints to standard out the bits of the pointed to data.
 **
 **    RETURN VALUES
-**         TODO.
+**         None.
 */
 
 #include "../Includes/stdio_42.h"
-#include "../Includes/math_42.h"
+#include "../Includes/stdint_42.h"
 
-void	ft_putbits(unsigned long long num, int n_bits)
+void		ft_putbits(void *data, size_t size)
 {
-	unsigned long long	temp;
-	int					i;
+	uint8_t	*bytestr;
+	uint8_t	bit;
+	size_t	i;
+	size_t	j;
+	size_t	k;
 
+	bytestr = (uint8_t *)(data);
 	i = 0;
-	temp = ft_powll(2, n_bits - 1);
-	while (i < n_bits)
+	k = size - 1;
+	while (i < size)
 	{
-		ft_putchar(((num & temp) == 0) ? '0' : '1');
-		if ((++i % 4) == 0)
+		j = 0;
+		while (j < 8)
+		{
+			bit = (uint8_t)(bytestr[k] & (1 << (7 - j)));
+			ft_putchar(((bit) ? '1' : '0'));
+			++j;
+		}
+		--k;
+		++i;
+		if (i < size)
 			ft_putchar(' ');
-		num = num << 1;
 	}
-	ft_putchar('\n');
+	return ;
 }

@@ -6,13 +6,13 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:34:53 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 18:06:01 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 10:55:27 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_enque -- enque an element in a vector
+**         vector_enque -- enque an element to the back of a queue
 **
 **    SYNOPSIS
 **         #include <libft.h>
@@ -27,7 +27,8 @@
 **         void *data                Pointer to some data.
 **
 **    DESCRIPTION
-**         Description.
+**         Adds an element to the end of a queue (i.e appends to
+**         the end of a vector).
 **
 **    RETURN VALUES
 **         If successful returns 1; otherwise 0.
