@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/22 19:48:42 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/23 12:09:17 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,13 +72,14 @@ SOURCES     =   $(STDIO)                                                      \
                 $(MATH)                                                       \
                                                                               \
                 $(BIGINT)                                                     \
-                                                                              \
                 $(VECTOR)                                                     \
                 $(LIST)                                                       \
                 $(BTREE)                                                      \
                 $(TRIE)                                                       \
                 $(HASHTABLE)                                                  \
                 $(DICT)                                                       \
+                                                                              \
+                $(CRYPT)                                                      \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
@@ -416,6 +417,30 @@ DICT        =   Dicts/dict_new.c                                              \
                 Dicts/dict_getentry_fast.c                                    \
                 Dicts/dict_remove.c                                           \
                 Dicts/dict_clear.c                                            \
+
+# — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+
+CRYPT       =                                                                 \
+                                                                              \
+                Crypt/MD5/ft_md5.c                                            \
+                Crypt/MD5/md5_process.c                                       \
+                Crypt/MD5/md5_utils.c                                         \
+                                                                              \
+                Crypt/SHA2-224/ft_sha224.c                                    \
+                Crypt/SHA2-224/sha224_process.c                               \
+                Crypt/SHA2-224/sha224_utils.c                                 \
+                                                                              \
+                Crypt/SHA2-256/ft_sha256.c                                    \
+                Crypt/SHA2-256/sha256_process.c                               \
+                Crypt/SHA2-256/sha256_utils.c                                 \
+                                                                              \
+                Crypt/SHA2-384/ft_sha384.c                                    \
+                Crypt/SHA2-384/sha384_process.c                               \
+                Crypt/SHA2-384/sha384_utils.c                                 \
+                                                                              \
+                Crypt/SHA2-512/ft_sha512.c                                    \
+                Crypt/SHA2-512/sha512_process.c                               \
+                Crypt/SHA2-512/sha512_utils.c                                 \
 
 # Main — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
