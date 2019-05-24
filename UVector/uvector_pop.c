@@ -12,20 +12,20 @@
 
 /*
 **    NAME
-**         uvector_pop -- pop an element from the end of a vector
+**         uvector_pop -- pop an element from the end of a uvector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         void *
-**         uvector_pop(struct s_vector *self);
+**         uvector_pop(struct s_uvector *self);
 **
 **    PARAMETERS
 **
-**         struct s_vector *self     Pointer to a vector instance.
+**         struct s_uvector *self     Pointer to a uvector instance.
 **
 **    DESCRIPTION
-**         Pops off the (current) last element of the vector and
+**         Pops off the (current) last element of the uvector and
 **         returns it.
 **
 **         The index at which the element was is made to point to
@@ -37,15 +37,15 @@
 
 #include "../Includes/uvector.h"
 
-void		*uvector_pop(struct s_vector *self)
+void		*uvector_pop(struct s_uvector *self)
 {
 	void	*element;
 
 	element = NULL;
 	if (self->length > 0)
 	{
-		element = self->vector[self->length - 1];
-		self->vector[self->length - 1] = NULL;
+		element = self->uvector[self->length - 1];
+		self->uvector[self->length - 1] = NULL;
 		self->length -= 1;
 	}
 	return (element);

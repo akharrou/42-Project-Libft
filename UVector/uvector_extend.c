@@ -6,23 +6,23 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:02:57 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 13:33:18 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 10:02:24 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         uvector_extend -- append multiple elements to a vector
+**         uvector_extend -- append multiple elements to a uvector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         uvector_extend(struct s_vector *self, size_t n, ...);
+**         uvector_extend(struct s_uvector *self, size_t n, ...);
 **
 **    PARAMETERS
 **
-**         struct s_vector *self     Pointer to a vector instance.
+**         struct s_uvector *self     Pointer to a uvector instance.
 **
 **         size_t n                  Number of elements passed as
 **                                   additional arguments.
@@ -32,10 +32,10 @@
 **
 **    DESCRIPTION
 **         Adds multiple elements (in the order that they are given)
-**         to the (current) end of a vector.
+**         to the (current) end of a uvector.
 **
-**         If the vector does not contain enough space for the elements
-**         then the vector is first resized to be able to accomodate them
+**         If the uvector does not contain enough space for the elements
+**         then the uvector is first resized to be able to accomodate them
 **         and then the elements are appended.
 **
 **    RETURN VALUES
@@ -45,7 +45,7 @@
 #include "../Includes/uvector.h"
 #include <stdarg.h>
 
-int		uvector_extend(struct s_vector *self, size_t n, ...)
+int		uvector_extend(struct s_uvector *self, size_t n, ...)
 {
 	int		ret;
 	va_list	ap;
@@ -56,7 +56,7 @@ int		uvector_extend(struct s_vector *self, size_t n, ...)
 	i = 0;
 	while (ret == 1 && i < n)
 	{
-		ret = self->append(self, va_arg(ap, void *));  /* TODO : optimize this is bad, move all elements by 'n' at once not at every append */
+		ret = self->append(self, va_arg(ap, void *));
 		++i;
 	}
 	va_end(ap);

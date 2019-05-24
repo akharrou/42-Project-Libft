@@ -12,23 +12,23 @@
 
 /*
 **    NAME
-**         uvector_remove -- remove the element at index 'i' in a vector
+**         uvector_remove -- remove the element at index 'i' in a uvector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         uvector_remove(struct s_vector *self, size_t i);
+**         uvector_remove(struct s_uvector *self, size_t i);
 **
 **    PARAMETERS
 **
-**         struct s_vector *self     Pointer to a vector instance.
+**         struct s_uvector *self     Pointer to a uvector instance.
 **
 **         size_t i                  The index at which to find the
 **                                   element to remove.
 **
 **    DESCRIPTION
-**         Finds & frees and element in the vector and sets the pointer
+**         Finds & frees and element in the uvector and sets the pointer
 **         at that index to point to NULL.
 **
 **    RETURN VALUES
@@ -37,14 +37,14 @@
 
 #include "../Includes/uvector.h"
 
-int		uvector_remove(struct s_vector *self, size_t i)
+int		uvector_remove(struct s_uvector *self, size_t i)
 {
 	if (i < self->capacity)
 	{
-		if (self->vector[i] != NULL)
+		if (self->uvector[i] != NULL)
 		{
-			self->free(self->vector[i]);
-			self->vector[i] = NULL;
+			self->free(self->uvector[i]);
+			self->uvector[i] = NULL;
 			self->length -= 1;
 			return (1);
 		}

@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   uvector_prepend.c                                   :+:      :+:    :+:   */
+/*   uvector_appendleft.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:54:53 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 18:21:42 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/24 10:18:30 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/24 10:28:03 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         uvector_prepend -- add an element to the front of a vector
+**         uvector_appendleft -- add an element to the front of a uvector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         uvector_prepend(struct s_vector *self, t_data data);
+**         uvector_appendleft(struct s_uvector *self, void *data);
 **
 **    PARAMETERS
 **
-**         struct s_vector *self     Pointer to a vector instance.
+**         struct s_uvector *self     Pointer to a uvector instance.
 **
-**         t_data data                Pointer to some data.
+**         void *data                Pointer to some data.
 **
 **    DESCRIPTION
-**         Adds an element to the beginning of the vector (i.e at
+**         Adds an element to the beginning of the uvector (i.e at
 **         index 0).
 **
 **    RETURN VALUES
@@ -36,11 +36,11 @@
 
 #include "../Includes/uvector.h"
 
-int		uvector_prepend(struct s_vector *self, t_data data)
+int		uvector_appendleft(struct s_uvector *self, void *data)
 {
 	if (self->isfull(self) == 1)
-		(*self) = vector.resize(*self, self->capacity * uvector_SIZE_MULTIPLIER);
-	(*self) = vector.rightshift(*self, 1);
+		(*self) = uvector.resize(*self, self->capacity * uvector_SIZE_MULTIPLIER);
+	(*self) = uvector.rightshift(*self, 1);
 	if (self->isfull(self) == 0)
 		return (self->insert(self, 0, data));
 	return (0);

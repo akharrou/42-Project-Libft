@@ -6,31 +6,31 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:55:37 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 18:21:42 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 19:25:52 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         uvector_insert -- insert an element in a vector at index 'i'
+**         uvector_insert -- insert an element in a uvector at index 'i'
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         uvector_insert(struct s_vector *self);
+**         uvector_insert(struct s_uvector *self);
 **
 **    PARAMETERS
 **
-**         struct s_vector *self     Pointer to a vector instance.
+**         struct s_uvector *self     Pointer to a uvector instance.
 **
-**         size_t i                  Index in the vector at which to
+**         size_t i                  Index in the uvector at which to
 **                                   insert the data.
 **
-**         t_data data                Pointer to some data.
+**         void *data                Pointer to some data.
 **
 **    DESCRIPTION
-**         If possible inserts 'data' in the vector at index 'i'.
+**         If possible inserts 'data' in the uvector at index 'i'.
 **
 **         If some element exists at that index, then the element is
 **         first free'd and then 'data' is inserted in its place.
@@ -42,13 +42,13 @@
 #include "../Includes/stdlib_42.h"
 #include "../Includes/uvector.h"
 
-int		uvector_insert(struct s_vector *self, size_t i, t_data data)
+int		uvector_insert(struct s_uvector *self, size_t i, void *data)
 {
 	if (i < self->capacity)
 	{
-		if (self->vector[i] != NULL)
-			self->free(self->vector[i]);
-		self->vector[i] = data;
+		if (self->uvector[i] != NULL)
+			self->free(self->uvector[i]);
+		self->uvector[i] = data;
 		self->length += 1;
 		return (1);
 	}

@@ -6,23 +6,24 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:05:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 13:33:13 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 12:26:22 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         uvector_extendleft -- prepend multiple elements to a vector
+**         uvector_extendleft -- append to the left multiple elements to a
+**                              uvector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         uvector_extendleft(struct s_vector *self, size_t n, ...);
+**         uvector_extendleft(struct s_uvector *self, size_t n, ...);
 **
 **    PARAMETERS
 **
-**         struct s_vector *self     Pointer to a vector instance.
+**         struct s_uvector *self     Pointer to a uvector instance.
 **
 **         size_t n                  Number of elements passed as
 **                                   additional arguments.
@@ -31,13 +32,14 @@
 **                                   to data.
 **
 **    DESCRIPTION
-**         Adds multiple elements (in the order that they are given) to
-**         the front of the vector, if elements already exist at the front
-**         the vector, they will be shifted forward so as to not overwrite
+**         Adds multiple elements, one element at a time (in the order that
+**         they are given) to
+**         the front of the uvector, if elements already exist at the front
+**         the uvector, they will be shifted forward so as to not overwrite
 **         them.
 **
-**         If the vector does not contain enough space for the elements
-**         then the vector is first resized to be able to accomodate them
+**         If the uvector does not contain enough space for the elements
+**         then the uvector is first resized to be able to accomodate them
 **         and then the elements are prepended.
 **
 **    RETURN VALUES
@@ -47,18 +49,21 @@
 #include "../Includes/uvector.h"
 #include <stdarg.h>
 
-int		uvector_extendleft(struct s_vector *self, size_t n, ...)
+int		uvector_extendleft(struct s_uvector *self, size_t n, ...)
 {
 	int		ret;
 	va_list	ap;
 	size_t	i;
 
+	while (self->length + n >= self->capacity)
+		(*self) = uvector.resize(*self, self->capacity * uvector_SIZE_MULTIPLIER);
+	(*self) = uvector.rightshift(*self, n);
 	va_start(ap, n);
 	ret = 1;
-	i = 0;
-	while (ret == 1 && i < n)
+	i = 1;
+	while (ret == 1 && i <= n)
 	{
-		ret = self->prepend(self, va_arg(ap, void *));  /* TODO : optimize this is bad, move all elements by 'n' at once not at every append */
+		ret = self->insert(self, (n - i), va_arg(ap, void *));
 		++i;
 	}
 	va_end(ap);

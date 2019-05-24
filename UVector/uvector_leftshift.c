@@ -12,31 +12,31 @@
 
 /*
 **    NAME
-**         uvector_leftshift -- left shift all elements of a vector by 'n'
+**         uvector_leftshift -- left shift all elements of a uvector by 'n'
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         struct s_vector
-**         uvector_leftshift(struct s_vector instance, size_t n);
+**         struct s_uvector
+**         uvector_leftshift(struct s_uvector instance, size_t n);
 **
 **    PARAMETERS
 **
-**         struct s_vector instance    A vector instance.
+**         struct s_uvector instance    A uvector instance.
 **
 **         size_t n                    Number of positions to left shift
 **                                     each element.
 **
 **    DESCRIPTION
-**         Moves each element of the vector to the left by 'n' indexes.
+**         Moves each element of the uvector to the left by 'n' indexes.
 **
 **    RETURN VALUES
-**         Returns the vector leftshifted.
+**         Returns the uvector leftshifted.
 */
 
 #include "../Includes/uvector.h"
 
-struct s_vector		uvector_leftshift(struct s_vector instance, size_t n)
+struct s_uvector		uvector_leftshift(struct s_uvector instance, size_t n)
 {
 	size_t	i;
 
@@ -45,19 +45,19 @@ struct s_vector		uvector_leftshift(struct s_vector instance, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (instance.vector[i] != NULL)
-			instance.free(instance.vector[i]);
+		if (instance.uvector[i] != NULL)
+			instance.free(instance.uvector[i]);
 		++i;
 	}
 	i = 0;
 	while ((i + n) < instance.capacity)
 	{
-		instance.vector[i] = instance.vector[i + n];
+		instance.uvector[i] = instance.uvector[i + n];
 		++i;
 	}
 	while (i < instance.capacity)
 	{
-		instance.vector[i] = NULL;
+		instance.uvector[i] = NULL;
 		++i;
 	}
 	return (instance);

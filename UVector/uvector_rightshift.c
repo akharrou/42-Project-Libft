@@ -12,31 +12,31 @@
 
 /*
 **    NAME
-**         uvector_rightshift -- right shift all elements of a vector by 'n'
+**         uvector_rightshift -- right shift all elements of a uvector by 'n'
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         struct s_vector
-**         uvector_rightshift(struct s_vector instance, size_t n);
+**         struct s_uvector
+**         uvector_rightshift(struct s_uvector instance, size_t n);
 **
 **    PARAMETERS
 **
-**         struct s_vector instance    A vector instance.
+**         struct s_uvector instance    A uvector instance.
 **
 **         size_t n                    Number of positions to right shift
 **                                     each element.
 **
 **    DESCRIPTION
-**         Moves each element of the vector to the right by 'n' indexes.
+**         Moves each element of the uvector to the right by 'n' indexes.
 **
 **    RETURN VALUES
-**         Returns the vector rightshifted.
+**         Returns the uvector rightshifted.
 */
 
 #include "../Includes/uvector.h"
 
-struct s_vector		uvector_rightshift(struct s_vector instance, size_t n)
+struct s_uvector		uvector_rightshift(struct s_uvector instance, size_t n)
 {
 	size_t			i;
 	size_t			j;
@@ -47,19 +47,19 @@ struct s_vector		uvector_rightshift(struct s_vector instance, size_t n)
 	j = 0;
 	while (j < n)
 	{
-		if (instance.vector[i - j] != NULL)
-			instance.free(instance.vector[i - j]);
+		if (instance.uvector[i - j] != NULL)
+			instance.free(instance.uvector[i - j]);
 		++j;
 	}
 	while (i - (n - 1) > 0)
 	{
-		instance.vector[i] = instance.vector[i - n];
+		instance.uvector[i] = instance.uvector[i - n];
 		--i;
 	}
 	j = 0;
 	while (j <= i)
 	{
-		instance.vector[j] = NULL;
+		instance.uvector[j] = NULL;
 		++j;
 	}
 	return (instance);

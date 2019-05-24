@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   uvector_duplicate.c                                 :+:      :+:    :+:   */
+/*   uvector_copy.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,21 +12,21 @@
 
 /*
 **    NAME
-**         uvector_duplicate -- create a shallow copy of a vector
+**         uvector_copy -- create a shallow copy of a uvector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         struct s_vector
-**         uvector_duplicate(struct s_vector instance);
+**         struct s_uvector
+**         uvector_copy(struct s_uvector instance);
 **
 **    PARAMETERS
 **
-**         struct s_vector self     A vector instance.
+**         struct s_uvector self     A uvector instance.
 **
 **    DESCRIPTION
-**         Makes a duplicate of a vector and returns
-**         it. The vector only in as far as the pointers
+**         Makes a duplicate of a uvector and returns
+**         it. The uvector only in as far as the pointers
 **         to each data is copied. The data to which
 **         the pointers point to is not copied (it is
 **         not a deep copy).
@@ -40,14 +40,14 @@
 #include "../Includes/stdlib_42.h"
 #include "../Includes/uvector.h"
 
-struct s_vector		uvector_duplicate(struct s_vector instance)
+struct s_uvector		uvector_copy(struct s_uvector instance)
 {
-	struct s_vector		duplicate;
+	struct s_uvector		duplicate;
 
-	duplicate = vector.constructor(instance.capacity, instance.free);
-	duplicate.vector = ft_memdup(
-		instance.vector, (instance.capacity + 1) * sizeof(void *));
-	if (!duplicate.vector)
+	duplicate = uvector.constructor(instance.capacity, instance.free);
+	duplicate.uvector = ft_memdup(
+		instance.uvector, (instance.capacity + 1) * sizeof(void *));
+	if (!duplicate.uvector)
 		return (instance);
 	duplicate.length = instance.length;
 	return (duplicate);

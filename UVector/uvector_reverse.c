@@ -12,28 +12,28 @@
 
 /*
 **    NAME
-**         uvector_reverse -- reverse a vector in place
+**         uvector_reverse -- reverse a uvector in place
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         struct s_vector
-**         uvector_reverse(struct s_vector vector);
+**         struct s_uvector
+**         uvector_reverse(struct s_uvector uvector);
 **
 **    PARAMETERS
 **
-**         struct s_vector vector    An instance of a vector.
+**         struct s_uvector uvector    An instance of a uvector.
 **
 **    DESCRIPTION
-**         Reverses in place a vector and returns it.
+**         Reverses in place a uvector and returns it.
 **
 **    RETURN VALUES
-**         If successful returns the vector reversed; otherwise NULL.
+**         If successful returns the uvector reversed; otherwise NULL.
 */
 
 #include "../Includes/uvector.h"
 
-struct s_vector		uvector_reverse(struct s_vector instance)
+struct s_uvector		uvector_reverse(struct s_uvector instance)
 {
 	void			*tmp;
 	size_t			len;
@@ -47,9 +47,9 @@ struct s_vector		uvector_reverse(struct s_vector instance)
 		i = 0;
 		while (i < j)
 		{
-			tmp = instance.vector[i];
-			instance.vector[i] = instance.vector[i + 1];
-			instance.vector[i + 1] = tmp;
+			tmp = instance.uvector[i];
+			instance.uvector[i] = instance.uvector[i + 1];
+			instance.uvector[i + 1] = tmp;
 			++i;
 		}
 		++len;

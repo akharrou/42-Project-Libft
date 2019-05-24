@@ -12,20 +12,20 @@
 
 /*
 **    NAME
-**         uvector_popleft -- pop an element from the front of a vector
+**         uvector_popleft -- pop an element from the front of a uvector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         void *
-**         uvector_popleft(struct s_vector *self);
+**         uvector_popleft(struct s_uvector *self);
 **
 **    PARAMETERS
 **
-**         struct s_vector *self     Pointer to a vector instance.
+**         struct s_uvector *self     Pointer to a uvector instance.
 **
 **    DESCRIPTION
-**         Pops off the first element of the vector and returns it.
+**         Pops off the first element of the uvector and returns it.
 **
 **         All elements that preceed the popped element are moved
 **         backwards by one index.
@@ -36,13 +36,13 @@
 
 #include "../Includes/uvector.h"
 
-void	*uvector_popleft(struct s_vector *self)
+void	*uvector_popleft(struct s_uvector *self)
 {
 	void	*element;
 
-	element = self->vector[0];
-	self->vector[0] = NULL;
+	element = self->uvector[0];
+	self->uvector[0] = NULL;
 	self->length -= 1;
-	(*self) = vector.leftshift(*self, 1);
+	(*self) = uvector.leftshift(*self, 1);
 	return (element);
 }

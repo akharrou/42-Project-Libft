@@ -12,20 +12,20 @@
 
 /*
 **    NAME
-**         uvector_deque -- deque the first element of a queue in a vector
+**         uvector_deque -- deque the first element of a queue in a uvector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         void *
-**         uvector_deque(struct s_vector *self);
+**         uvector_deque(struct s_uvector *self);
 **
 **    PARAMETERS
 **
-**         struct s_vector *self     Pointer to a vector instance.
+**         struct s_uvector *self     Pointer to a uvector instance.
 **
 **    DESCRIPTION
-**         De-queues the first element of the queue in the vector.
+**         De-queues the first element of the queue in the uvector.
 **
 **    RETURN VALUES
 **         If successful returns the dequed element; otherwise NULL.
@@ -33,7 +33,7 @@
 
 #include "../Includes/uvector.h"
 
-void		*uvector_deque(struct s_vector *self)
+void		*uvector_deque(struct s_uvector *self)
 {
 	return (self->popleft(self));
 }
