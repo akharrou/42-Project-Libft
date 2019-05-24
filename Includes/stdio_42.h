@@ -6,23 +6,43 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:39:25 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 16:00:35 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 16:08:20 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STDIO_42_H
 # define STDIO_42_H
 
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+**  Header File(s).
+*/
+
 # include <unistd.h>
 # include <string.h>
 # include <stdarg.h>
 # include <fcntl.h>
 
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+**  Open Function(s).
+*/
+
 int		ft_open(char *filename, int oflag);
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+**  Reading Function(s).
+*/
 
 int		ft_readline(const int fd, char **line);
 char	*ft_readfile(char *filename);
-char	*ft_readfiledes(int filedes);
+char	*ft_readfiledes(const int filedes);
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+**  Printf Function(s).
+*/
 
 int		ft_printf(const char *format, ...);
 int		ft_dprintf(int filedes, const char *format, ...);
@@ -33,6 +53,11 @@ int		ft_vprintf(const char *format, va_list *args);
 int		ft_vdprintf(int filedes, const char *format, va_list *args);
 int		ft_vsprintf(char *str, const char *format, va_list *args);
 int		ft_vasprintf(char **ret, const char *format, va_list *args);
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+**  Other Printing Function(s).
+*/
 
 void	ft_putbits(void *data, size_t size);
 void	ft_putbyte(int c);
@@ -51,5 +76,9 @@ void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putnbr_base(int nbr, char *base);
 void	ft_putnbr_base_fd(int nbr, char *base, int fd);
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 #endif

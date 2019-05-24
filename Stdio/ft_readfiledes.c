@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 07:00:10 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/20 11:25:14 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 16:06:07 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 **         #include <libft.h>
 **
 **         char	*
-**         ft_readfiledes(int filedes);
+**         ft_readfiledes(const int filedes);
 **
 **    PARAMETERS
 **
-**         int filedes          File descriptor from which to
+**         const int filedes    File descriptor from which to
 **                              read file.
 **
 **    DESCRIPTION
@@ -40,7 +40,7 @@
 #include "../Includes/macros_42.h"
 #include <errno.h>
 
-char		*ft_readfiledes(int filedes)
+char		*ft_readfiledes(const int filedes)
 {
 	char	chunk[PAGE_SIZE + 1];
 	char	*file;

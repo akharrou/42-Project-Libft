@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/14 10:59:04 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/16 16:46:21 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 20:22:28 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char			*ft_sha256(void *data, int flag)
 	}
 	if (ret < 0)
 	{
-		ft_printf("Error: %s{underlined}", strerror(errno));
+		ft_printf("Error: %s{underlined}\n", strerror(errno));
 		return (NULL);
 	}
 	sha256_final(&ctx, &digest);

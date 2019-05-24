@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_constructor.c                               :+:      :+:    :+:   */
+/*   uvector_constructor.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:08:45 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 19:27:50 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 11:18:30 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_constructor -- instantiate a vector
+**         uvector_constructor -- instantiate a vector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         t_vector
-**         vector_constructor(size_t capacity);
+**         uvector_constructor(size_t capacity);
 **
 **    PARAMETERS
 **
@@ -33,28 +33,28 @@
 */
 
 #include "../Includes/stdlib_42.h"
-#include "../Includes/vector.h"
+#include "../Includes/uvector.h"
 
-t_vector		vector_constructor(size_t capacity, void (*vector_free)(void *))
+t_vector		uvector_constructor(size_t capacity, void (*uvector_free)(void *))
 {
 	t_vector	instance;
 
 	instance = (struct s_vector) {
 		.vector = NULL, .length = 0, .capacity = 0,
-		.push = &vector_push,
-		.enque = &vector_enque,
-		.append = &vector_append,
-		.prepend = &vector_prepend,
-		.insert = &vector_insert,
-		.extend = &vector_extend,
-		.extendleft = &vector_extendleft,
-		.pop = &vector_pop,
-		.popleft = &vector_popleft,
-		.deque = &vector_deque,
-		.clear = &vector_clear,
-		.remove = &vector_remove,
-		.free = vector_free,
-		.isempty = &vector_isempty, .isfull = &vector_isfull };
+		.push = &uvector_push,
+		.enque = &uvector_enque,
+		.append = &uvector_append,
+		.prepend = &uvector_prepend,
+		.insert = &uvector_insert,
+		.extend = &uvector_extend,
+		.extendleft = &uvector_extendleft,
+		.pop = &uvector_pop,
+		.popleft = &uvector_popleft,
+		.deque = &uvector_deque,
+		.clear = &uvector_clear,
+		.remove = &uvector_remove,
+		.free = uvector_free,
+		.isempty = &uvector_isempty, .isfull = &uvector_isfull };
 	instance.vector = (void **)malloc(sizeof(void *) * (capacity + 1));
 	if (instance.vector != NULL)
 	{
@@ -68,12 +68,12 @@ t_vector		vector_constructor(size_t capacity, void (*vector_free)(void *))
 **  Definition of the Vector Class.
 */
 
-const struct s_vector_class vector =
+const struct s_uvector_class vector =
 {
-	.constructor = &vector_constructor,
-	.copy = &vector_copy,
-	.reverse = &vector_reverse,
-	.resize = &vector_resize,
-	.rightshift = &vector_rightshift,
-	.leftshift = &vector_leftshift
+	.constructor = &uvector_constructor,
+	.duplicate = &uvector_duplicate,
+	.reverse = &uvector_reverse,
+	.resize = &uvector_resize,
+	.rightshift = &uvector_rightshift,
+	.leftshift = &uvector_leftshift
 };

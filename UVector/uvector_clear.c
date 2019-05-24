@@ -1,51 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_append.c                                    :+:      :+:    :+:   */
+/*   uvector_clear.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:53:27 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 19:25:46 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/21 13:16:03 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/22 12:08:33 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_append -- add an element to the back of a vector
+**         uvector_clear -- clear all elements of a vector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         vector_append(struct s_vector *self, void *data);
+**         uvector_clear(struct s_vector *self);
 **
 **    PARAMETERS
 **
 **         struct s_vector *self     Pointer to a vector instance.
 **
-**         void *data                Pointer to some data.
-**
 **    DESCRIPTION
-**         Adds an element to end of the vector.
+**         Iterates over and frees every element of the vector and
+**         each index of the vector is set to NULL.
 **
 **    RETURN VALUES
 **         If successful returns 1; otherwise 0.
 */
 
-#include "../Includes/vector.h"
+#include "../Includes/uvector.h"
 
-int		vector_append(struct s_vector *self, void *data)
+int			uvector_clear(struct s_vector *self)
 {
-	if (self->isfull(self) == 1)
-		(*self) = vector.resize(*self, self->capacity * VECTOR_SIZE_MULTIPLIER);
-	if (self->isfull(self) == 0)
+	size_t	i;
+
+	i = 0;
+	while (i < self->capacity)
 	{
-		if (self->vector[self->length] != NULL)
-			self->free(self->vector[self->length]);
-		self->vector[self->length] = data;
-		self->length += 1;
-		return (1);
+		if (self->vector[i] != NULL)
+			self->free(self->vector[i]);
+		self->vector[i] = NULL;
+		++i;
 	}
-	return (0);
+	self->length = 0;
+	return (1);
 }

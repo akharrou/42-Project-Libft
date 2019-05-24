@@ -1,42 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_enque.c                                     :+:      :+:    :+:   */
+/*   uvector_popleft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:34:53 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 19:25:49 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/21 12:31:25 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/22 16:16:05 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_enque -- enque an element to the back of a queue
+**         uvector_popleft -- pop an element from the front of a vector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         int
-**         vector_enque(struct s_vector *self, void *data);
+**         void *
+**         uvector_popleft(struct s_vector *self);
 **
 **    PARAMETERS
 **
 **         struct s_vector *self     Pointer to a vector instance.
 **
-**         void *data                Pointer to some data.
-**
 **    DESCRIPTION
-**         Adds an element to the end of a queue (i.e appends to
-**         the end of a vector).
+**         Pops off the first element of the vector and returns it.
+**
+**         All elements that preceed the popped element are moved
+**         backwards by one index.
 **
 **    RETURN VALUES
-**         If successful returns 1; otherwise 0.
+**         If successful returns the popped element; otherwise NULL.
 */
 
-#include "../Includes/vector.h"
+#include "../Includes/uvector.h"
 
-int		vector_enque(struct s_vector *self, void *data)
+void	*uvector_popleft(struct s_vector *self)
 {
-	return (self->append(self, data));
+	void	*element;
+
+	element = self->vector[0];
+	self->vector[0] = NULL;
+	self->length -= 1;
+	(*self) = vector.leftshift(*self, 1);
+	return (element);
 }

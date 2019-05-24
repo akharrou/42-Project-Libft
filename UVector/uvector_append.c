@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_append.c                                    :+:      :+:    :+:   */
+/*   uvector_append.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:53:27 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 19:25:46 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 18:22:33 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_append -- add an element to the back of a vector
+**         uvector_append -- add an element to the back of a vector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         vector_append(struct s_vector *self, void *data);
+**         uvector_append(struct s_vector *self, t_data data);
 **
 **    PARAMETERS
 **
 **         struct s_vector *self     Pointer to a vector instance.
 **
-**         void *data                Pointer to some data.
+**         t_data data                Pointer to some data.
 **
 **    DESCRIPTION
 **         Adds an element to end of the vector.
@@ -33,12 +33,12 @@
 **         If successful returns 1; otherwise 0.
 */
 
-#include "../Includes/vector.h"
+#include "../Includes/uvector.h"
 
-int		vector_append(struct s_vector *self, void *data)
+int		uvector_append(struct s_vector *self, t_data data)
 {
 	if (self->isfull(self) == 1)
-		(*self) = vector.resize(*self, self->capacity * VECTOR_SIZE_MULTIPLIER);
+		(*self) = vector.resize(*self, self->capacity * uvector_SIZE_MULTIPLIER);
 	if (self->isfull(self) == 0)
 	{
 		if (self->vector[self->length] != NULL)

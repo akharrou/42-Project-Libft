@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 19:04:15 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 19:27:42 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ typedef t_vector	t_queue;
 extern const struct	s_vector_class
 {
 	struct s_vector	(*constructor)(size_t capacity, void (*vector_free)(void*));
-	struct s_vector	(*duplicate)(struct s_vector instance);
+	struct s_vector	(*copy)(struct s_vector instance);
 	struct s_vector	(*resize)(struct s_vector instance, size_t new_size);
 	struct s_vector	(*rightshift)(struct s_vector instance, size_t n);
 	struct s_vector	(*leftshift)(struct s_vector instance, size_t n);
@@ -93,7 +93,7 @@ extern const struct	s_vector_class
 struct s_vector		vector_constructor(size_t capacity,
 						void (*vector_free)(void *));
 
-struct s_vector		vector_duplicate(struct s_vector vector);
+struct s_vector		vector_copy(struct s_vector vector);
 struct s_vector		vector_reverse(struct s_vector vector);
 struct s_vector		vector_resize(struct s_vector vector, size_t new_size);
 struct s_vector		vector_rightshift(struct s_vector vector, size_t n);

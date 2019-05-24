@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/12 17:49:08 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/20 12:45:44 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 20:18:27 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char		*ft_strhex(const char *str, size_t len)
 	size_t	j;
 
 	hexstr = NULL;
-	if (len > 0)
+	if (str && len > 0)
 	{
 		if (!(hexstr = (char *)ft_malloc((len * 2) + 1, '\0')))
 			return (NULL);
@@ -45,6 +45,7 @@ char		*ft_strhexfre(const char *str, size_t size)
 	char	*res;
 
 	res = ft_strhex(str, size);
-	free((void *)str);
+	if (str)
+		free((void *)str);
 	return (res);
 }

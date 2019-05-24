@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_duplicate.c                                 :+:      :+:    :+:   */
+/*   uvector_duplicate.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,13 +12,13 @@
 
 /*
 **    NAME
-**         vector_duplicate -- create a shallow copy of a vector
+**         uvector_duplicate -- create a shallow copy of a vector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         struct s_vector
-**         vector_duplicate(struct s_vector instance);
+**         uvector_duplicate(struct s_vector instance);
 **
 **    PARAMETERS
 **
@@ -38,9 +38,9 @@
 */
 
 #include "../Includes/stdlib_42.h"
-#include "../Includes/vector.h"
+#include "../Includes/uvector.h"
 
-struct s_vector		vector_duplicate(struct s_vector instance)
+struct s_vector		uvector_duplicate(struct s_vector instance)
 {
 	struct s_vector		duplicate;
 

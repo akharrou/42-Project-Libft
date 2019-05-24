@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 12:14:48 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/15 10:56:53 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 20:22:19 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char			*ft_md5(void *data, int flag)
 	}
 	if (ret < 0)
 	{
-		ft_printf("Error: %s{underlined}", strerror(errno));
+		ft_printf("Error: %s{underlined}\n", strerror(errno));
 		return (NULL);
 	}
 	md5_final(&ctx, &digest);

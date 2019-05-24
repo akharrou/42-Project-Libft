@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_enque.c                                     :+:      :+:    :+:   */
+/*   uvector_deque.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:34:53 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 19:25:49 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/21 12:34:43 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/21 18:05:49 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_enque -- enque an element to the back of a queue
+**         uvector_deque -- deque the first element of a queue in a vector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         int
-**         vector_enque(struct s_vector *self, void *data);
+**         void *
+**         uvector_deque(struct s_vector *self);
 **
 **    PARAMETERS
 **
 **         struct s_vector *self     Pointer to a vector instance.
 **
-**         void *data                Pointer to some data.
-**
 **    DESCRIPTION
-**         Adds an element to the end of a queue (i.e appends to
-**         the end of a vector).
+**         De-queues the first element of the queue in the vector.
 **
 **    RETURN VALUES
-**         If successful returns 1; otherwise 0.
+**         If successful returns the dequed element; otherwise NULL.
 */
 
-#include "../Includes/vector.h"
+#include "../Includes/uvector.h"
 
-int		vector_enque(struct s_vector *self, void *data)
+void		*uvector_deque(struct s_vector *self)
 {
-	return (self->append(self, data));
+	return (self->popleft(self));
 }

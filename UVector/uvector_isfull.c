@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_enque.c                                     :+:      :+:    :+:   */
+/*   uvector_isfull.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:34:53 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 19:25:49 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/21 14:43:20 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/22 12:00:11 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_enque -- enque an element to the back of a queue
+**         uvector_isfull -- check if a vector is at full capacity
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         vector_enque(struct s_vector *self, void *data);
+**         uvector_isfull(struct s_vector *self);
 **
 **    PARAMETERS
 **
 **         struct s_vector *self     Pointer to a vector instance.
 **
-**         void *data                Pointer to some data.
-**
 **    DESCRIPTION
-**         Adds an element to the end of a queue (i.e appends to
-**         the end of a vector).
+**         Evaluates the length to capacity status of a vector and
+**         returns either full or not full, respectively 1 or
+**         0.
 **
 **    RETURN VALUES
-**         If successful returns 1; otherwise 0.
+**         If the vector is full 1 is returned; otherwise 0.
 */
 
-#include "../Includes/vector.h"
+#include "../Includes/uvector.h"
 
-int		vector_enque(struct s_vector *self, void *data)
+inline int		uvector_isfull(struct s_vector *self)
 {
-	return (self->append(self, data));
+	return (self->length >= self->capacity);
 }

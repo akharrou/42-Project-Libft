@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_insert.c                                    :+:      :+:    :+:   */
+/*   uvector_insert.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:55:37 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 19:25:52 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/23 18:21:42 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_insert -- insert an element in a vector at index 'i'
+**         uvector_insert -- insert an element in a vector at index 'i'
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         vector_insert(struct s_vector *self);
+**         uvector_insert(struct s_vector *self);
 **
 **    PARAMETERS
 **
@@ -27,7 +27,7 @@
 **         size_t i                  Index in the vector at which to
 **                                   insert the data.
 **
-**         void *data                Pointer to some data.
+**         t_data data                Pointer to some data.
 **
 **    DESCRIPTION
 **         If possible inserts 'data' in the vector at index 'i'.
@@ -40,9 +40,9 @@
 */
 
 #include "../Includes/stdlib_42.h"
-#include "../Includes/vector.h"
+#include "../Includes/uvector.h"
 
-int		vector_insert(struct s_vector *self, size_t i, void *data)
+int		uvector_insert(struct s_vector *self, size_t i, t_data data)
 {
 	if (i < self->capacity)
 	{
