@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   uvector_pop.c                                       :+:      :+:    :+:   */
+/*   uvector_pop.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:27:29 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 16:28:16 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/24 15:43:25 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/24 15:44:54 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         void *
+**         t_integer
 **         uvector_pop(struct s_uvector *self);
 **
 **    PARAMETERS
@@ -32,20 +32,19 @@
 **         NULL.
 **
 **    RETURN VALUES
-**         If successful returns the popped element; otherwise NULL.
+**         Returns the popped element.
 */
 
 #include "../Includes/uvector.h"
 
-void		*uvector_pop(struct s_uvector *self)
+t_integer	uvector_pop(struct s_uvector *self)
 {
-	void	*element;
+	t_integer	element;
 
-	element = NULL;
+	element.int128 = 0;
 	if (self->length > 0)
 	{
 		element = self->uvector[self->length - 1];
-		self->uvector[self->length - 1] = NULL;
 		self->length -= 1;
 	}
 	return (element);

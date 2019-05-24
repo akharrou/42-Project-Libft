@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:08:45 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 10:26:23 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 16:26:55 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 **         Creates an instance of a vector object.
 **
 **    RETURN VALUES
-**         If successful returns 1; otherwise 0.
+**         Returns the constructed instance.
 */
 
 #include "../Includes/stdlib_42.h"
@@ -52,8 +52,8 @@ t_vector		vector_constructor(size_t capacity, void (*vector_free)(void *))
 		.popleft = &vector_popleft,
 		.deque = &vector_deque,
 		.clear = &vector_clear,
-		.remove = &vector_remove,
-		.free = vector_free,
+		.remove = &vector_remove, .free = vector_free,
+		.get = &vector_get, .getby_ref = &vector_getby_ref,
 		.isempty = &vector_isempty, .isfull = &vector_isfull };
 	instance.vector = (void **)malloc(sizeof(void *) * (capacity + 1));
 	if (instance.vector != NULL)

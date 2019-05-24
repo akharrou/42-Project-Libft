@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   uvector_copy.c                                 :+:      :+:    :+:   */
+/*   uvector_copy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 19:01:19 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 09:44:19 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/24 15:37:15 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/24 15:37:17 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ struct s_uvector		uvector_copy(struct s_uvector instance)
 {
 	struct s_uvector		duplicate;
 
-	duplicate = uvector.constructor(instance.capacity, instance.free);
+	duplicate = uvector.constructor(instance.capacity);
 	duplicate.uvector = ft_memdup(
-		instance.uvector, (instance.capacity + 1) * sizeof(void *));
+		instance.uvector, (instance.capacity + 1) * sizeof(t_integer));
 	if (!duplicate.uvector)
 		return (instance);
 	duplicate.length = instance.length;

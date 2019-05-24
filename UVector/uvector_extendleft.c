@@ -56,14 +56,15 @@ int		uvector_extendleft(struct s_uvector *self, size_t n, ...)
 	size_t	i;
 
 	while (self->length + n >= self->capacity)
-		(*self) = uvector.resize(*self, self->capacity * uvector_SIZE_MULTIPLIER);
+		(*self) = uvector.resize(
+			*self, self->capacity * UVECTOR_SIZE_MULTIPLIER);
 	(*self) = uvector.rightshift(*self, n);
 	va_start(ap, n);
 	ret = 1;
 	i = 1;
 	while (ret == 1 && i <= n)
 	{
-		ret = self->insert(self, (n - i), va_arg(ap, void *));
+		ret = self->insert(self, (n - i), va_arg(ap, t_integer));
 		++i;
 	}
 	va_end(ap);

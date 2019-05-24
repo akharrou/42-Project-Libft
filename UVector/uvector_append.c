@@ -18,13 +18,13 @@
 **         #include <libft.h>
 **
 **         int
-**         uvector_append(struct s_uvector *self, void *data);
+**         uvector_append(struct s_uvector *self, t_integer data);
 **
 **    PARAMETERS
 **
 **         struct s_uvector *self     Pointer to a uvector instance.
 **
-**         void *data                Pointer to some data.
+**         t_integer data                Pointer to some data.
 **
 **    DESCRIPTION
 **         Adds an element to end of the uvector.
@@ -35,14 +35,13 @@
 
 #include "../Includes/uvector.h"
 
-int		uvector_append(struct s_uvector *self, void *data)
+int		uvector_append(struct s_uvector *self, t_integer data)
 {
 	if (self->isfull(self) == 1)
-		(*self) = uvector.resize(*self, self->capacity * UVECTOR_SIZE_MULTIPLIER);
+		(*self) = uvector.resize(
+			*self, self->capacity * UVECTOR_SIZE_MULTIPLIER);
 	if (self->isfull(self) == 0)
 	{
-		if (self->uvector[self->length] != NULL)
-			self->free(self->uvector[self->length]);
 		self->uvector[self->length] = data;
 		self->length += 1;
 		return (1);

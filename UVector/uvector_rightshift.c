@@ -45,22 +45,11 @@ struct s_uvector		uvector_rightshift(struct s_uvector instance, size_t n)
 		n = instance.capacity;
 	i = instance.capacity - 1;
 	j = 0;
-	while (j < n)
-	{
-		if (instance.uvector[i - j] != NULL)
-			instance.free(instance.uvector[i - j]);
-		++j;
-	}
 	while (i - (n - 1) > 0)
 	{
 		instance.uvector[i] = instance.uvector[i - n];
 		--i;
 	}
 	j = 0;
-	while (j <= i)
-	{
-		instance.uvector[j] = NULL;
-		++j;
-	}
 	return (instance);
 }

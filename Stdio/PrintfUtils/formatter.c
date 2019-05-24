@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 18:29:48 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/19 19:53:28 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 16:00:20 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,14 +132,14 @@ t_format		parse_format(const char *format, va_list *args)
 
 	i = 0;
 	info = (t_format) {
-		parse_flags(format, &i),
-		parse_width(format, args, &i),
-		parse_precison(format, args, &i),
-		parse_length(format, &i),
-		parse_specifier(format, &i),
-		parse_style(format, &i),
-		' ',
-		i
+		.flags = parse_flags(format, &i),
+		.width = parse_width(format, args, &i),
+		.precision = parse_precison(format, args, &i),
+		.length = parse_length(format, &i),
+		.specifier = parse_specifier(format, &i),
+		.style = parse_style(format, &i),
+		.pad = ' ',
+		.format_length = i
 	};
 	if (info.width < 0)
 	{

@@ -17,7 +17,7 @@
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         void *
+**         t_integer
 **         uvector_deque(struct s_uvector *self);
 **
 **    PARAMETERS

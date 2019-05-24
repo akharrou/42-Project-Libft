@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 10:19:19 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 16:26:14 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ typedef struct		s_vector
 	int				(*extend)(struct s_vector *self, size_t n, ...);
 	int				(*extendleft)(struct s_vector *self, size_t n, ...);
 	\
-	void			*(*getby_index)(struct s_vector *self, size_t i);
+	void			*(*get)(struct s_vector *self, size_t i);
 	void			*(*getby_ref)(struct s_vector *self, void *ref,
 						int (*cmp)(void *a, void *b));
 	\
@@ -112,9 +112,9 @@ int					vector_insert(struct s_vector *self, size_t i, void *data);
 int					vector_extend(struct s_vector *self, size_t n, ...);
 int					vector_extendleft(struct s_vector *self, size_t n, ...);
 
-void				*vector_getby_index(struct s_vector *self, size_t i);
+void				*vector_get(struct s_vector *self, size_t i);
 void				*vector_getby_ref(struct s_vector *self, void *ref,
-						int (*cmp)(void *a, void *b));
+						int (*cmp)(void *ref, void *data));
 
 void				*vector_pop(struct s_vector *self);
 void				*vector_popleft(struct s_vector *self);

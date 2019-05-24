@@ -35,7 +35,7 @@
 
 struct s_uvector		uvector_reverse(struct s_uvector instance)
 {
-	void			*tmp;
+	t_integer		tmp;
 	size_t			len;
 	size_t			i;
 	size_t			j;

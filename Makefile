@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/24 10:47:03 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/24 16:30:09 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,7 @@ SOURCES     =   $(STDIO)                                                      \
                                                                               \
                 $(BIGINT)                                                     \
                 $(VECTOR)                                                     \
+                $(UVECTOR)                                                    \
                 $(LIST)                                                       \
                 $(BTREE)                                                      \
                 $(TRIE)                                                       \
@@ -326,6 +327,8 @@ VECTOR      =   Vector/vector_constructor.c                                   \
                 Vector/vector_insert.c                                        \
                 Vector/vector_extend.c                                        \
                 Vector/vector_extendleft.c                                    \
+                Vector/vector_get.c                                           \
+                Vector/vector_getby_ref.c                                     \
                 Vector/vector_pop.c                                           \
                 Vector/vector_popleft.c                                       \
                 Vector/vector_deque.c                                         \
@@ -333,9 +336,31 @@ VECTOR      =   Vector/vector_constructor.c                                   \
                 Vector/vector_remove.c                                        \
                 Vector/vector_isfull.c                                        \
                 Vector/vector_isempty.c                                       \
-                # Vector/vector_getby_index.c                                 \
-                # Vector/vector_getby_ref.c                                   \
-                # Vector/vector_sort.c                                        \
+
+# — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+
+UVECTOR      =  UVector/uvector_constructor.c                                 \
+                                                                              \
+                UVector/uvector_resize.c                                      \
+                UVector/uvector_copy.c                                        \
+                UVector/uvector_reverse.c                                     \
+                UVector/uvector_leftshift.c                                   \
+                UVector/uvector_rightshift.c                                  \
+                                                                              \
+                UVector/uvector_push.c                                        \
+                UVector/uvector_enque.c                                       \
+                UVector/uvector_append.c                                      \
+                UVector/uvector_appendleft.c                                  \
+                UVector/uvector_extend.c                                      \
+                UVector/uvector_extendleft.c                                  \
+                UVector/uvector_insert.c                                      \
+                UVector/vector_get.c                                          \
+                UVector/uvector_pop.c                                         \
+                UVector/uvector_popleft.c                                     \
+                UVector/uvector_deque.c                                       \
+                UVector/uvector_setall.c                                      \
+                UVector/uvector_isempty.c                                     \
+                UVector/uvector_isfull.c                                      \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 

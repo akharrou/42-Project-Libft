@@ -56,7 +56,7 @@ int		uvector_extend(struct s_uvector *self, size_t n, ...)
 	i = 0;
 	while (ret == 1 && i < n)
 	{
-		ret = self->append(self, va_arg(ap, void *));
+		ret = self->append(self, va_arg(ap, t_integer));
 		++i;
 	}
 	va_end(ap);

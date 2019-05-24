@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   uvector_insert.c                                    :+:      :+:    :+:   */
+/*   uvector_insert.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:55:37 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 19:25:52 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/24 15:37:37 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/24 15:37:39 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 **         size_t i                  Index in the uvector at which to
 **                                   insert the data.
 **
-**         void *data                Pointer to some data.
+**         t_integer data                Pointer to some data.
 **
 **    DESCRIPTION
 **         If possible inserts 'data' in the uvector at index 'i'.
@@ -42,12 +42,10 @@
 #include "../Includes/stdlib_42.h"
 #include "../Includes/uvector.h"
 
-int		uvector_insert(struct s_uvector *self, size_t i, void *data)
+int		uvector_insert(struct s_uvector *self, size_t i, t_integer data)
 {
 	if (i < self->capacity)
 	{
-		if (self->uvector[i] != NULL)
-			self->free(self->uvector[i]);
 		self->uvector[i] = data;
 		self->length += 1;
 		return (1);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   uvector_resize.c                                    :+:      :+:    :+:   */
+/*   uvector_resize.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 13:28:41 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 10:27:25 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/24 15:48:20 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/24 16:03:16 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,20 +44,20 @@
 **         The uvector resized is returned.
 */
 
-#include "../Includes/stdlib_42.h"
 #include "../Includes/uvector.h"
+#include "../Includes/stdlib_42.h"
 
-struct s_uvector		uvector_resize(struct s_uvector instance, size_t new_size)
+struct s_uvector	uvector_resize(struct s_uvector instance, size_t new_size)
 {
-	void			*new_uvector;
+	t_integer		*new_uvector;
 
 	new_uvector = ft_realloc(
 		instance.uvector,
-		(sizeof(void *) * (instance.capacity + 1)),
-		(sizeof(void *) * (new_size + 1)));
+		(sizeof(t_integer) * instance.capacity),
+		(sizeof(t_integer) * new_size));
 	if (new_uvector != NULL)
 	{
-		instance.uvector = (void **)new_uvector;
+		instance.uvector = (t_integer *)new_uvector;
 		instance.capacity = new_size;
 	}
 	return (instance);

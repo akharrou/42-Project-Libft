@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   uvector_popleft.c                                   :+:      :+:    :+:   */
+/*   uvector_popleft.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:31:25 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 16:16:05 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/24 15:43:56 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/24 15:44:44 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         void *
+**         t_integer
 **         uvector_popleft(struct s_uvector *self);
 **
 **    PARAMETERS
@@ -31,17 +31,16 @@
 **         backwards by one index.
 **
 **    RETURN VALUES
-**         If successful returns the popped element; otherwise NULL.
+**         Returns the popped element.
 */
 
 #include "../Includes/uvector.h"
 
-void	*uvector_popleft(struct s_uvector *self)
+t_integer	uvector_popleft(struct s_uvector *self)
 {
-	void	*element;
+	t_integer	element;
 
 	element = self->uvector[0];
-	self->uvector[0] = NULL;
 	self->length -= 1;
 	(*self) = uvector.leftshift(*self, 1);
 	return (element);

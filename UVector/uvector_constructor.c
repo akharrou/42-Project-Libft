@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   uvector_constructor.c                               :+:      :+:    :+:   */
+/*   uvector_constructor.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 11:08:45 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 10:26:23 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/24 15:35:55 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/24 16:02:51 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@
 **         Creates an instance of a uvector object.
 **
 **    RETURN VALUES
-**         If successful returns 1; otherwise 0.
+**         Returns the constructed instance.
 */
 
 #include "../Includes/stdlib_42.h"
 #include "../Includes/uvector.h"
 
-t_uvector		uvector_constructor(size_t capacity, void (*uvector_free)(void *))
+t_uvector		uvector_constructor(size_t capacity)
 {
 	t_uvector	instance;
 
@@ -51,15 +51,15 @@ t_uvector		uvector_constructor(size_t capacity, void (*uvector_free)(void *))
 		.pop = &uvector_pop,
 		.popleft = &uvector_popleft,
 		.deque = &uvector_deque,
-		.clear = &uvector_clear,
-		.remove = &uvector_remove,
-		.free = uvector_free,
-		.isempty = &uvector_isempty, .isfull = &uvector_isfull };
-	instance.uvector = (void **)malloc(sizeof(void *) * (capacity + 1));
+		.setall = &uvector_setall,
+		.isempty = &uvector_isempty,
+		.isfull = &uvector_isfull
+	};
+	instance.uvector = (t_integer *)malloc(sizeof(t_integer) * capacity);
 	if (instance.uvector != NULL)
 	{
 		instance.capacity = capacity;
-		ft_bzero(instance.uvector, (instance.capacity + 1) * sizeof(void *));
+		ft_bzero(instance.uvector, instance.capacity * sizeof(t_integer));
 	}
 	return (instance);
 }

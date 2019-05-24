@@ -1,53 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   uvector_remove.c                                    :+:      :+:    :+:   */
+/*   uvector_setall.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 13:13:51 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 12:14:13 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/24 15:31:04 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/24 15:49:20 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         uvector_remove -- remove the element at index 'i' in a uvector
+**         uvector_setall -- sets all elements of a uvector to 'value'
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         uvector_remove(struct s_uvector *self, size_t i);
+**         uvector_setall(struct s_uvector *self, t_integer value);
 **
 **    PARAMETERS
 **
 **         struct s_uvector *self     Pointer to a uvector instance.
 **
-**         size_t i                  The index at which to find the
-**                                   element to remove.
-**
 **    DESCRIPTION
-**         Finds & frees and element in the uvector and sets the pointer
-**         at that index to point to NULL.
+**         Iterates over and sets every element of the uvector to 'value'.
 **
 **    RETURN VALUES
-**         If successful returns 1; otherwise 0.
+**         None.
 */
 
 #include "../Includes/uvector.h"
 
-int		uvector_remove(struct s_uvector *self, size_t i)
+void	uvector_setall(struct s_uvector *self, t_integer value)
 {
-	if (i < self->capacity)
+	size_t	i;
+
+	i = 0;
+	while (i < self->capacity)
 	{
-		if (self->uvector[i] != NULL)
-		{
-			self->free(self->uvector[i]);
-			self->uvector[i] = NULL;
-			self->length -= 1;
-			return (1);
-		}
+		self->uvector[i] = value;
+		++i;
 	}
-	return (0);
+	self->length = 0;
 }

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 12:03:50 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 13:16:19 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 15:07:53 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef unsigned char	*t_ptr;
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
-**  Units Type(s).
+**  Unit Type(s).
 */
 
 typedef struct	s_bit
@@ -125,34 +125,35 @@ typedef union			u_data
 	size_t				size_;
 }						t_data;
 
-typedef union			u_integer
+/*
+** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+*/
+
+typedef union			u_integral_types
 {
-	bool				bool_;
+	uint8_t				uint8;
+	uint16_t			uint16;
+	uint32_t			uint32;
+	uint64_t			uint64;
+	__uint128_t			uint128;
 	\
-	uint8_t				char_;
-	uint16_t			short_;
-	uint32_t			int_;
-	uint64_t			long_;
-	__uint128_t			long_long_;
+	int8_t				int8;
+	int16_t				int16;
+	int32_t				int32;
+	int64_t				int64;
+	__int128_t			int128;
 	\
-	int8_t				ushort_;
-	int16_t				uint_;
-	int32_t				ulong_;
-	int64_t				ulong_long_;
-	__int128_t			uchar_;
-	\
-	intmax_t			intmax_;
-	uintmax_t			uintmax_;
-	intptr_t			intptr_;
-	uintptr_t			uintptr_;
-	ptrdiff_t			ptrdiff_;
-	size_t				size_;
-	\
-	float				flt_;
-	double				dbl_;
-	long double			ldbl_;
-	\
+	intmax_t			intmax;
+	uintmax_t			uintmax;
+	intptr_t			intptr;
+	uintptr_t			uintptr;
+	ptrdiff_t			ptrdiff;
+	size_t				size;
 }						t_integer;
+
+/*
+** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+*/
 
 typedef union			u_decimal
 {
@@ -161,32 +162,8 @@ typedef union			u_decimal
 	long double			ldbl_;
 }						t_decimal;
 
-typedef union			u_number
-{
-	bool				bool_;
-	\
-	uint8_t				char_;
-	uint16_t			short_;
-	uint32_t			int_;
-	uint64_t			long_;
-	__uint128_t			long_long_;
-	\
-	int8_t				ushort_;
-	int16_t				uint_;
-	int32_t				ulong_;
-	int64_t				ulong_long_;
-	__int128_t			uchar_;
-	\
-	intmax_t			intmax_;
-	uintmax_t			uintmax_;
-	intptr_t			intptr_;
-	uintptr_t			uintptr_;
-	ptrdiff_t			ptrdiff_;
-	size_t				size_;
-	\
-	float				flt_;
-	double				dbl_;
-	long double			ldbl_;
-}						t_number;
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 #endif

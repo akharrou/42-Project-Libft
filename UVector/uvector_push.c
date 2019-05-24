@@ -18,13 +18,13 @@
 **         #include <libft.h>
 **
 **         int
-**         uvector_push(struct s_uvector *self, void *data);
+**         uvector_push(struct s_uvector *self, t_integer data);
 **
 **    PARAMETERS
 **
 **         struct s_uvector *self     Pointer to a uvector instance.
 **
-**         void *data                Pointer to some data.
+**         t_integer data                Pointer to some data.
 **
 **    DESCRIPTION
 **         Adds an element to the top of a stack (i.e appends to
@@ -36,7 +36,7 @@
 
 #include "../Includes/uvector.h"
 
-int		uvector_push(struct s_uvector *self, void *data)
+int		uvector_push(struct s_uvector *self, t_integer data)
 {
 	return (self->append(self, data));
 }

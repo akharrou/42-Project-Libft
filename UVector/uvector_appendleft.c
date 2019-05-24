@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   uvector_appendleft.c                                :+:      :+:    :+:   */
+/*   uvector_appendleft.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 10:18:30 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 10:28:03 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/24 15:35:30 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/24 15:35:30 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 **         #include <libft.h>
 **
 **         int
-**         uvector_appendleft(struct s_uvector *self, void *data);
+**         uvector_appendleft(struct s_uvector *self, t_integer data);
 **
 **    PARAMETERS
 **
 **         struct s_uvector *self     Pointer to a uvector instance.
 **
-**         void *data                Pointer to some data.
+**         t_integer data                Pointer to some data.
 **
 **    DESCRIPTION
 **         Adds an element to the beginning of the uvector (i.e at
@@ -36,10 +36,11 @@
 
 #include "../Includes/uvector.h"
 
-int		uvector_appendleft(struct s_uvector *self, void *data)
+int		uvector_appendleft(struct s_uvector *self, t_integer data)
 {
 	if (self->isfull(self) == 1)
-		(*self) = uvector.resize(*self, self->capacity * uvector_SIZE_MULTIPLIER);
+		(*self) = uvector.resize(
+			*self, self->capacity * UVECTOR_SIZE_MULTIPLIER);
 	(*self) = uvector.rightshift(*self, 1);
 	if (self->isfull(self) == 0)
 		return (self->insert(self, 0, data));

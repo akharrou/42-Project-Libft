@@ -12,15 +12,9 @@
 
 #include "../Includes/libft.h"
 
-void	my_free(void *data)
-{
-	data = NULL;
-	return ;
-}
-
 int		main(int ac, char *av[])
 {
-	t_queue 	students;
+	t_uqueue 	students;
 	char		*value;
 	size_t		i;
 
@@ -32,7 +26,7 @@ int		main(int ac, char *av[])
 
 	/* INSTANTIATING uvector OBJECT */
 
-	students = uvector.constructor(20, &my_free);
+	students = uvector.constructor(20);
 
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
