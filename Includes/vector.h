@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 19:27:42 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 10:19:19 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ typedef struct		s_vector
 	int				(*push)(struct s_vector *self, void *data);
 	int				(*enque)(struct s_vector *self, void *data);
 	int				(*append)(struct s_vector *self, void *data);
-	int				(*prepend)(struct s_vector *self, void *data);
+	int				(*appendleft)(struct s_vector *self, void *data);
 	int				(*extend)(struct s_vector *self, size_t n, ...);
 	int				(*extendleft)(struct s_vector *self, size_t n, ...);
 	\
@@ -107,7 +107,7 @@ struct s_vector		vector_leftshift(struct s_vector vector, size_t n);
 int					vector_push(struct s_vector *self, void *data);
 int					vector_enque(struct s_vector *self, void *data);
 int					vector_append(struct s_vector *self, void *data);
-int					vector_prepend(struct s_vector *self, void *data);
+int					vector_appendleft(struct s_vector *self, void *data);
 int					vector_insert(struct s_vector *self, size_t i, void *data);
 int					vector_extend(struct s_vector *self, size_t n, ...);
 int					vector_extendleft(struct s_vector *self, size_t n, ...);

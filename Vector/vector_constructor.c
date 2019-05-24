@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:08:45 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 19:27:50 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 10:26:23 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ t_vector		vector_constructor(size_t capacity, void (*vector_free)(void *))
 		.push = &vector_push,
 		.enque = &vector_enque,
 		.append = &vector_append,
-		.prepend = &vector_prepend,
+		.appendleft = &vector_appendleft,
 		.insert = &vector_insert,
 		.extend = &vector_extend,
 		.extendleft = &vector_extendleft,

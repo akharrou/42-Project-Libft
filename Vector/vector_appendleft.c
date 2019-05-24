@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_prepend.c                                   :+:      :+:    :+:   */
+/*   vector_appendleft.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:54:53 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 19:25:55 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/24 10:18:30 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/24 10:28:03 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_prepend -- add an element to the front of a vector
+**         vector_appendleft -- add an element to the front of a vector
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         vector_prepend(struct s_vector *self, void *data);
+**         vector_appendleft(struct s_vector *self, void *data);
 **
 **    PARAMETERS
 **
@@ -36,7 +36,7 @@
 
 #include "../Includes/vector.h"
 
-int		vector_prepend(struct s_vector *self, void *data)
+int		vector_appendleft(struct s_vector *self, void *data)
 {
 	if (self->isfull(self) == 1)
 		(*self) = vector.resize(*self, self->capacity * VECTOR_SIZE_MULTIPLIER);
