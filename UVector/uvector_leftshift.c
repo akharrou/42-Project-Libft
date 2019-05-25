@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   uvector_leftshift.c                                 :+:      :+:    :+:   */
+/*   uvector_leftshift.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 11:04:36 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 11:51:06 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/24 16:49:00 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/24 16:49:01 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@
 
 #include "../Includes/uvector.h"
 
-struct s_uvector		uvector_leftshift(struct s_uvector instance, size_t n)
+struct s_uvector	uvector_leftshift(struct s_uvector instance, size_t n)
 {
 	size_t	i;
 

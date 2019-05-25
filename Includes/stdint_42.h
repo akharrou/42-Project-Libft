@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 12:03:50 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 15:07:53 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 17:12:35 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,13 +135,11 @@ typedef union			u_integral_types
 	uint16_t			uint16;
 	uint32_t			uint32;
 	uint64_t			uint64;
-	__uint128_t			uint128;
 	\
 	int8_t				int8;
 	int16_t				int16;
 	int32_t				int32;
 	int64_t				int64;
-	__int128_t			int128;
 	\
 	intmax_t			intmax;
 	uintmax_t			uintmax;

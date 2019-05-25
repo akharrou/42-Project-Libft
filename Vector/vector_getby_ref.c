@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:16:15 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:25:43 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 16:40:22 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,19 @@
 **
 **         void *ref                            Reference data that can be
 **                                              used to find the data element
-**                                              that is looked for in the
-**                                              vector.
+**                                              in the vector.
 **
 **         int (*cmp)(void *ref, void *data)    Comparasion function that
 **                                              checks if the data element
-**                                              corresponds to the reference
-**                                              and returns 0 if it does.
+**                                              corresponds to the reference;
+**                                              it needs to returns 0 the
+**                                              reference does correspond
+**                                              to the data.
 **
 **    DESCRIPTION
-**         Trys to find a data element that matches the reference provided
-**         (i.e 'ref') using the provided comparasion function (i.e 'cmp').
+**         Trys to find a data element based on a provided reference
+**         (i.e 'ref') using the provided comparasion function
+**         (i.e 'cmp').
 **
 **    RETURN VALUES
 **         If found, the data element is returned; otherwise NULL is

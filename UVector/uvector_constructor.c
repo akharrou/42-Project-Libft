@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:35:55 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:02:51 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 17:05:23 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ t_uvector		uvector_constructor(size_t capacity)
 		.pop = &uvector_pop,
 		.popleft = &uvector_popleft,
 		.deque = &uvector_deque,
+		.get = &uvector_get,
 		.setall = &uvector_setall,
 		.isempty = &uvector_isempty,
 		.isfull = &uvector_isfull
@@ -65,7 +66,7 @@ t_uvector		uvector_constructor(size_t capacity)
 }
 
 /*
-**  Definition of the uvector Class.
+**  Definition of the Unboxed Vector Class.
 */
 
 const struct s_uvector_class uvector =

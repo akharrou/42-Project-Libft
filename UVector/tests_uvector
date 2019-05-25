@@ -15,18 +15,20 @@
 int		main(int ac, char *av[])
 {
 	t_uqueue 	students;
-	char		*value;
+	t_integer	val;
 	size_t		i;
 
 	++av;
 
+
+	val.int64 = 999;
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
 
 
 	/* INSTANTIATING uvector OBJECT */
 
-	students = uvector.constructor(20);
+	students = uvector.constructor(1);
 
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
@@ -70,34 +72,18 @@ int		main(int ac, char *av[])
 
 	/* ADD 'N' DATA ELEMENTS & RESIZING */
 
+	ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[ADDING ELEMENTS START]-- -- -- -- -- -- -- -- --\n\n");
 	i = 0;
-	while (i < 15)
+	while (i < 1200)
 	{
-		ft_asprintf((char **)&value, "%s%i", "Jason", i);
-
-		students.enque(&students, value);
-
-		ft_printf("%3i:   %-20s> Length: %-7i> Capacity: %i\n", i, students.uvector[i], students.length, students.capacity);
+		students.enque(&students, val);
+		ft_printf("%3i:   %-20i> Length: %-7i> Capacity: %i\n", i, students.uvector[i], students.length, students.capacity);
 		++i;
 
 		if (students.isfull(&students))
 			ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[FULL]-- -- -- -- -- -- -- -- --\n\n");
 	}
-
-
-/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
-
-
-	/* PRINT uvector */
-
-	ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[PRINT START]-- -- -- -- -- -- -- -- --\n\n");
-	i = 0;
-	while (i < students.capacity)
-	{
-		ft_printf("%3i:  %-20s> Length: %-7i> Capacity: %i\n", i, students.uvector[i], students.length, students.capacity);
-		++i;
-	}
-	ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[PRINT END]-- -- -- -- -- -- -- -- --\n\n");
+	ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[ADDING ELEMENTS START]-- -- -- -- -- -- -- -- --\n\n");
 
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
@@ -105,7 +91,7 @@ int		main(int ac, char *av[])
 
 	/* [ OVER ] EXTEND */
 
-	// ft_printf("Extend: [%i]\n", students.extend(&students, 8, "James", "John", "Kevin", "Dilan", "Brian", "Steve", "Mathilda", "Nope"));
+	// ft_printf("Extend: [%i]\n", students.extend(&students, 8, 90, 91, 92, 93, 94, 95, 96, 97));
 
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
@@ -113,7 +99,22 @@ int		main(int ac, char *av[])
 
 	/* [ OVER ] EXTENDLEFT */
 
-	// ft_printf("ExtendLeft: [%i]\n", students.extendleft(&students, 8, "Patrick", "Silva", "Bruno", "Peter", "Samantha", "Mario", "Chris", "Yogi"));
+	// ft_printf("ExtendLeft: [%i]\n", students.extendleft(&students, 8, 190, 191, 192, 193, 194, 195, 196, 197));
+
+
+/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
+
+
+	/* PRINT uvector */
+
+	// ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[PRINT START]-- -- -- -- -- -- -- -- --\n\n");
+	// i = 0;
+	// while (i < students.capacity)
+	// {
+	// 	ft_printf("%3i:  %-20i> Length: %-7i> Capacity: %i\n", i, students.uvector[i], students.length, students.capacity);
+	// 	++i;
+	// }
+	// ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[PRINT END]-- -- -- -- -- -- -- -- --\n\n");
 
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
@@ -137,14 +138,14 @@ int		main(int ac, char *av[])
 
 	/* PRINT uvector */
 
-	ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[PRINT START]-- -- -- -- -- -- -- -- --\n\n");
-	i = 0;
-	while (i < students.capacity)
-	{
-		ft_printf("%3i:  %-20s> Length: %-7i> Capacity: %i\n", i, students.uvector[i], students.length, students.capacity);
-		++i;
-	}
-	ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[PRINT END]-- -- -- -- -- -- -- -- --\n\n");
+	// ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[PRINT START]-- -- -- -- -- -- -- -- --\n\n");
+	// i = 0;
+	// while (i < students.capacity)
+	// {
+	// 	ft_printf("%3i:  %-20s> Length: %-7i> Capacity: %i\n", i, students.uvector[i], students.length, students.capacity);
+	// 	++i;
+	// }
+	// ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[PRINT END]-- -- -- -- -- -- -- -- --\n\n");
 
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
@@ -290,33 +291,9 @@ int		main(int ac, char *av[])
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
 
-
-	/* CLEARING */
-
-	students.clear(&students);
-
-
-/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
-
-
-	/* PRINT uvector */
-
-	ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[PRINT START]-- -- -- -- -- -- -- -- --\n\n");
-	i = 0;
-	while (i < students.capacity)
-	{
-		ft_printf("%3i:  %-20s> Length: %-7i> Capacity: %i\n", i, students.uvector[i], students.length, students.capacity);
-		++i;
-	}
-	ft_printf("%s", "\n-- -- -- -- -- -- -- -- --[PRINT END]-- -- -- -- -- -- -- -- --\n\n");
-
-
-/* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
-
 	// sleep(1);
 
 	(void)ac;
 	(void)av;
-	(void)value;
 	return (0);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   uvector_deque.c                                     :+:      :+:    :+:   */
+/*   uvector_deque.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:34:43 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 18:05:49 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/24 16:46:58 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/24 16:46:58 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@
 **         De-queues the first element of the queue in the uvector.
 **
 **    RETURN VALUES
-**         If successful returns the dequed element; otherwise NULL.
+**         Returns the deque'd element.
 */
 
 #include "../Includes/uvector.h"
 
-void		*uvector_deque(struct s_uvector *self)
+t_integer	uvector_deque(struct s_uvector *self)
 {
 	return (self->popleft(self));
 }

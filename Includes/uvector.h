@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:41:37 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:07:04 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 17:24:43 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@
 */
 
 # define UVECTOR_INIT_CAPACITY    (256)
-# define UVECTOR_SIZE_MULTIPLIER  (2)
+# define UVECTOR_SIZE_MULTIPLIER  (4)
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
@@ -53,9 +53,7 @@ typedef struct		s_uvector
 	int				(*extend)(struct s_uvector *self, size_t n, ...);
 	int				(*extendleft)(struct s_uvector *self, size_t n, ...);
 	\
-	void			*(*getby_index)(struct s_uvector *self, size_t i);
-	void			*(*getby_ref)(struct s_uvector *self, t_integer ref,
-						int (*cmp)(t_integer a, t_integer b));
+	t_integer		(*get)(struct s_uvector *self, size_t i);
 	\
 	t_integer		(*pop)(struct s_uvector *self);
 	t_integer		(*popleft)(struct s_uvector *self);
@@ -114,9 +112,7 @@ int					uvector_insert(struct s_uvector *self, size_t i,
 int					uvector_extend(struct s_uvector *self, size_t n, ...);
 int					uvector_extendleft(struct s_uvector *self, size_t n, ...);
 
-t_integer			uvector_getby_index(struct s_uvector *self, size_t i);
-t_integer			uvector_getby_ref(struct s_uvector *self, t_integer ref,
-						int (*cmp)(t_integer a, t_integer b));
+t_integer			uvector_get(struct s_uvector *self, size_t i);
 
 t_integer			uvector_pop(struct s_uvector *self);
 t_integer			uvector_popleft(struct s_uvector *self);

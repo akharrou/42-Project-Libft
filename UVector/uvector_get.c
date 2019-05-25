@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_get.c                                       :+:      :+:    :+:   */
+/*   uvector_get.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:29:29 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:29:30 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 17:13:02 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@
 **         data is returned.
 **
 **    RETURN VALUES
-**         Returns a the data at that index.
+**         If the index is inbounds of the uvector, the popped
+**         element; otherwise 0.
 */
 
 #include "../Includes/uvector.h"
@@ -43,7 +44,8 @@ t_integer		uvector_get(struct s_uvector *self, size_t i)
 {
 	t_integer	value;
 
+	value.int64 = 0;
 	if (i < self->capacity)
-		return (self->uvector[i]);
+		value = self->uvector[i];
 	return (value);
 }

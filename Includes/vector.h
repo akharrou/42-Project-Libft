@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:26:14 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 17:23:34 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 */
 
 # define VECTOR_INIT_CAPACITY    (256)
-# define VECTOR_SIZE_MULTIPLIER  (2)
+# define VECTOR_SIZE_MULTIPLIER  (4)
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **

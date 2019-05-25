@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/24 16:30:09 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/24 17:25:35 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ HEADERS     =   Includes/libft.h                                              \
                                                                               \
                 Includes/bigint.h                                             \
                 Includes/vector.h                                             \
+                Includes/uvector.h                                            \
                 Includes/list.h                                               \
                 Includes/btree.h                                              \
                 Includes/trie.h                                               \
@@ -354,7 +355,7 @@ UVECTOR      =  UVector/uvector_constructor.c                                 \
                 UVector/uvector_extend.c                                      \
                 UVector/uvector_extendleft.c                                  \
                 UVector/uvector_insert.c                                      \
-                UVector/vector_get.c                                          \
+                UVector/uvector_get.c                                         \
                 UVector/uvector_pop.c                                         \
                 UVector/uvector_popleft.c                                     \
                 UVector/uvector_deque.c                                       \
