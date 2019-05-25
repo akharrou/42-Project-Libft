@@ -6,44 +6,52 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 18:25:01 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/25 12:44:15 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 15:15:39 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         ft_bubble_sort -- sort a vector by ascending order
+**         ft_bubble_sort -- sort an array by ascending order
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         ft_bubble_sort(void *vector, size_t length, size_t width,
+**         ft_bubble_sort(void *base, size_t length, size_t width,
 **             int (*cmp)(void *, void *));
 **
 **    PARAMETERS
 **
+**         void *base                     Pointer to the initial member of
+**                                        the array.
 **
+**         size_t length                  Number of objects in the array.
 **
+**         size_t width                   Size of each object (in bytes).
 **
-**
+**         int (*cmp)(void *, void *)     Comparasion function.
 **
 **    DESCRIPTION
-**         Description.
+**         The contents of the array 'base' are sorted in ascending order
+**         according to a comparison function pointed to by 'cmp', which
+**         requires two arguments pointing to the objects being compared.
+**
+**         The comparison function must return an integer less than, equal
+**         to, or greater than zero if the first argument is considered to
+**         be respectively less than, equal to, or greater than the second.
 **
 **    RETURN VALUES
 **         If successful returns 0; otherwise -1.
 */
 
 #include "../Includes/stdlib_42.h"
-#include "../Includes/stdint_42.h"
 
-int			ft_bubble_sort(void *vector, size_t length, size_t width,
+int			ft_bubble_sort(void *base, size_t length, size_t width,
 				int (*cmp)(void *, void *))
 {
 	int		unordered;
 	void	*tmp;
-	size_t	len;
 	size_t	i;
 
 	if (!(tmp = (void *)malloc(width)))
@@ -53,45 +61,18 @@ int			ft_bubble_sort(void *vector, size_t length, size_t width,
 	{
 		i = 0;
 		unordered = 0;
-		len = (length - 1);
-		while (i < len)
+		--length;
+		while (i < length)
 		{
-			if (cmp(&(vector[i]), &(vector[i + 1])) > 0)
+			if (cmp(base + (i * width), base + ((i + 1) * width)) > 0)
 			{
-				ft_swap_mem(&(vector[i]), &(vector[i + 1]), tmp, width);
+				ft_swap_mem(
+					base + (i * width), base + ((i + 1) * width), tmp, width);
 				++unordered;
 			}
 			++i;
 		}
-		--length;
 	}
 	free(tmp);
-	return (0);
-}
-
-
-#include "../Includes/libft.h"
-
-int		compare(void *a, void *b)
-{
-	return (*(intmax_t *)(a) <= *(intmax_t *)(b));
-}
-
-int		main(void)
-{
-
-	t_uvector	ages;
-
-	ages = uvector.constructor(1);
-	ages.extend(&ages, 10, 7, 2, 9, 4, 1, 0, 3, 5, 8, 6);
-
-	for (size_t i = 0; i < ages.length; i++) { ft_printf("%3i: %ji, ", i, ages.uvector[i]); }
-	ft_printf("\n\n");
-
-	ft_bubble_sort(ages.uvector, ages.length, sizeof(intmax_t), &compare);
-
-	for (size_t i = 0; i < ages.length; i++) { ft_printf("%3i: %ji, ", i, ages.uvector[i]); }
-	ft_printf("\n\n");
-
 	return (0);
 }

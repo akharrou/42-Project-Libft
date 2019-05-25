@@ -6,12 +6,12 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/25 12:30:47 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/25 13:25:30 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC          =   gcc
-CFLAGS      =   -Wall -Wextra -Werror #$(DEBUG_FLAGS)
+CFLAGS      =   -Wall -Wextra -Werror $(DEBUG_FLAGS)
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
@@ -21,14 +21,13 @@ OPTIM_FLAGS =   -O3 -march=native                                             \
 
 DEBUG_FLAGS =   -O0 -g                                                      \
                                                                             \
-                -fsanitize=address                                          \
-                -fsanitize=undefined                                        \
-                -fsanitize=bounds                                           \
-                -fsanitize=nullability-arg                                  \
-                -fsanitize=nullability-return                               \
-                -fsanitize=nullability-assign                               \
-                -fsanitize=undefined                                        \
-                -fsanitize-address-use-after-scope                          \
+                # -fsanitize=address                                          \
+                # -fsanitize=undefined                                        \
+                # -fsanitize=bounds                                           \
+                # -fsanitize=nullability-arg                                  \
+                # -fsanitize=nullability-return                               \
+                # -fsanitize=nullability-assign                               \
+                # -fsanitize-address-use-after-scope                          \
                 # -fsanitize=integer                                          \
                 # -fsanitize=object-size                                      \
 

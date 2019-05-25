@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:35:17 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/25 12:32:17 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 15:16:08 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,13 @@ void			ft_memset_addr(void **buf, int c, size_t len);
 **  Sorting Function(s).
 */
 
-int				ft_bubble_sort(void *vector, size_t length, size_t width,
+int				ft_bubble_sort(void *base, size_t length, size_t width,
 					int (*cmp)(void *, void *));
 
-int				ft_insertion_sort(void *vector, size_t length, size_t width,
+int				ft_insertion_sort(void *base, size_t length, size_t width,
 					int (*cmp)(void *, void *));
 
-int				ft_selection_sort(void *vector, size_t length, size_t width,
+int				ft_selection_sort(void *base, size_t length, size_t width,
 					int (*cmp)(void *, void *));
 
 /*
