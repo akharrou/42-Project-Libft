@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 12:03:50 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 17:12:35 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 18:12:19 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,15 @@ typedef unsigned char	*t_ptr;
 **  Unit Type(s).
 */
 
-typedef struct	s_bit
+typedef struct			s_bit
 {
 	int8_t	bit : 1;
-}				t_bit;
+}						t_bit;
 
-typedef struct	s_byte
+typedef struct			s_byte
 {
 	int8_t	byte;
-}				t_byte;
+}						t_byte;
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **

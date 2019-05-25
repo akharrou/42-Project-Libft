@@ -6,13 +6,12 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:41:37 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 17:24:43 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 18:11:55 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **  Header File -- Unboxed Vector Class
-**
 */
 
 #ifndef UVECTOR_H
@@ -77,6 +76,7 @@ typedef t_uvector	t_uqueue;
 extern const struct	s_uvector_class
 {
 	struct s_uvector	(*constructor)(size_t capacity);
+	void				(*destructor)(struct s_uvector *instance);
 	struct s_uvector	(*copy)(struct s_uvector instance);
 	struct s_uvector	(*resize)(struct s_uvector instance, size_t new_size);
 	struct s_uvector	(*rightshift)(struct s_uvector instance, size_t n);
@@ -89,14 +89,14 @@ extern const struct	s_uvector_class
 **  UVector Class Function Declaration(s).
 */
 
-struct s_uvector		uvector_constructor(size_t capacity);
+struct s_uvector	uvector_constructor(size_t capacity);
+void				uvector_destructor(struct s_uvector *instance);
 
-struct s_uvector		uvector_copy(struct s_uvector uvector);
-struct s_uvector		uvector_reverse(struct s_uvector uvector);
-struct s_uvector		uvector_resize(struct s_uvector uvector,
-							size_t new_size);
-struct s_uvector		uvector_rightshift(struct s_uvector uvector, size_t n);
-struct s_uvector		uvector_leftshift(struct s_uvector uvector, size_t n);
+struct s_uvector	uvector_copy(struct s_uvector uvector);
+struct s_uvector	uvector_reverse(struct s_uvector uvector);
+struct s_uvector	uvector_resize(struct s_uvector uvector, size_t new_size);
+struct s_uvector	uvector_rightshift(struct s_uvector uvector, size_t n);
+struct s_uvector	uvector_leftshift(struct s_uvector uvector, size_t n);
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **

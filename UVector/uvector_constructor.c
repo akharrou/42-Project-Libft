@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:35:55 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 17:05:23 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 18:09:45 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,7 @@ t_uvector		uvector_constructor(size_t capacity)
 		.deque = &uvector_deque,
 		.get = &uvector_get,
 		.setall = &uvector_setall,
-		.isempty = &uvector_isempty,
-		.isfull = &uvector_isfull
+		.isempty = &uvector_isempty, .isfull = &uvector_isfull
 	};
 	instance.uvector = (t_integer *)malloc(sizeof(t_integer) * capacity);
 	if (instance.uvector != NULL)
@@ -72,6 +71,7 @@ t_uvector		uvector_constructor(size_t capacity)
 const struct s_uvector_class uvector =
 {
 	.constructor = &uvector_constructor,
+	.destructor = &uvector_destructor,
 	.copy = &uvector_copy,
 	.reverse = &uvector_reverse,
 	.resize = &uvector_resize,

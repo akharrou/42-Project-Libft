@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/24 17:25:35 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/24 17:59:24 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -314,6 +314,7 @@ BIGINT      =   BigInt/bigint_add.c                                           \
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
 VECTOR      =   Vector/vector_constructor.c                                   \
+                Vector/vector_destructor.c                                    \
                                                                               \
                 Vector/vector_copy.c                                          \
                 Vector/vector_reverse.c                                       \
@@ -341,6 +342,7 @@ VECTOR      =   Vector/vector_constructor.c                                   \
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
 UVECTOR      =  UVector/uvector_constructor.c                                 \
+                UVector/uvector_destructor.c                                  \
                                                                               \
                 UVector/uvector_resize.c                                      \
                 UVector/uvector_copy.c                                        \
