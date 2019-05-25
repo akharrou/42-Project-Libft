@@ -6,14 +6,22 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:38:09 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 15:52:08 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 18:22:04 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRING_42_H
 # define STRING_42_H
 
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
+
 # include <string.h>
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 size_t		ft_strlen(const char *str);
 size_t		ft_strnlen(const char *s, size_t maxlen);
@@ -88,5 +96,9 @@ char		**ft_strtabncat(char **dst, char **src, long n);
 char		**ft_strtab_appendstr(const char **strtab, char *str);
 char		**ft_strtab_appendstrfre(const char **strtab, char *str,
 			int free_s1, int free_s2);
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 #endif

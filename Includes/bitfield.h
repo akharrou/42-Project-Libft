@@ -6,14 +6,24 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 13:07:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 15:00:46 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 18:20:36 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BITFIELD_H
 # define BITFIELD_H
 
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+**  Header File(s)
+*/
+
 # include <stdint.h>
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+**  Bit Field Declaration(s)
+*/
 
 typedef struct	s_bitfield__2 {
 	__int128_t bits : 2;
@@ -486,5 +496,9 @@ typedef struct	s_bitfield__127 {
 typedef struct	s_bitfield__128 {
 	__int128_t bits : 128;
 }				t_128_bits;
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 #endif

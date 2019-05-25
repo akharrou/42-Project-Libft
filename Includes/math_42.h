@@ -6,16 +6,24 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/12 11:09:19 by akharrou          #+#    #+#             */
-/*   Updated: 2019/04/18 12:11:37 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 18:21:54 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MATH_42_H
 # define MATH_42_H
 
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
+
 # define E              2.71828182845U
 # define PI             3.14159265359U
 # define GOLDEN_RATIO   1.61803398875U
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 # define ODD(n)         (n % 2 == 1)
 # define EVEN(n)        (n % 2 == 0)
@@ -27,6 +35,10 @@
 
 # define CEIL(x)        (((float)x > (int)x) ? ((int)x + 1) : (x))
 # define FLOOR(x)       ((int)x)
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 double					ft_sqrt(double x);
 
@@ -49,5 +61,9 @@ double					ft_min_d(double *vector, unsigned int size);
 
 long double				ft_round(long double n);
 long double				ft_round_with_prior(long double n);
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 #endif

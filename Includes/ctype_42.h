@@ -6,14 +6,22 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:31:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/20 10:31:31 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 18:22:26 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CTYPE_42_H
 # define CTYPE_42_H
 
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
+
 # include <string.h>
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 # define ISBLANK(c) (c == ' ' || c == '\t')
 # define ISSPACE(c) (ISBLANK (c) || c >= 10 && c <= 13)
@@ -31,6 +39,10 @@
 # define ISGREATER(x, y)  (x > y)
 # define ISLESSER(x, y)   (x < y)
 # define ISEQUAL(x, y)    (x == y)
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 int		ft_isupper(int c);
 int		ft_islower(int c);
@@ -58,5 +70,9 @@ char	*ft_strtoupper(char *str);
 char	*ft_strtolower(char *str);
 void	*ft_to_big_endian(void *data, size_t size);
 void	*ft_to_little_endian(void *data, size_t size);
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 #endif

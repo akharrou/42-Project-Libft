@@ -3,21 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   list.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:40:33 by akharrou          #+#    #+#             */
-/*   Updated: 2019/03/04 08:37:37 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 18:21:37 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIST_H
 # define LIST_H
 
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
+
 typedef struct	s_list_element
 {
 	void					*item;
 	struct s_list_element	*next;
 }				t_list;
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 t_list			*list_newelem(const void *item);
 
@@ -68,5 +76,9 @@ int				list_reverse(t_list **head);
 int				list_map(t_list **dest, t_list *src,
 				t_list *(*f)(t_list *elem));
 int				list_merge(t_list **list1, t_list *list2);
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 #endif

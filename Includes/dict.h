@@ -3,19 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   dict.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 08:17:40 by akharrou          #+#    #+#             */
-/*   Updated: 2019/03/07 16:46:03 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 18:21:01 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DICT_H
 # define DICT_H
 
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
+
 # include "hashtable.h"
 
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
+
 typedef t_hashtable	t_dict;
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 t_dict				*dict_new(unsigned int num_entries);
 
@@ -33,5 +45,9 @@ t_entry				*dict_getentry_fast(t_hashtable *table, char *key,
 
 int					dict_remove(t_hashtable **table, char *key);
 int					dict_clear(t_dict **table);
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+*/
 
 #endif
