@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:48:20 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:03:16 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:38:22 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **
 **    PARAMETERS
 **
-**         struct s_uvector instance    A uvector instance.
+**         struct s_uvector instance   A uvector instance.
 **
 **         size_t new_size             The new size to which to resize
 **                                     the uvector.
@@ -49,15 +49,15 @@
 
 struct s_uvector	uvector_resize(struct s_uvector instance, size_t new_size)
 {
-	t_integer		*new_uvector;
+	intmax_t		*new_uvector;
 
 	new_uvector = ft_realloc(
 		instance.uvector,
-		(sizeof(t_integer) * instance.capacity),
-		(sizeof(t_integer) * new_size));
+		(sizeof(intmax_t) * instance.capacity),
+		(sizeof(intmax_t) * new_size));
 	if (new_uvector != NULL)
 	{
-		instance.uvector = (t_integer *)new_uvector;
+		instance.uvector = (intmax_t *)new_uvector;
 		instance.capacity = new_size;
 	}
 	return (instance);

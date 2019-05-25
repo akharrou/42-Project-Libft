@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:47:16 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:47:16 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:35:38 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **
 **    PARAMETERS
 **
-**         struct s_uvector *self     Pointer to a uvector instance.
+**         struct s_uvector *self    Pointer to a uvector instance.
 **
 **         size_t n                  Number of elements passed as
 **                                   additional arguments.
@@ -47,16 +47,16 @@
 
 int		uvector_extend(struct s_uvector *self, size_t n, ...)
 {
-	int		ret;
-	va_list	ap;
-	size_t	i;
+	int			ret;
+	va_list		ap;
+	size_t		i;
 
 	va_start(ap, n);
 	ret = 1;
 	i = 0;
 	while (ret == 1 && i < n)
 	{
-		ret = self->append(self, va_arg(ap, t_integer));
+		ret = self->append(self, va_arg(ap, intmax_t));
 		++i;
 	}
 	va_end(ap);

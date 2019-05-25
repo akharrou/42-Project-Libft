@@ -15,13 +15,13 @@
 int		main(int ac, char *av[])
 {
 	t_uqueue 	students;
-	t_integer	val;
+	intmax_t	val;
 	size_t		i;
 
 	++av;
 
 
-	val.int64 = 999;
+	val = 999;
 
 /* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  */
 
@@ -297,3 +297,55 @@ int		main(int ac, char *av[])
 	(void)av;
 	return (0);
 }
+
+
+
+
+
+
+/*
+
+#include "Includes/libft.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <math.h>
+
+int		main(void)
+{
+	t_uvector	ages;
+	size_t		i;
+
+	ages = uvector.constructor(10);
+
+	ages.setall(&ages, -1);
+
+	/* PRINT UVECTOR */
+	ft_printf("—— —— —— —— —— —— [PRINT START] —— —— —— —— —— —— ——\n\n");
+	i = 0; while (i < ages.length) { ft_printf("%3i:  %20ji > Length: %10i > Capacity : %i\n", i, ages.uvector[i], ages.length, ages.capacity); ++i; }
+	ft_printf("\n—— —— —— —— —— —— [PRINT END] —— —— —— —— —— —— ——\n\n");
+
+	ages.extend(&ages, 12, 1, 2 , 3 , 4 , 5  , 6 , 7 , 8 , 9 , 10 , 11 , 12);
+	ages.extendleft(&ages, 12, 11, 12, 13, 14, 15, 16, 17, 18, 19, 110, 111, 112);
+
+	/* PRINT UVECTOR */
+	ft_printf("—— —— —— —— —— —— [PRINT START] —— —— —— —— —— —— ——\n\n");
+	i = 0; while (i < ages.length) { ft_printf("%3i:  %20ji > Length: %10i > Capacity : %i\n", i, ages.uvector[i], ages.length, ages.capacity); ++i; }
+	ft_printf("\n—— —— —— —— —— —— [PRINT END] —— —— —— —— —— —— ——\n\n");
+
+	// i = 0;
+	// while (i < 100)
+	// {
+	// 	// ages.append(&ages ,i);
+	// 	ft_printf("%3i:  %20ld > Length: %10i > Capacity : %i\n", i, ages.uvector[i], ages.length, ages.capacity);
+	// 	++i;
+	// }
+
+	uvector.destructor(&ages);
+
+	return (0);
+}
+
+*/

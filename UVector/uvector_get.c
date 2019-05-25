@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:29:29 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 17:13:02 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:36:54 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         t_intger
+**         intmax_t
 **         uvector_get(struct s_uvector *self, size_t i);
 **
 **    PARAMETERS
 **
-**         struct s_uvector *self     Pointer to a uvector instance.
+**         struct s_uvector *self     Pointer to a uvector
+**                                    instance.
 **
 **         size_t i                   Index in the uvector.
 **
@@ -30,21 +31,20 @@
 **         Fetches and returns the value found at index 'i' in
 **         the uvector.
 **
-**         If 'i' is out of the bounds of the uvector, then undetermined
-**         data is returned.
+**         If 'i' is out of the bounds of the uvector, then 0
+**         is  the value that is returned.
 **
 **    RETURN VALUES
-**         If the index is inbounds of the uvector, the popped
-**         element; otherwise 0.
+**         Returns the element at index 'i'; otherwise 0.
 */
 
 #include "../Includes/uvector.h"
 
-t_integer		uvector_get(struct s_uvector *self, size_t i)
+intmax_t		uvector_get(struct s_uvector *self, size_t i)
 {
-	t_integer	value;
+	intmax_t	value;
 
-	value.int64 = 0;
+	value = 0;
 	if (i < self->capacity)
 		value = self->uvector[i];
 	return (value);

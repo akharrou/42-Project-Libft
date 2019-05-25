@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:43:25 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 17:16:08 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:37:44 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         t_integer
+**         intmax_t
 **         uvector_pop(struct s_uvector *self);
 **
 **    PARAMETERS
@@ -37,15 +37,15 @@
 
 #include "../Includes/uvector.h"
 
-t_integer	uvector_pop(struct s_uvector *self)
+intmax_t	uvector_pop(struct s_uvector *self)
 {
-	t_integer	element;
+	intmax_t	element;
 
-	element.int64 = 0;
+	element = 0;
 	if (self->length > 0)
 	{
 		element = self->uvector[self->length - 1];
-		self->uvector[self->length - 1].int64 = 0;
+		self->uvector[self->length - 1] = 0;
 		self->length -= 1;
 	}
 	return (element);

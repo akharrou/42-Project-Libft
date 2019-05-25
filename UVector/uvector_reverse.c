@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:49:29 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:49:30 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:38:00 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@
 
 struct s_uvector		uvector_reverse(struct s_uvector instance)
 {
-	t_integer		tmp;
+	intmax_t		tmp;
 	size_t			len;
 	size_t			i;
 	size_t			j;

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:46:40 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:46:40 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:35:00 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 **         #include <libft.h>
 **
 **         int
-**         uvector_append(struct s_uvector *self, t_integer data);
+**         uvector_append(struct s_uvector *self, intmax_t data);
 **
 **    PARAMETERS
 **
 **         struct s_uvector *self     Pointer to a uvector instance.
 **
-**         t_integer data                Pointer to some data.
+**         intmax_t data              Pointer to some data.
 **
 **    DESCRIPTION
 **         Adds an element to end of the uvector.
@@ -35,7 +35,7 @@
 
 #include "../Includes/uvector.h"
 
-int		uvector_append(struct s_uvector *self, t_integer data)
+int		uvector_append(struct s_uvector *self, intmax_t data)
 {
 	if (self->isfull(self) == 1)
 		(*self) = uvector.resize(

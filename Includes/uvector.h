@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:41:37 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 18:11:55 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:33:52 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,25 +40,25 @@
 
 typedef struct		s_uvector
 {
-	t_integer		*uvector;
+	intmax_t		*uvector;
 	size_t			length;
 	size_t			capacity;
 	\
-	int				(*insert)(struct s_uvector *self, size_t i, t_integer data);
-	int				(*push)(struct s_uvector *self, t_integer data);
-	int				(*enque)(struct s_uvector *self, t_integer data);
-	int				(*append)(struct s_uvector *self, t_integer data);
-	int				(*appendleft)(struct s_uvector *self, t_integer data);
+	int				(*insert)(struct s_uvector *self, size_t i, intmax_t data);
+	int				(*push)(struct s_uvector *self, intmax_t data);
+	int				(*enque)(struct s_uvector *self, intmax_t data);
+	int				(*append)(struct s_uvector *self, intmax_t data);
+	int				(*appendleft)(struct s_uvector *self, intmax_t data);
 	int				(*extend)(struct s_uvector *self, size_t n, ...);
 	int				(*extendleft)(struct s_uvector *self, size_t n, ...);
 	\
-	t_integer		(*get)(struct s_uvector *self, size_t i);
+	intmax_t		(*get)(struct s_uvector *self, size_t i);
 	\
-	t_integer		(*pop)(struct s_uvector *self);
-	t_integer		(*popleft)(struct s_uvector *self);
-	t_integer		(*deque)(struct s_uvector *self);
+	intmax_t		(*pop)(struct s_uvector *self);
+	intmax_t		(*popleft)(struct s_uvector *self);
+	intmax_t		(*deque)(struct s_uvector *self);
 	\
-	void			(*setall)(struct s_uvector *self, t_integer value);
+	void			(*setall)(struct s_uvector *self, intmax_t value);
 	\
 	int				(*isfull)(struct s_uvector *self);
 	int				(*isempty)(struct s_uvector *self);
@@ -103,22 +103,22 @@ struct s_uvector	uvector_leftshift(struct s_uvector uvector, size_t n);
 **  UVector Object Function Declaration(s).
 */
 
-int					uvector_push(struct s_uvector *self, t_integer data);
-int					uvector_enque(struct s_uvector *self, t_integer data);
-int					uvector_append(struct s_uvector *self, t_integer data);
-int					uvector_appendleft(struct s_uvector *self, t_integer data);
+int					uvector_push(struct s_uvector *self, intmax_t data);
+int					uvector_enque(struct s_uvector *self, intmax_t data);
+int					uvector_append(struct s_uvector *self, intmax_t data);
+int					uvector_appendleft(struct s_uvector *self, intmax_t data);
 int					uvector_insert(struct s_uvector *self, size_t i,
-						t_integer data);
+						intmax_t data);
 int					uvector_extend(struct s_uvector *self, size_t n, ...);
 int					uvector_extendleft(struct s_uvector *self, size_t n, ...);
 
-t_integer			uvector_get(struct s_uvector *self, size_t i);
+intmax_t			uvector_get(struct s_uvector *self, size_t i);
 
-t_integer			uvector_pop(struct s_uvector *self);
-t_integer			uvector_popleft(struct s_uvector *self);
-t_integer			uvector_deque(struct s_uvector *self);
+intmax_t			uvector_pop(struct s_uvector *self);
+intmax_t			uvector_popleft(struct s_uvector *self);
+intmax_t			uvector_deque(struct s_uvector *self);
 
-void				uvector_setall(struct s_uvector *self, t_integer value);
+void				uvector_setall(struct s_uvector *self, intmax_t value);
 
 int					uvector_isfull(struct s_uvector *self);
 int					uvector_isempty(struct s_uvector *self);

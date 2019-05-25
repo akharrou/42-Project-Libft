@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:37:37 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 15:37:39 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:37:34 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 **         size_t i                  Index in the uvector at which to
 **                                   insert the data.
 **
-**         t_integer data                Pointer to some data.
+**         intmax_t data              Pointer to some data.
 **
 **    DESCRIPTION
 **         If possible inserts 'data' in the uvector at index 'i'.
@@ -42,7 +42,7 @@
 #include "../Includes/stdlib_42.h"
 #include "../Includes/uvector.h"
 
-int		uvector_insert(struct s_uvector *self, size_t i, t_integer data)
+int		uvector_insert(struct s_uvector *self, size_t i, intmax_t data)
 {
 	if (i < self->capacity)
 	{

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:47:04 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:47:04 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:34:53 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 **         #include <libft.h>
 **
 **         int
-**         uvector_enque(struct s_uvector *self, t_integer data);
+**         uvector_enque(struct s_uvector *self, intmax_t data);
 **
 **    PARAMETERS
 **
 **         struct s_uvector *self     Pointer to a uvector instance.
 **
-**         t_integer data                Pointer to some data.
+**         intmax_t data              Pointer to some data.
 **
 **    DESCRIPTION
 **         Adds an element to the end of a queue (i.e appends to
@@ -36,7 +36,7 @@
 
 #include "../Includes/uvector.h"
 
-int		uvector_enque(struct s_uvector *self, t_integer data)
+int		uvector_enque(struct s_uvector *self, intmax_t data)
 {
 	return (self->append(self, data));
 }

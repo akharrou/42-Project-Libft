@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:31:04 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 15:49:20 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:38:12 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 **         #include <libft.h>
 **
 **         int
-**         uvector_setall(struct s_uvector *self, t_integer value);
+**         uvector_setall(struct s_uvector *self, intmax_t value);
 **
 **    PARAMETERS
 **
@@ -33,7 +33,7 @@
 
 #include "../Includes/uvector.h"
 
-void	uvector_setall(struct s_uvector *self, t_integer value)
+void	uvector_setall(struct s_uvector *self, intmax_t value)
 {
 	size_t	i;
 
@@ -43,5 +43,5 @@ void	uvector_setall(struct s_uvector *self, t_integer value)
 		self->uvector[i] = value;
 		++i;
 	}
-	self->length = 0;
+	self->length = self->capacity;
 }

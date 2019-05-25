@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:43:56 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 17:16:24 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:37:50 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         t_integer
+**         intmax_t
 **         uvector_popleft(struct s_uvector *self);
 **
 **    PARAMETERS
@@ -36,12 +36,12 @@
 
 #include "../Includes/uvector.h"
 
-t_integer	uvector_popleft(struct s_uvector *self)
+intmax_t	uvector_popleft(struct s_uvector *self)
 {
-	t_integer	element;
+	intmax_t	element;
 
 	element = self->uvector[0];
-	self->uvector[0].int64 = 0;
+	self->uvector[0] = 0;
 	self->length -= 1;
 	(*self) = uvector.leftshift(*self, 1);
 	return (element);

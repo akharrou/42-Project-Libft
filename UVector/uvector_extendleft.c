@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:47:21 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:47:22 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:37:29 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **
 **    PARAMETERS
 **
-**         struct s_uvector *self     Pointer to a uvector instance.
+**         struct s_uvector *self    Pointer to a uvector instance.
 **
 **         size_t n                  Number of elements passed as
 **                                   additional arguments.
@@ -49,11 +49,11 @@
 #include "../Includes/uvector.h"
 #include <stdarg.h>
 
-int		uvector_extendleft(struct s_uvector *self, size_t n, ...)
+int				uvector_extendleft(struct s_uvector *self, size_t n, ...)
 {
-	int		ret;
-	va_list	ap;
-	size_t	i;
+	int			ret;
+	va_list		ap;
+	size_t		i;
 
 	while (self->length + n >= self->capacity)
 		(*self) = uvector.resize(
@@ -64,7 +64,7 @@ int		uvector_extendleft(struct s_uvector *self, size_t n, ...)
 	i = 1;
 	while (ret == 1 && i <= n)
 	{
-		ret = self->insert(self, (n - i), va_arg(ap, t_integer));
+		ret = self->insert(self, (n - i), va_arg(ap, intmax_t));
 		++i;
 	}
 	va_end(ap);

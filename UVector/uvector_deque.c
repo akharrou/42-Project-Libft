@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:46:58 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:46:58 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:21:13 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         t_integer
+**         intmax_t
 **         uvector_deque(struct s_uvector *self);
 **
 **    PARAMETERS
@@ -33,7 +33,7 @@
 
 #include "../Includes/uvector.h"
 
-t_integer	uvector_deque(struct s_uvector *self)
+intmax_t	uvector_deque(struct s_uvector *self)
 {
 	return (self->popleft(self));
 }

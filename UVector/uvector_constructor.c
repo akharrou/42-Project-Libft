@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:35:55 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 18:09:45 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:35:06 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,11 @@ t_uvector		uvector_constructor(size_t capacity)
 		.setall = &uvector_setall,
 		.isempty = &uvector_isempty, .isfull = &uvector_isfull
 	};
-	instance.uvector = (t_integer *)malloc(sizeof(t_integer) * capacity);
+	instance.uvector = (intmax_t *)malloc(sizeof(intmax_t) * capacity);
 	if (instance.uvector != NULL)
 	{
 		instance.capacity = capacity;
-		ft_bzero(instance.uvector, instance.capacity * sizeof(t_integer));
+		ft_bzero(instance.uvector, instance.capacity * sizeof(intmax_t));
 	}
 	return (instance);
 }

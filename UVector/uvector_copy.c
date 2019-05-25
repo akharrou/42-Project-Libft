@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:37:15 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:44:35 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:37:09 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ struct s_uvector		uvector_copy(struct s_uvector instance)
 
 	duplicate = uvector.constructor(instance.capacity);
 	duplicate.uvector = ft_memdup(
-		instance.uvector, (instance.capacity) * sizeof(t_integer));
+		instance.uvector, (instance.capacity) * sizeof(intmax_t));
 	if (!duplicate.uvector)
 		return (instance);
 	duplicate.length = instance.length;
