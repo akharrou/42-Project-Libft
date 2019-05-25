@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 22:38:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 19:05:31 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/24 18:27:11 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,5 @@ int		ft_mergesort(void **vector, size_t start, size_t end,
 			ft_mergesort(vector, mid + 1, end, cmp);
 		}
 	}
-	return ();
+	return (0);
+}
