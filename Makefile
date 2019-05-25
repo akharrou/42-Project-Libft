@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/25 11:18:57 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/25 12:30:47 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -179,13 +179,19 @@ STDLIB      =   Stdlib/ft_bzero.c                                             \
                 Stdlib/ft_find_next_prime.c                                   \
                 Stdlib/ft_wcount.c                                            \
                 Stdlib/ft_chrcount.c                                          \
+                Stdlib/ft_reverse_bytes.c                                     \
+                Stdlib/ft_hash.c                                              \
+                Stdlib/ft_hash.c                                              \
+                                                                              \
                 Stdlib/ft_swap_int.c                                          \
                 Stdlib/ft_swap_char.c                                         \
                 Stdlib/ft_swap_str.c                                          \
-                Stdlib/ft_swap_item.c                                         \
-                Stdlib/ft_hash.c                                              \
+                Stdlib/ft_swap_ptr.c                                          \
+                Stdlib/ft_swap_mem.c                                          \
                                                                               \
-                Stdlib/ft_reverse_bytes.c                                     \
+                Stdlib/ft_bubble_sort.c                                       \
+                Stdlib/ft_insertion_sort.c                                    \
+                Stdlib/ft_selection_sort.c                                    \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 

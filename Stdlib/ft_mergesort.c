@@ -6,13 +6,37 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 22:38:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 18:27:11 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:44:19 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**    NAME
+**         ft_mergesort -- brief
+**
+**    SYNOPSIS
+**         #include <libft.h>
+**
+**         int
+**         ft_mergesort(struct s_vector *self);
+**
+**    PARAMETERS
+**
+**         struct s_vector *self     Pointer to a vector instance.
+**
+**         void *data                Pointer to some data.
+**
+**         PARAM 3          Brief
+**
+**    DESCRIPTION
+**         Description.
+**
+**    RETURN VALUES
+**         If successful returns 0; otherwise -1.
+*/
+
 #include "../Include/string.h"
 
-/* TODO : implement this function */
 int		ft_mergesort(void **vector, size_t start, size_t end,
 			int (*cmp)(void *, void *))
 {

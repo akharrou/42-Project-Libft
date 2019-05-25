@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:16:15 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:40:22 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:51:04 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,8 @@
 **                                              in the vector.
 **
 **         int (*cmp)(void *ref, void *data)    Comparasion function that
-**                                              checks if the data element
-**                                              corresponds to the reference;
-**                                              it needs to returns 0 the
-**                                              reference does correspond
+**                                              checks returns the integer 0
+**                                              if the reference does correspond
 **                                              to the data.
 **
 **    DESCRIPTION

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:35:17 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 18:26:58 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 12:32:17 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,14 @@ void			ft_memset_addr(void **buf, int c, size_t len);
 **  Sorting Function(s).
 */
 
-/*
-** int				ft_mergesort(void **vector, size_t start, size_t end,
-** 					int (*cmp)(void *, void *));
-**
-**                   TODO : implement this function
-*/
+int				ft_bubble_sort(void *vector, size_t length, size_t width,
+					int (*cmp)(void *, void *));
+
+int				ft_insertion_sort(void *vector, size_t length, size_t width,
+					int (*cmp)(void *, void *));
+
+int				ft_selection_sort(void *vector, size_t length, size_t width,
+					int (*cmp)(void *, void *));
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
@@ -92,7 +94,9 @@ char			*ft_convert_base(char *nbr, char *base_from, char *base_to);
 void			ft_swap_int(int *a, int *b);
 void			ft_swap_char(char *a, char *b);
 void			ft_swap_str(char **a, char **b);
-void			ft_swap_item(void **a, void **b);
+void			ft_swap_ptr(void **a, void **b);
+void			ft_swap_mem(void *a, void *b, void *tmp, size_t width);
+
 size_t			ft_intlen(int n);
 size_t			ft_intlen_base(int n, unsigned int base);
 size_t			ft_intmaxlen_base(intmax_t n, unsigned int base);

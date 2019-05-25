@@ -26,7 +26,7 @@
  * **Implementation of** `BigInt` (an infinitely big number type)
  * **Implementation of Bit Manipulation Functions**
  * **and more !**
- 
+
 >By developing this library, I gained a very deep & thorough understanding of the C Language and its Standard Library functions but also a great understanding of data structures, algorithms, unit testing, continuous integration, troubleshooting, and proper documentation.
 
 ## Norminette <a name="norminette"></a>
@@ -64,7 +64,7 @@ All library functions follow [42 Silicon Valley's](https://www.42.us.org/) codin
 | [ft_putstrtab_fd](Stdio/ft_putstrtab_fd.c)   | [ft_uintmaxlen_base](Stdlib/ft_uintmaxlen_base.c) | [ft_strcpy_until](String/ft_strcpy_until.c) |              |               |
 |                  | [ft_swap_char](Stdlib/ft_swap_char.c)       | [ft_strdup](String/ft_strdup.c)       |              |               |
 |                  | [ft_swap_int](Stdlib/ft_swap_int.c)        | [ft_strndup](String/ft_strndup.c)      |              |               |
-|                  | [ft_swap_item](Stdlib/ft_swap_item.c)       | [ft_strsub](String/ft_strsub.c)       |              |               |
+|                  | [ft_swap_ptr](Stdlib/ft_swap_ptr.c)       | [ft_strsub](String/ft_strsub.c)       |              |               |
 |                  | [ft_swap_str](Stdlib/ft_swap_str.c)        | [ft_strnlen](String/ft_strnlen.c)      |              |               |
 |                  | [ft_padding](Stdlib/ft_padding.c)         | [ft_strlen](String/ft_strlen.c)       |              |               |
 |                  | [ft_wcount](Stdlib/ft_wcount.c)          | [ft_strsplit](String/ft_strsplit.c)     |              |               |
@@ -134,11 +134,11 @@ Git clone the repository :
 
 Build the Library :
 
-	$> make 
+	$> make
 
 Copy/Move the `Includes/` Directory & the `libft.a` Executable into the Root of your Project :
 
-	$> cp -R Includes libft.a <root_of_your_project> 
+	$> cp -R Includes libft.a <root_of_your_project>
 
 Compile your source code with the Library binary:
 
