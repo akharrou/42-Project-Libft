@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/25 13:25:30 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/26 10:44:07 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -191,6 +191,7 @@ STDLIB      =   Stdlib/ft_bzero.c                                             \
                 Stdlib/ft_bubble_sort.c                                       \
                 Stdlib/ft_insertion_sort.c                                    \
                 Stdlib/ft_selection_sort.c                                    \
+                Stdlib/ft_mergesort.c                                         \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 

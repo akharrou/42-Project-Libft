@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:35:17 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/25 15:16:08 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/26 10:47:35 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void			ft_memset_addr(void **buf, int c, size_t len);
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
-**  Sorting Function(s).
+**  Sorting Algorithm Function(s).
 */
 
 int				ft_bubble_sort(void *base, size_t length, size_t width,
@@ -56,6 +56,16 @@ int				ft_insertion_sort(void *base, size_t length, size_t width,
 
 int				ft_selection_sort(void *base, size_t length, size_t width,
 					int (*cmp)(void *, void *));
+
+int				ft_mergesort(void *base, size_t length, size_t width,
+					int (*cmp)(void *, void *));
+
+/*
+**  int				ft_quicksort(void *base, size_t length, size_t width,
+**  					int (*cmp)(void *, void *));
+**
+** TODO : implement quicksort
+*/
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
@@ -70,19 +80,20 @@ int				ft_atoi_base(char *str, char *base);
 char			*ft_itoa(int n);
 char			*ft_itoa_base(intmax_t n, char *base, int precision);
 char			*ft_ltoa_base(long n, char *base, int precision);
-char			*ft_lltoa_base(long long n, char *base, int precision);
+char			*ft_lltoa_base(long long n, char *base,
+					int precision);
 
 char			*ft_utoa_base(uintmax_t n, char *base, int precision);
 char			*ft_uitoa_base(unsigned int n, char *base, int precision);
 char			*ft_ultoa_base(unsigned long n, char *base, int precision);
 char			*ft_ulltoa_base(unsigned long long n, char *base,
-				int precision);
+					int precision);
 
 char			*ft_ftoa(float n, int width, int precision);
 char			*ft_ftoa_base(float n, char *base, int width, int precision);
 char			*ft_dtoa_base(double n, char *base, int width, int precision);
 char			*ft_ldtoa_base(long double n, char *base, int width,
-				int precision);
+					int precision);
 
 char			*ft_convert_base(char *nbr, char *base_from, char *base_to);
 
@@ -108,7 +119,7 @@ int				ft_find_next_prime(int n);
 int				ft_wcount(const char *s, const char *charset);
 int				ft_chrcount(const char *s, const char c);
 void			**ft_matrix_new(void **matrix, size_t height, size_t width,
-				size_t typesize);
+					size_t typesize);
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **

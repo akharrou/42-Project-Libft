@@ -1,3 +1,121 @@
+// /* ************************************************************************** */
+// /*                                                                            */
+// /*                                                        :::      ::::::::   */
+// /*   ft_mergesort.c                                     :+:      :+:    :+:   */
+// /*                                                    +:+ +:+         +:+     */
+// /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
+// /*                                                +#+#+#+#+#+   +#+           */
+// /*   Created: 2019/03/16 22:38:54 by akharrou          #+#    #+#             */
+// /*   Updated: 2019/05/26 11:01:53 by akharrou         ###   ########.fr       */
+// /*                                                                            */
+// /* ************************************************************************** */
+
+// /*
+// **    NAME
+// **         ft_mergesort -- sort an array by ascending order
+// **
+// **    SYNOPSIS
+// **         #include <libft.h>
+// **
+// **         int
+// **         ft_mergesort(void *base, size_t length, size_t width,
+// **             int (*cmp)(void *, void *));
+// **
+// **    PARAMETERS
+// **
+// **         void *base                     Pointer to the initial member of
+// **                                        an array.
+// **
+// **         size_t length                  Number of objects in the array.
+// **
+// **         size_t width                   Size of each object (in bytes).
+// **
+// **         int (*cmp)(void *, void *)     Comparasion function.
+// **
+// **    DESCRIPTION
+// **         The contents of the array 'base' are sorted in ascending order
+// **         according to a comparison function pointed to by 'cmp', which
+// **         requires two arguments pointing to the objects being compared.
+// **
+// **         The comparison function must return an integer less than, equal
+// **         to, or greater than zero if the first argument is considered to
+// **         be respectively less than, equal to, or greater than the second.
+// **
+// **    RETURN VALUES
+// **         If successful returns 0; otherwise -1.
+// */
+
+// #include "../Includes/stdlib_42.h"
+// #include "../Includes/math_42.h"
+
+// static void	merge(void *base, size_t length, size_t width,
+// 				int (*cmp)(void *, void *))
+// {
+// 	void	*base[1];
+// 	void	*tmp;
+// 	int		res;
+// 	size_t	length_right_side;
+// 	size_t	i;
+// 	size_t	j;
+// 	size_t	k;
+
+// 	tmp = ft_malloc((length * width), '\0');
+// 	base[1] = base + ((length / 2) * width);
+// 	length_right_side = (length / 2) + (length % 2);
+// 	i = 0;
+// 	j = 0;
+// 	k = 0;
+// 	while (i + j < length)
+// 	{
+// 		if (j == length_right_side)
+// 			res = -1;
+// 		else if (i == length - length_right_side)
+// 			res = 1;
+// 		else
+// 			res = cmp(base + (i * width), base[1] + (j * width));
+// 		if (res <= 0)
+// 		{
+// 			ft_memmove(tmp + (k * width), base + (i * width), width);
+// 			++i;
+// 			++k;
+// 		}
+// 		if (res >= 0)
+// 		{
+// 			ft_memmove(tmp + (k * width), base[1] + (j * width), width);
+// 			++j;
+// 			++k;
+// 		}
+// 	}
+// 	ft_memmove(base, tmp, (length * width));
+// 	free(tmp);
+// 	return ;
+// }
+
+// int			ft_mergesort(void *base, size_t length, size_t width,
+// 				int (*cmp)(void *, void *))
+// {
+// 	int		ret1;
+// 	int		ret2;
+
+// 	if (length > 1)
+// 	{
+// 		ret1 = ft_mergesort(base, (length / 2), width, cmp);
+// 		ret2 = ft_mergesort(
+// 			base + ((length / 2) * width),
+// 			((length / 2) + (length % 2)),
+// 			width,
+// 			cmp);
+// 		if (ret1 == -1 || ret2 == -1)
+// 			return (-1);
+// 		merge(base, length, width, cmp);
+// 	}
+// 	return (0);
+// }
+
+
+
+
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -6,7 +124,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 22:38:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/25 19:46:35 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/26 11:15:10 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,44 +166,52 @@
 #include "../Includes/stdlib_42.h"
 #include "../Includes/math_42.h"
 
-void		*merge(void *base, size_t length, size_t width,
+static int	merge(void *base[2], size_t length[2], size_t width,
 				int (*cmp)(void *, void *))
 {
-	void	*sorted_right;
-	void	*sorted_left;
+	void	*tmp;
 	size_t	i;
 	size_t	j;
-	size_t	length_right_side;
+	size_t	k;
 
-	sorted_left = base;
-	sorted_right = base + (((size_t)CEIL((double)length / (double)2)) * 8);
+	if (!(tmp = ft_malloc(((length[0] + length[1]) * width), '\0')))
+		return (-1);
 	i = 0;
 	j = 0;
-	length_right_side = ;
-	while (i + j < length)
-	{
-
-	}
-
-	return ;
+	k = 0;
+	while (i < length[0] && j < length[1])
+		if (cmp(base[0] + (i * width), base[1] + (j * width)) <= 0)
+			ft_memmove(tmp + (k++ * width), base[0] + (i++ * width), width);
+		else
+			ft_memmove(tmp + (k++ * width), base[1] + (j++ * width), width);
+	while (i < length[0])
+		ft_memmove(tmp + (k++ * width), base[0] + (i++ * width), width);
+	while (j < length[1])
+		ft_memmove(tmp + (k++ * width), base[1] + (j++ * width), width);
+	ft_memmove(base[0], tmp, ((length[0] + length[1]) * width));
+	free(tmp);
+	return (0);
 }
 
 int			ft_mergesort(void *base, size_t length, size_t width,
 				int (*cmp)(void *, void *))
 {
+	size_t	half_lengths[2];
+	void	*half_bases[2];
+	int		ret1;
+	int		ret2;
+
 	if (length > 1)
 	{
-		ft_mergesort(
-			base,
-			((size_t)FLOOR((double)length / (double)2)),
-			width,
-			cmp);
-		ft_mergesort(
-			base + (((size_t)CEIL((double)length / (double)2)) * 8),
-			((size_t)CEIL((double)length / (double)2)),
-			width,
-			cmp);
-		merge(base, length, width, cmp);
+		half_lengths[0] = (length / 2);
+		half_lengths[1] = (length / 2) + (length % 2);
+		half_bases[0] = base;
+		half_bases[1] = base + (half_lengths[0] * width);
+		ret1 = ft_mergesort(half_bases[0], half_lengths[0], width, cmp);
+		ret2 = ft_mergesort(half_bases[1], half_lengths[1], width, cmp);
+		if (ret1 == -1 || ret2 == -1)
+			return (-1);
+		return (merge(half_bases, half_lengths, width, cmp));
 	}
 	return (0);
 }

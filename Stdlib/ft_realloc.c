@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 13:28:08 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/22 18:40:49 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/26 09:54:00 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void		*ft_realloc(void *ptr, size_t init_size, size_t new_size)
 	new_memblock = (void *)malloc(new_size);
 	if (!new_memblock)
 		return (NULL);
-	if (ptr)
+	if (ptr != NULL)
 	{
 		new_memblock = ft_memcpy(new_memblock, ptr, init_size);
 		bzero(new_memblock + init_size, new_size - init_size);
