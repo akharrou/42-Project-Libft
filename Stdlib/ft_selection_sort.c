@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 18:24:24 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/25 17:15:25 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/26 16:06:15 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int			ft_selection_sort(void *base, size_t length, size_t width,
 				lowest = i;
 			++i;
 		}
-		ft_swap_mem(
+		ft_memswap(
 			base + (start * width), base + (lowest * width), tmp, width);
 		++start;
 	}

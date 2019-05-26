@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap_mem.c                                      :+:      :+:    :+:   */
+/*   ft_memswap.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "../Includes/stdlib_42.h"
 
-void	ft_swap_mem(void *a, void *b, void *tmp, size_t width)
+void	ft_memswap(void *a, void *b, void *tmp, size_t width)
 {
 	ft_memcpy(tmp, a, width);
 	ft_memcpy(a, b, width);

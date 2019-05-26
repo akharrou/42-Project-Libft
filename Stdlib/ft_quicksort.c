@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bubble_sort.c                                   :+:      :+:    :+:   */
+/*   ft_quicksort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 18:25:01 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/26 16:05:33 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/26 11:36:32 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/26 16:16:26 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         ft_bubble_sort -- sort an array by ascending order
+**         ft_quicksort -- sort an array by ascending order
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         ft_bubble_sort(void *base, size_t length, size_t width,
+**         ft_quicksort(void *base, size_t length, size_t width,
 **             int (*cmp)(void *, void *));
 **
 **    PARAMETERS
 **
 **         void *base                     Pointer to the initial member of
-**                                        the array.
+**                                        an array.
 **
 **         size_t length                  Number of objects in the array.
 **
@@ -47,32 +47,32 @@
 
 #include "../Includes/stdlib_42.h"
 
-int			ft_bubble_sort(void *base, size_t length, size_t width,
-				int (*cmp)(void *, void *))
+int		ft_quicksort(void *base, size_t length, size_t width,
+			int (*cmp)(void *, void *))
 {
-	int		unordered;
 	void	*tmp;
 	size_t	i;
+	size_t	j;
 
+	if (length < 1)
+		return (0);
 	if (!(tmp = (void *)malloc(width)))
 		return (-1);
-	unordered = 1;
-	while (unordered)
+	i = 1;
+	j = length - 1;
+	while (i < j)
 	{
-		i = 0;
-		unordered = 0;
-		--length;
-		while (i < length)
-		{
-			if (cmp(base + (i * width), base + ((i + 1) * width)) > 0)
-			{
-				ft_memswap(
-					base + (i * width), base + ((i + 1) * width), tmp, width);
-				++unordered;
-			}
+		while (i < j && cmp(base, base + (i * width)) > 0)
 			++i;
-		}
+		while (i <= j && cmp(base, base + (j * width)) <= 0)
+			--j;
+		if (i < j)
+			ft_memswap(base + (i++ * width), base + (j-- * width), tmp, width);
 	}
+	ft_memswap(base, base + (j * width), tmp, width);
 	free(tmp);
+	if (ft_quicksort(base, j, width, cmp) == -1 ||
+	ft_quicksort(base + (j + 1) * width, length - j - 1, width, cmp) == -1)
+		return (-1);
 	return (0);
 }
