@@ -1,121 +1,3 @@
-// /* ************************************************************************** */
-// /*                                                                            */
-// /*                                                        :::      ::::::::   */
-// /*   ft_mergesort.c                                     :+:      :+:    :+:   */
-// /*                                                    +:+ +:+         +:+     */
-// /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
-// /*                                                +#+#+#+#+#+   +#+           */
-// /*   Created: 2019/03/16 22:38:54 by akharrou          #+#    #+#             */
-// /*   Updated: 2019/05/26 11:01:53 by akharrou         ###   ########.fr       */
-// /*                                                                            */
-// /* ************************************************************************** */
-
-// /*
-// **    NAME
-// **         ft_mergesort -- sort an array by ascending order
-// **
-// **    SYNOPSIS
-// **         #include <libft.h>
-// **
-// **         int
-// **         ft_mergesort(void *base, size_t length, size_t width,
-// **             int (*cmp)(void *, void *));
-// **
-// **    PARAMETERS
-// **
-// **         void *base                     Pointer to the initial member of
-// **                                        an array.
-// **
-// **         size_t length                  Number of objects in the array.
-// **
-// **         size_t width                   Size of each object (in bytes).
-// **
-// **         int (*cmp)(void *, void *)     Comparasion function.
-// **
-// **    DESCRIPTION
-// **         The contents of the array 'base' are sorted in ascending order
-// **         according to a comparison function pointed to by 'cmp', which
-// **         requires two arguments pointing to the objects being compared.
-// **
-// **         The comparison function must return an integer less than, equal
-// **         to, or greater than zero if the first argument is considered to
-// **         be respectively less than, equal to, or greater than the second.
-// **
-// **    RETURN VALUES
-// **         If successful returns 0; otherwise -1.
-// */
-
-// #include "../Includes/stdlib_42.h"
-// #include "../Includes/math_42.h"
-
-// static void	merge(void *base, size_t length, size_t width,
-// 				int (*cmp)(void *, void *))
-// {
-// 	void	*base[1];
-// 	void	*tmp;
-// 	int		res;
-// 	size_t	length_right_side;
-// 	size_t	i;
-// 	size_t	j;
-// 	size_t	k;
-
-// 	tmp = ft_malloc((length * width), '\0');
-// 	base[1] = base + ((length / 2) * width);
-// 	length_right_side = (length / 2) + (length % 2);
-// 	i = 0;
-// 	j = 0;
-// 	k = 0;
-// 	while (i + j < length)
-// 	{
-// 		if (j == length_right_side)
-// 			res = -1;
-// 		else if (i == length - length_right_side)
-// 			res = 1;
-// 		else
-// 			res = cmp(base + (i * width), base[1] + (j * width));
-// 		if (res <= 0)
-// 		{
-// 			ft_memmove(tmp + (k * width), base + (i * width), width);
-// 			++i;
-// 			++k;
-// 		}
-// 		if (res >= 0)
-// 		{
-// 			ft_memmove(tmp + (k * width), base[1] + (j * width), width);
-// 			++j;
-// 			++k;
-// 		}
-// 	}
-// 	ft_memmove(base, tmp, (length * width));
-// 	free(tmp);
-// 	return ;
-// }
-
-// int			ft_mergesort(void *base, size_t length, size_t width,
-// 				int (*cmp)(void *, void *))
-// {
-// 	int		ret1;
-// 	int		ret2;
-
-// 	if (length > 1)
-// 	{
-// 		ret1 = ft_mergesort(base, (length / 2), width, cmp);
-// 		ret2 = ft_mergesort(
-// 			base + ((length / 2) * width),
-// 			((length / 2) + (length % 2)),
-// 			width,
-// 			cmp);
-// 		if (ret1 == -1 || ret2 == -1)
-// 			return (-1);
-// 		merge(base, length, width, cmp);
-// 	}
-// 	return (0);
-// }
-
-
-
-
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -124,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 22:38:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/26 11:15:10 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/26 11:33:26 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,7 +46,6 @@
 */
 
 #include "../Includes/stdlib_42.h"
-#include "../Includes/math_42.h"
 
 static int	merge(void *base[2], size_t length[2], size_t width,
 				int (*cmp)(void *, void *))
