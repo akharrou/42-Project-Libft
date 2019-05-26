@@ -1,35 +1,77 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   selectionsort.c                                    :+:      :+:    :+:   */
+/*   ft_selection_sort.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 18:24:24 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 18:26:01 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/25 17:15:25 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         func_name -- brief
+**         ft_selection_sort -- sort an array by ascending order
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         func_name();
+**         ft_selection_sort(void *base, size_t length, size_t width,
+**             int (*cmp)(void *, void *));
 **
 **    PARAMETERS
 **
+**         void *base                     Pointer to the initial member of
+**                                        an array.
+**
+**         size_t length                  Number of objects in the array.
+**
+**         size_t width                   Size of each object (in bytes).
+**
+**         int (*cmp)(void *, void *)     Comparasion function.
 **
 **    DESCRIPTION
-**         Description.
+**         The contents of the array 'base' are sorted in ascending order
+**         according to a comparison function pointed to by 'cmp', which
+**         requires two arguments pointing to the objects being compared.
+**
+**         The comparison function must return an integer less than, equal
+**         to, or greater than zero if the first argument is considered to
+**         be respectively less than, equal to, or greater than the second.
 **
 **    RETURN VALUES
 **         If successful returns 0; otherwise -1.
 */
 
-/*
-** TODO : implement sorting algorithm
-*/
+#include "../Includes/stdlib_42.h"
+
+int			ft_selection_sort(void *base, size_t length, size_t width,
+				int (*cmp)(void *, void *))
+{
+	void	*tmp;
+	size_t	lowest;
+	size_t	start;
+	size_t	i;
+
+	if (!(tmp = (void *)malloc(width)))
+		return (-1);
+	start = 0;
+	while (start < length)
+	{
+		i = start;
+		lowest = start;
+		while (i < length)
+		{
+			if (cmp(base + (lowest * width), base + (i * width)) > 0)
+				lowest = i;
+			++i;
+		}
+		ft_swap_mem(
+			base + (start * width), base + (lowest * width), tmp, width);
+		++start;
+	}
+	free(tmp);
+	return (0);
+}
