@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/26 16:05:33 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/26 16:28:20 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -138,13 +138,20 @@ STDIO       =   Stdio/ft_readline.c                                           \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
-STDLIB      =   Stdlib/ft_bzero.c                                             \
+STDLIB      =   Stdlib/ft_bubble_sort.c                                       \
+                Stdlib/ft_insertion_sort.c                                    \
+                Stdlib/ft_selection_sort.c                                    \
+                Stdlib/ft_mergesort.c                                         \
+                Stdlib/ft_quicksort.c                                         \
+                                                                              \
+                Stdlib/ft_bzero.c                                             \
                 Stdlib/ft_bnull.c                                             \
                 Stdlib/ft_memset.c                                            \
                 Stdlib/ft_memset_addr.c                                       \
                 Stdlib/ft_memcpy.c                                            \
                 Stdlib/ft_memccpy.c                                           \
                 Stdlib/ft_memdup.c                                            \
+                Stdlib/ft_memswap.c                                           \
                 Stdlib/ft_memmove.c                                           \
                 Stdlib/ft_memchr.c                                            \
                 Stdlib/ft_memcmp.c                                            \
@@ -153,6 +160,7 @@ STDLIB      =   Stdlib/ft_bzero.c                                             \
                 Stdlib/ft_malloc.c                                            \
                 Stdlib/ft_realloc.c                                           \
                 Stdlib/ft_matrix_new.c                                        \
+                                                                              \
                 Stdlib/valid_base.c                                           \
                 Stdlib/ft_padding.c                                           \
                 Stdlib/ft_intlen.c                                            \
@@ -175,24 +183,18 @@ STDLIB      =   Stdlib/ft_bzero.c                                             \
                 Stdlib/ft_dtoa_base.c                                         \
                 Stdlib/ft_ldtoa_base.c                                        \
                 Stdlib/ft_convert_base.c                                      \
-                Stdlib/ft_find_next_prime.c                                   \
-                Stdlib/ft_wcount.c                                            \
-                Stdlib/ft_chrcount.c                                          \
-                Stdlib/ft_reverse_bytes.c                                     \
-                Stdlib/ft_hash.c                                              \
-                Stdlib/ft_hash.c                                              \
                                                                               \
                 Stdlib/ft_swap_int.c                                          \
                 Stdlib/ft_swap_char.c                                         \
                 Stdlib/ft_swap_str.c                                          \
                 Stdlib/ft_swap_ptr.c                                          \
-                Stdlib/ft_memswap.c                                          \
                                                                               \
-                Stdlib/ft_bubble_sort.c                                       \
-                Stdlib/ft_insertion_sort.c                                    \
-                Stdlib/ft_selection_sort.c                                    \
-                Stdlib/ft_mergesort.c                                         \
-                Stdlib/ft_quicksort.c                                         \
+                Stdlib/ft_find_next_prime.c                                   \
+                Stdlib/ft_wcount.c                                            \
+                Stdlib/ft_chrcount.c                                          \
+                Stdlib/ft_reverse_bytes.c                                     \
+                Stdlib/ft_hash.c                                              \
+                                                                              \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
