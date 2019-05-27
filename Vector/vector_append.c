@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:53:27 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 19:25:46 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:55:05 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@
 
 int		vector_append(struct s_vector *self, void *data)
 {
+	if (self->isvoid(self) == 1)
+		(*self) = vector.resize(*self, VECTOR_INIT_CAPACITY);
 	if (self->isfull(self) == 1)
 		(*self) = vector.resize(*self, self->capacity * VECTOR_SIZE_MULTIPLIER);
 	if (self->isfull(self) == 0)

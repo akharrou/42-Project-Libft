@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_isempty.c                                   :+:      :+:    :+:   */
+/*   vector_isvoid.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:12:13 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 11:48:23 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 12:01:03 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_isempty -- check if a vector is empty
+**         vector_isvoid -- check if a vector is void
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         int
-**         vector_isempty(struct s_vector *self);
+**         vector_isvoid(struct s_vector *self);
 **
 **    PARAMETERS
 **
 **         struct s_vector *self     Pointer to a vector instance.
 **
 **    DESCRIPTION
-**         Evaluates the length to capacity status of a vector and
-**         returns either empty or not empty, respectively 1 or
-**         0.
+**         Checks if capacity is 0 or that the pointer to the vector.
+**         field is pointing to NULL.
 **
 **    RETURN VALUES
-**         If the vector is empty 1 is returned; otherwise 0.
+**         If the vector is void 1 is returned; otherwise 0.
 */
 
 #include "../Includes/vector.h"
 
-inline int		vector_isempty(struct s_vector *self)
+inline int		vector_isvoid(struct s_vector *self)
 {
-	return (self->length == 0);
+	return (self->capacity == 0 || self->vector == NULL);
 }

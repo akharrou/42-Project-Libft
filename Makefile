@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/27 11:32:58 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/27 11:59:56 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -363,6 +363,7 @@ VECTOR      =   Vector/vector_constructor.c                                   \
                 Vector/vector_free.c                                          \
                 Vector/vector_isfull.c                                        \
                 Vector/vector_isempty.c                                       \
+                Vector/vector_isvoid.c                                        \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 11:18:31 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:52:58 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ typedef struct		s_vector
 	\
 	int				(*isfull)(struct s_vector *self);
 	int				(*isempty)(struct s_vector *self);
+	int				(*isvoid)(struct s_vector *self);
 }					t_vector;
 
 typedef t_vector	t_array;
@@ -133,6 +134,7 @@ void				vector_free(void *data);
 
 int					vector_isfull(struct s_vector *self);
 int					vector_isempty(struct s_vector *self);
+int					vector_isvoid(struct s_vector *self);
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **

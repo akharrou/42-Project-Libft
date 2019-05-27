@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:18:30 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 10:28:03 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:55:33 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@
 
 int		vector_appendleft(struct s_vector *self, void *data)
 {
+	if (self->isvoid(self) == 1)
+		(*self) = vector.resize(*self, VECTOR_INIT_CAPACITY);
 	if (self->isfull(self) == 1)
 		(*self) = vector.resize(*self, self->capacity * VECTOR_SIZE_MULTIPLIER);
 	(*self) = vector.rightshift(*self, 1);

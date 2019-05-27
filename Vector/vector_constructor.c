@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:08:45 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 11:21:17 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:53:12 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ t_vector		vector_constructor(size_t capacity, void (*custom_free)(void *))
 		.get = &vector_get, .getby_ref = &vector_getby_ref,
 		.pop = &vector_pop, .popleft = &vector_popleft, .deque = &vector_deque,
 		.free = &vector_free, .remove = &vector_remove, .clear = &vector_clear,
-		.isempty = &vector_isempty, .isfull = &vector_isfull
+		.isempty = &vector_isempty, .isfull = &vector_isfull,
+		.isvoid = &vector_isvoid
 	};
 	if (custom_free != NULL)
 		instance.free = custom_free;
