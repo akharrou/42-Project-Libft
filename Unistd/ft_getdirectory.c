@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:36:48 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 10:54:26 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:22:59 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@
 **
 **    RETURN VALUES
 **         A vector containing all entries of the 'dirname' directory.
+**
+**         If an error occurs, an empty vector is returned.
 */
 
 #include "../Includes/unistd_42.h"
@@ -39,6 +41,7 @@ t_vector		ft_getdirectory(const char *dirname)
 	t_vector	directory;
 	DIR			*dirdes;
 
+	directory = vector.empty(NULL);
 	dirdes = opendir(dirname);
 	if (dirdes != NULL)
 	{
@@ -46,9 +49,6 @@ t_vector		ft_getdirectory(const char *dirname)
 		closedir(dirdes);
 	}
 	else
-	{
 		perror(NULL);
-		directory.clear(&directory);
-	}
 	return (directory);
 }

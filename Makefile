@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/27 09:58:40 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/27 11:21:06 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -323,6 +323,9 @@ BIGINT      =   BigInt/bigint_add.c                                           \
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
 VECTOR      =   Vector/vector_constructor.c                                   \
+                Vector/vector_init.c                                          \
+                Vector/vector_empty.c                                         \
+                Vector/vector_instance.c                                      \
                 Vector/vector_destructor.c                                    \
                                                                               \
                 Vector/vector_copy.c                                          \

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:08:45 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 10:03:28 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:21:17 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,13 @@
 **
 **    PARAMETERS
 **
-**         size_t capacity           Starting capacity of
-**                                   the vector instance.
+**         size_t capacity                Starting capacity of
+**                                        the vector instance.
+**
+**         void (*custom_free)(void *)    Function pointer that
+**                                        points to a function
+**                                        that will free a vector
+**                                        element.
 **
 **    DESCRIPTION
 **         Creates an instance of a vector object.
@@ -53,7 +58,8 @@ t_vector		vector_constructor(size_t capacity, void (*custom_free)(void *))
 	};
 	if (custom_free != NULL)
 		instance.free = custom_free;
-	instance.vector = (void **)malloc(sizeof(void *) * (capacity + 1));
+	if (capacity > 0)
+		instance.vector = (void **)malloc(sizeof(void *) * (capacity + 1));
 	if (instance.vector != NULL)
 	{
 		instance.capacity = capacity;
@@ -69,7 +75,11 @@ t_vector		vector_constructor(size_t capacity, void (*custom_free)(void *))
 const struct s_vector_class vector =
 {
 	.constructor = &vector_constructor,
+	.instance = &vector_instance,
+	.init = &vector_init,
+	.empty = &vector_empty,
 	.destructor = &vector_destructor,
+	\
 	.copy = &vector_copy,
 	.reverse = &vector_reverse,
 	.resize = &vector_resize,

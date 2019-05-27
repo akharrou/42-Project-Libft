@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 09:59:01 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:18:31 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,12 @@ typedef t_vector	t_queue;
 
 extern const struct	s_vector_class
 {
-	struct s_vector	(*constructor)(size_t capacity, void (*vector_free)(void*));
+	struct s_vector	(*constructor)(size_t capacity, void (*custom_free)(void*));
+	struct s_vector	(*instance)(void);
+	struct s_vector	(*init)(void (*custom_free)(void *));
+	struct s_vector	(*empty)(void (*custom_free)(void *));
 	void			(*destructor)(struct s_vector *instance);
+	\
 	struct s_vector	(*copy)(struct s_vector instance);
 	struct s_vector	(*resize)(struct s_vector instance, size_t new_size);
 	struct s_vector	(*rightshift)(struct s_vector instance, size_t n);
@@ -88,11 +92,14 @@ extern const struct	s_vector_class
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
-**  Vector Class Function Declaration(s).
+**  Vector Class Method(s).
 */
 
 struct s_vector		vector_constructor(size_t capacity,
-						void (*vector_free)(void *));
+						void (*custom_free)(void *));
+struct s_vector		vector_instance(void);
+struct s_vector		vector_empty(void (*custom_free)(void *));
+struct s_vector		vector_init(void (*custom_free)(void *));
 void				vector_destructor(struct s_vector *instance);
 struct s_vector		vector_copy(struct s_vector vector);
 struct s_vector		vector_reverse(struct s_vector vector);
@@ -102,7 +109,7 @@ struct s_vector		vector_leftshift(struct s_vector vector, size_t n);
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
-**  Vector Object Function Declaration(s).
+**  Vector Object Method(s).
 */
 
 int					vector_push(struct s_vector *self, void *data);

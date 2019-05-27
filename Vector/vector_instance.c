@@ -1,47 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_free.c                                      :+:      :+:    :+:   */
+/*   vector_instance.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 11:08:45 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 11:20:21 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/27 11:06:08 by akharrou          #+#    #+#             */
+/*   Updated: 2019/05/27 11:20:39 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_free -- free an element of a vector
+**         vector_instance -- instantiate a vector of certain capacity and
+**                            with the default free'ing method
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         void
-**         vector_free(void *data);
+**         struct s_vector
+**         vector_instance(void);
 **
 **    PARAMETERS
-**
-**         void *data                Pointer to some data.
-**
-**    DESCRIPTION
-**         Frees the data element 'data'.
-**
-**    RETURN VALUES
 **         None.
 **
-**    NOTES
-**         This is just the default free'ing method but it can be
-**         overrided by a user provided custom free function in the
-**         constructor.
+**    DESCRIPTION
+**         Creates an instance of a vector object; its vector
+**         is given a certain initial capacity; the default
+**         free'ing method for each element is kept.
 **
-**         Also can be redefined here.
+**    RETURN VALUES
+**         Returns the constructed instance.
 */
 
 #include "../Includes/vector.h"
 
-void		vector_free(void *data)
+struct s_vector		vector_instance(void)
 {
-	(void)data;
-	return ;
+	return (vector.constructor(VECTOR_INIT_CAPACITY, NULL));
 }

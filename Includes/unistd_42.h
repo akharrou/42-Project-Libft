@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:12:47 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 10:54:34 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:28:11 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@
 # include <sys/types.h>
 # include <dirent.h>
 
-#include "stdlib_42.h"
-#include "stdio_42.h"
+# include "stdlib_42.h"
+# include "stdio_42.h"
+
 # include "vector.h"
 # include "ft_printf.h"
 
