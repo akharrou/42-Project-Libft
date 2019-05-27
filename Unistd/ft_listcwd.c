@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:11:51 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 10:36:02 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:34:58 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 **    DESCRIPTION
 **         Prints out all entries in the current working directory; one
 **         entry per line.
+**
+**         If an error occurs, an error is printed to standard out.
 **
 **    RETURN VALUES
 **         None.

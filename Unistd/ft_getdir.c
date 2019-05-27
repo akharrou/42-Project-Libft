@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:36:57 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 11:24:18 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:35:27 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@
 **         A vector containing all entries of the directory that
 **         'dirdes' points to.
 **
-**         If an error occurs, an empty vector is returned.
+**         If an error occurs, an error is printed to standard out & an
+**         empty vector is returned.
 */
 
 #include "../Includes/unistd_42.h"

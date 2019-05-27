@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:36:12 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 10:36:14 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:34:38 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 **    DESCRIPTION
 **         Prints out all entries in the directory: 'dirname'; one
 **         entry per line.
+**
+**         If an error occurs, an error is printed to standard out.
 **
 **    RETURN VALUES
 **         None.

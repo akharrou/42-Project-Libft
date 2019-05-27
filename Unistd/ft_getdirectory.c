@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:36:48 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 11:22:59 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:35:21 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@
 **    RETURN VALUES
 **         A vector containing all entries of the 'dirname' directory.
 **
-**         If an error occurs, an empty vector is returned.
+**         If an error occurs, an error is printed to standard out & an
+**         empty vector is returned.
 */
 
 #include "../Includes/unistd_42.h"
