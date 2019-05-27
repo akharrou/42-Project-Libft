@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 17:45:09 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 09:59:01 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ typedef struct		s_vector
 	void			*(*pop)(struct s_vector *self);
 	void			*(*popleft)(struct s_vector *self);
 	void			*(*deque)(struct s_vector *self);
-	void			(*free)(void *);
 	int				(*remove)(struct s_vector *self, size_t i);
 	int				(*clear)(struct s_vector *self);
+	void			(*free)(void *);
 	\
 	int				(*isfull)(struct s_vector *self);
 	int				(*isempty)(struct s_vector *self);
@@ -122,6 +122,7 @@ void				*vector_popleft(struct s_vector *self);
 void				*vector_deque(struct s_vector *self);
 int					vector_clear(struct s_vector *self);
 int					vector_remove(struct s_vector *self, size_t i);
+void				vector_free(void *data);
 
 int					vector_isfull(struct s_vector *self);
 int					vector_isempty(struct s_vector *self);

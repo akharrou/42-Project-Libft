@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:35:17 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/26 16:05:33 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 09:00:03 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,25 +42,26 @@ void			*ft_memchr(const void *str, int c, size_t n);
 int				ft_memcmp(const void *dst, const void *src, size_t n);
 void			ft_memdel(void **ap);
 void			ft_memset_addr(void **buf, int c, size_t len);
+void			ft_memswap(void *a, void *b, void *tmp, size_t width);
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
 **  Sorting Algorithm Function(s).
 */
 
-int				ft_bubble_sort(void *base, size_t length, size_t width,
-					int (*cmp)(void *, void *));
-
-int				ft_insertion_sort(void *base, size_t length, size_t width,
-					int (*cmp)(void *, void *));
-
-int				ft_selection_sort(void *base, size_t length, size_t width,
+int				ft_quicksort(void *base, size_t length, size_t width,
 					int (*cmp)(void *, void *));
 
 int				ft_mergesort(void *base, size_t length, size_t width,
 					int (*cmp)(void *, void *));
 
-int				ft_quicksort(void *base, size_t length, size_t width,
+int				ft_selection_sort(void *base, size_t length, size_t width,
+					int (*cmp)(void *, void *));
+
+int				ft_insertion_sort(void *base, size_t length, size_t width,
+					int (*cmp)(void *, void *));
+
+int				ft_bubble_sort(void *base, size_t length, size_t width,
 					int (*cmp)(void *, void *));
 
 /*
@@ -102,7 +103,6 @@ void			ft_swap_int(int *a, int *b);
 void			ft_swap_char(char *a, char *b);
 void			ft_swap_str(char **a, char **b);
 void			ft_swap_ptr(void **a, void **b);
-void			ft_memswap(void *a, void *b, void *tmp, size_t width);
 
 size_t			ft_intlen(int n);
 size_t			ft_intlen_base(int n, unsigned int base);

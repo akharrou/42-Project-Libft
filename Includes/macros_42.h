@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 09:07:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/21 13:11:10 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 10:32:05 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,12 @@
 #  define BUFF_SIZE (1024)
 # endif
 
-# ifndef NAME_LEN_MAX
-#  define NAME_LEN_MAX (256)
+# ifndef NAMEMAX
+#  define NAMEMAX (256)
 # endif
 
-# ifndef PATH_LEN_MAX
-#  define PATH_LEN_MAX (1024)
+# ifndef PATHMAX
+#  define PATHMAX (1024)
 # endif
 
 # ifndef MAX_FDS

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:08:45 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 17:59:41 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 10:03:28 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,26 +35,24 @@
 #include "../Includes/stdlib_42.h"
 #include "../Includes/vector.h"
 
-t_vector		vector_constructor(size_t capacity, void (*vector_free)(void *))
+t_vector		vector_constructor(size_t capacity, void (*custom_free)(void *))
 {
 	t_vector	instance;
 
 	instance = (struct s_vector) {
 		.vector = NULL, .length = 0, .capacity = 0,
-		.push = &vector_push,
-		.enque = &vector_enque,
-		.append = &vector_append,
-		.appendleft = &vector_appendleft,
+		\
 		.insert = &vector_insert,
-		.extend = &vector_extend,
-		.extendleft = &vector_extendleft,
-		.pop = &vector_pop,
-		.popleft = &vector_popleft,
-		.deque = &vector_deque,
-		.clear = &vector_clear,
-		.remove = &vector_remove, .free = vector_free,
+		.push = &vector_push, .enque = &vector_enque,
+		.append = &vector_append, .appendleft = &vector_appendleft,
+		.extend = &vector_extend, .extendleft = &vector_extendleft,
 		.get = &vector_get, .getby_ref = &vector_getby_ref,
-		.isempty = &vector_isempty, .isfull = &vector_isfull };
+		.pop = &vector_pop, .popleft = &vector_popleft, .deque = &vector_deque,
+		.free = &vector_free, .remove = &vector_remove, .clear = &vector_clear,
+		.isempty = &vector_isempty, .isfull = &vector_isfull
+	};
+	if (custom_free != NULL)
+		instance.free = custom_free;
 	instance.vector = (void **)malloc(sizeof(void *) * (capacity + 1));
 	if (instance.vector != NULL)
 	{
