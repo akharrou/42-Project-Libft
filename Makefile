@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/27 11:21:06 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/27 11:31:00 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ HEADERS     =   Includes/libft.h                                              \
                 Includes/stdlib_42.h                                          \
                 Includes/string_42.h                                          \
                 Includes/stdint_42.h                                          \
+                Includes/unistd_42.h                                          \
                 Includes/macros_42.h                                          \
                 Includes/ctype_42.h                                           \
                 Includes/math_42.h                                            \
@@ -70,6 +71,7 @@ HEADERS     =   Includes/libft.h                                              \
 SOURCES     =   $(STDIO)                                                      \
                 $(STDLIB)                                                     \
                 $(STRING)                                                     \
+                $(UNISTD)                                                     \
                 $(CTYPE)                                                      \
                 $(MATH)                                                       \
                                                                               \
@@ -254,6 +256,16 @@ STRING      =   String/ft_strlen.c                                            \
                 String/ft_strtabcat.c                                         \
                 String/ft_strtabncat.c                                        \
                 String/ft_strtab_appendstr.c                                  \
+
+# — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+
+UNISTD      =   \
+                Unistd/ft_listcwd.c                                           \
+                Unistd/ft_listdir.c                                           \
+                Unistd/ft_listdirectory.c                                     \
+                                                                              \
+                Unistd/ft_getdir.c                                            \
+                Unistd/ft_getdirectory.c                                      \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
