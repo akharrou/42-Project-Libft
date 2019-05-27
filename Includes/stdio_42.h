@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:39:25 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/23 16:08:20 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/26 18:55:38 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 **  Header File(s).
 */
 
+# include <stdio.h>
 # include <unistd.h>
 # include <string.h>
 # include <stdarg.h>
