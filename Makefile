@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/27 11:59:56 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/27 19:02:20 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,7 +71,6 @@ HEADERS     =   Includes/libft.h                                              \
 SOURCES     =   $(STDIO)                                                      \
                 $(STDLIB)                                                     \
                 $(STRING)                                                     \
-                $(UNISTD)                                                     \
                 $(CTYPE)                                                      \
                 $(MATH)                                                       \
                                                                               \
@@ -85,6 +84,7 @@ SOURCES     =   $(STDIO)                                                      \
                 $(DICT)                                                       \
                                                                               \
                 $(CRYPT)                                                      \
+                # $(UNISTD)                                                     \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 

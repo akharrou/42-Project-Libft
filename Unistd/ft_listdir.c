@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:11:51 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 11:34:49 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 18:53:43 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,19 @@
 
 #include "../Includes/unistd_42.h"
 
-void	ft_listdir(DIR *dirdes)
-{
-	struct dirent	*dir;
+// void	ft_listdir(DIR *dirdes)
+// {
+// 	struct dirent	*dir;
 
-	if (!dirdes)
-	{
-		perror(NULL);
-		return ;
-	}
-	errno = 0;
-	while (errno == 0 && (dir = readdir(dirdes)) != NULL)
-		ft_printf("%s\n", dir->d_name);
-	if (errno != 0)
-		perror(NULL);
-	return ;
-}
+// 	if (!dirdes)
+// 	{
+// 		perror(NULL);
+// 		return ;
+// 	}
+// 	errno = 0;
+// 	while (errno == 0 && (dir = readdir(dirdes)) != NULL)
+// 		ft_printf("%s\n", dir->d_name);
+// 	if (errno != 0)
+// 		perror(NULL);
+// 	return ;
+// }

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:12:47 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 11:28:11 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 19:03:53 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@
 **  Directory Function(s).
 */
 
-void		ft_listdir(DIR *dirdes);
-void		ft_listdirectory(const char *dirname);
-void		ft_listcwd(void);
+// void		ft_listdir(DIR *dirdes);
+// void		ft_listdirectory(const char *dirname);
+// void		ft_listcwd(void);
 
-t_vector	ft_getdir(DIR *dirdes);
-t_vector	ft_getdirectory(const char *dirname);
+// t_vector	ft_getdir(DIR *dirdes);
+// t_vector	ft_getdirectory(const char *dirname);
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **

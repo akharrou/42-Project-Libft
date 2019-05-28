@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:36:48 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 11:35:21 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/27 18:54:35 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,19 +37,19 @@
 
 #include "../Includes/unistd_42.h"
 
-t_vector		ft_getdirectory(const char *dirname)
-{
-	t_vector	directory;
-	DIR			*dirdes;
+// t_vector		ft_getdirectory(const char *dirname)
+// {
+// 	t_vector	directory;
+// 	DIR			*dirdes;
 
-	directory = vector.empty(NULL);
-	dirdes = opendir(dirname);
-	if (dirdes != NULL)
-	{
-		directory = ft_getdir(dirdes);
-		closedir(dirdes);
-	}
-	else
-		perror(NULL);
-	return (directory);
-}
+// 	directory = vector.empty(NULL);
+// 	dirdes = opendir(dirname);
+// 	if (dirdes != NULL)
+// 	{
+// 		directory = ft_getdir(dirdes);
+// 		closedir(dirdes);
+// 	}
+// 	else
+// 		perror(NULL);
+// 	return (directory);
+// }
