@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/27 19:02:20 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/28 18:01:28 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -294,6 +294,8 @@ CTYPE       =   Ctype/ft_isupper.c                                            \
                 Ctype/ft_strtolower.c                                         \
                 Ctype/ft_to_big_endian.c                                      \
                 Ctype/ft_to_little_endian.c                                   \
+                                                                              \
+                Ctype/ft_cmpstr.c                                             \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 

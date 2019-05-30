@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:31:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 18:22:26 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/28 18:01:48 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,9 @@ char	*ft_strtoupper(char *str);
 char	*ft_strtolower(char *str);
 void	*ft_to_big_endian(void *data, size_t size);
 void	*ft_to_little_endian(void *data, size_t size);
+
+int		ft_cmpstr(void *a, void *b);
+int		ft_reverse_cmpstr(void *a, void *b);
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **

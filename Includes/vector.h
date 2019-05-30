@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 11:52:58 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/29 19:32:27 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 */
 
 # include <string.h>
+# include <stdarg.h>
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
@@ -51,6 +52,10 @@ typedef struct		s_vector
 	int				(*extend)(struct s_vector *self, size_t n, ...);
 	int				(*extendleft)(struct s_vector *self, size_t n, ...);
 	\
+	ssize_t			(*find)(struct s_vector *self, int (*function)(void *)); /* TODO */
+	ssize_t			(*search)(struct s_vector *self, void *ref,
+						int (*cmp)(void *, void *));
+	\
 	void			*(*get)(struct s_vector *self, size_t i);
 	void			*(*getby_ref)(struct s_vector *self, void *ref,
 						int (*cmp)(void *a, void *b));
@@ -61,6 +66,10 @@ typedef struct		s_vector
 	int				(*remove)(struct s_vector *self, size_t i);
 	int				(*clear)(struct s_vector *self);
 	void			(*free)(void *);
+	\
+	void			(*iter)(struct s_vector *self, void (*function)(void *));
+	void			(*viter)(struct s_vector *self,
+						void (*function)(void *, va_list ap), ...);
 	\
 	int				(*isfull)(struct s_vector *self);
 	int				(*isempty)(struct s_vector *self);
@@ -82,6 +91,11 @@ extern const struct	s_vector_class
 	struct s_vector	(*instance)(void);
 	struct s_vector	(*init)(void (*custom_free)(void *));
 	struct s_vector	(*empty)(void (*custom_free)(void *));
+	struct s_vector	(*from)(void *iterable, size_t length, size_t width); /* TODO */
+	struct s_vector	(*filter)(void *iterable, size_t length, size_t width,
+						int (*function)(void *)); /* TODO */
+	struct s_vector	(*map)(void *iterable, size_t length, size_t width,
+						int (*function)(void *)); /* TODO */
 	void			(*destructor)(struct s_vector *instance);
 	\
 	struct s_vector	(*copy)(struct s_vector instance);
@@ -98,10 +112,17 @@ extern const struct	s_vector_class
 
 struct s_vector		vector_constructor(size_t capacity,
 						void (*custom_free)(void *));
+void				vector_destructor(struct s_vector *instance);
+
 struct s_vector		vector_instance(void);
 struct s_vector		vector_empty(void (*custom_free)(void *));
 struct s_vector		vector_init(void (*custom_free)(void *));
-void				vector_destructor(struct s_vector *instance);
+struct s_vector		vector_from(void *iterable, size_t length, size_t width);
+struct s_vector		vector_filter(void *iterable, size_t length, size_t width,
+						int (*function)(void *));
+struct s_vector		vector_map(void *iterable, size_t length, size_t width,
+						int (*function)(void *));
+
 struct s_vector		vector_copy(struct s_vector vector);
 struct s_vector		vector_reverse(struct s_vector vector);
 struct s_vector		vector_resize(struct s_vector vector, size_t new_size);
@@ -121,6 +142,11 @@ int					vector_insert(struct s_vector *self, size_t i, void *data);
 int					vector_extend(struct s_vector *self, size_t n, ...);
 int					vector_extendleft(struct s_vector *self, size_t n, ...);
 
+ssize_t				vector_find(struct s_vector *self,
+						int (*function)(void *));
+ssize_t				vector_search(struct s_vector *self, void *ref,
+						int (*cmp)(void *ref, void *data));
+
 void				*vector_get(struct s_vector *self, size_t i);
 void				*vector_getby_ref(struct s_vector *self, void *ref,
 						int (*cmp)(void *ref, void *data));
@@ -131,6 +157,11 @@ void				*vector_deque(struct s_vector *self);
 int					vector_clear(struct s_vector *self);
 int					vector_remove(struct s_vector *self, size_t i);
 void				vector_free(void *data);
+
+void				vector_iter(struct s_vector *self,
+						void (*function)(void *));
+void				vector_viter(struct s_vector *self,
+						void (*function)(void *, va_list ap), ...);
 
 int					vector_isfull(struct s_vector *self);
 int					vector_isempty(struct s_vector *self);
