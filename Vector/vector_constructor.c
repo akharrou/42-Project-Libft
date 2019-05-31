@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:08:45 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/29 19:30:25 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/30 19:22:53 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ const struct s_vector_class vector =
 	.empty = &vector_empty,
 	// .from = &vector_from,
 	// .filter = &vector_filter,
-	// .map = &vector_map,
+	.map = &vector_map,
 	.destructor = &vector_destructor,
 	\
 	.copy = &vector_copy,

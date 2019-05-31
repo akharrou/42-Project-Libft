@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/29 19:32:27 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/30 19:32:16 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,11 +91,11 @@ extern const struct	s_vector_class
 	struct s_vector	(*instance)(void);
 	struct s_vector	(*init)(void (*custom_free)(void *));
 	struct s_vector	(*empty)(void (*custom_free)(void *));
-	struct s_vector	(*from)(void *iterable, size_t length, size_t width); /* TODO */
+	struct s_vector	(*from)(void *iterable, size_t length, size_t width); /* TODO : implement this */
 	struct s_vector	(*filter)(void *iterable, size_t length, size_t width,
 						int (*function)(void *)); /* TODO */
 	struct s_vector	(*map)(void *iterable, size_t length, size_t width,
-						int (*function)(void *)); /* TODO */
+						void *(*function)(void *)); /* TODO */
 	void			(*destructor)(struct s_vector *instance);
 	\
 	struct s_vector	(*copy)(struct s_vector instance);
@@ -119,7 +119,7 @@ struct s_vector		vector_empty(void (*custom_free)(void *));
 struct s_vector		vector_init(void (*custom_free)(void *));
 struct s_vector		vector_from(void *iterable, size_t length, size_t width);
 struct s_vector		vector_filter(void *iterable, size_t length, size_t width,
-						int (*function)(void *));
+						void *(*function)(void *));
 struct s_vector		vector_map(void *iterable, size_t length, size_t width,
 						int (*function)(void *));
 

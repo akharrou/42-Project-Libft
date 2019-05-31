@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 09:07:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/30 18:04:09 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/30 19:19:28 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@
 # endif
 
 # ifndef MAX_PATHLEN
-#  define MAX_PATHLEN (1024)
+#  define MAX_PATHLEN (4096)
 # endif
 
 # ifndef MAX_FDS
