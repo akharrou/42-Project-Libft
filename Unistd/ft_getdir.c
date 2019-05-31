@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:36:57 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 18:54:40 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/30 17:44:40 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,24 +39,24 @@
 
 #include "../Includes/unistd_42.h"
 
-// t_vector			ft_getdir(DIR *dirdes)
-// {
-// 	struct dirent	*direntry;
-// 	t_vector		directory;
+t_vector			ft_getdir(DIR *dirdes)
+{
+	struct dirent	*direntry;
+	t_vector		directory;
 
-// 	directory = vector.empty(NULL);
-// 	if (!dirdes)
-// 	{
-// 		perror(NULL);
-// 		return (directory);
-// 	}
-// 	errno = 0;
-// 	while (errno == 0 && (direntry = readdir(dirdes)) != NULL)
-// 		directory.append(&directory, direntry);
-// 	if (errno != 0)
-// 	{
-// 		perror(NULL);
-// 		directory.clear(&directory);
-// 	}
-// 	return (directory);
-// }
+	directory = vector.empty(NULL);
+	if (!dirdes)
+	{
+		perror(NULL);
+		return (directory);
+	}
+	errno = 0;
+	while (errno == 0 && (direntry = readdir(dirdes)) != NULL)
+		directory.append(&directory, direntry);
+	if (errno != 0)
+	{
+		perror(NULL);
+		directory.clear(&directory);
+	}
+	return (directory);
+}

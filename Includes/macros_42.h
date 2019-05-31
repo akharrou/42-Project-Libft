@@ -6,12 +6,20 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 09:07:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 10:32:05 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/30 18:04:09 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MACROS_42_H
 # define MACROS_42_H
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+** Macro Library Header(s).
+*/
+
+# include <limits.h>
+# include <float.h>
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
@@ -58,12 +66,12 @@
 #  define BUFF_SIZE (1024)
 # endif
 
-# ifndef NAMEMAX
-#  define NAMEMAX (256)
+# ifndef MAX_NAMELEN
+#  define MAX_NAMELEN (256)
 # endif
 
-# ifndef PATHMAX
-#  define PATHMAX (1024)
+# ifndef MAX_PATHLEN
+#  define MAX_PATHLEN (1024)
 # endif
 
 # ifndef MAX_FDS

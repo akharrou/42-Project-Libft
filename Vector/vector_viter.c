@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 18:45:41 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/29 19:05:11 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/05/30 13:40:33 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,5 @@ void		vector_viter(struct s_vector *self,
 		function(self->vector[i], ap);
 		++i;
 	}
+	va_end(ap);
 }

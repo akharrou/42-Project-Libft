@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/05/28 18:01:28 by akharrou         ###   ########.fr        #
+#    Updated: 2019/05/30 17:45:32 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,7 @@ HEADERS     =   Includes/libft.h                                              \
 SOURCES     =   $(STDIO)                                                      \
                 $(STDLIB)                                                     \
                 $(STRING)                                                     \
+                $(UNISTD)                                                     \
                 $(CTYPE)                                                      \
                 $(MATH)                                                       \
                                                                               \
@@ -84,7 +85,6 @@ SOURCES     =   $(STDIO)                                                      \
                 $(DICT)                                                       \
                                                                               \
                 $(CRYPT)                                                      \
-                # $(UNISTD)                                                     \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
@@ -260,12 +260,8 @@ STRING      =   String/ft_strlen.c                                            \
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
 UNISTD      =   \
-                Unistd/ft_listcwd.c                                           \
-                Unistd/ft_listdir.c                                           \
-                Unistd/ft_listdirectory.c                                     \
-                                                                              \
                 Unistd/ft_getdir.c                                            \
-                Unistd/ft_getdirectory.c                                      \
+                Unistd/ft_getdirentries.c                                     \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
