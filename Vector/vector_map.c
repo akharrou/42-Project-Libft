@@ -6,44 +6,120 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 19:23:07 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/30 19:40:53 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/01 14:01:16 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         func_name -- brief
+**         vector_map -- instantiate a vector as the mapping of an iterable
+**                       (i.e array of any type)
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
-**         int
-**         func_name(struct s_vector *self);
+**         t_vector
+**         vector_map(void *iterable, size_t length, size_t width,
+				void *(*function)(void *));
 **
 **    PARAMETERS
 **
-**         struct s_vector *self     Pointer to a vector instance.
+**         void *iterable                    Array (of any type).
 **
-**         void *data                Pointer to some data.
+**         size_t length                     Number of elements in the array.
 **
-**         PARAM 3          Brief
+**         size_t width                      Size of each element of the array.
+**
+**         void *(*function)(void *)         Mapping function, takes an element
+**                                           of 'iterable' and produces another.
+**
+**                                           This newly produced element is
+**                                           then stored in the vector.
 **
 **    DESCRIPTION
-**         Description.
+**         Creates a vector out of the mapping of 'iterable'.
 **
 **    RETURN VALUES
-**         If successful returns 0; otherwise -1.
+**         Returns the newly created vector.
+**
+**         If an error occurs, the newly created vector is returned with its
+**         '.vector' field pointing to NULL.
 */
 
 #include "../Includes/vector.h"
 
 t_vector	vector_map(void *iterable, size_t length, size_t width,
-				void (*function)(void *))
+				void *(*function)(void *))
 {
-	t_vector	instance;
 	size_t		i;
+	t_vector	instance;
 
 	instance = vector.constructor(length, NULL);
+	if (!instance.vector)
+		return (instance);
 	i = 0;
-	while (i < length)
+	while (i < instance.length)
+	{
+		instance.vector[i] = function(iterable + (i * width));
+		++i;
+	}
+	return (instance);
+}
+
+/*
+**    DESCRIPTION
+**         Same as 'vector_map' but the iterable used the the array
+**         of a vector instance. Also the mapping function accepts
+**         additional arguments as a 'va_list'
+*/
+
+t_vector	vector_self_map_new(struct s_vector *self,
+				void *(*function)(void *, va_list ap), ...)
+{
+	t_vector	instance;
+	void		*tmp;
+	va_list		ap;
+	size_t		i;
+
+	instance = vector.constructor(self->length, NULL);
+	if (!self->vector || !instance.vector)
+		return (instance);
+	va_start(ap, function);
+	i = 0;
+	while (i < self->length)
+	{
+		instance.vector[i] = function(self->vector[i], ap);
+		++i;
+	}
+	va_end(ap);
+	return (instance);
+}
+
+/*
+**    DESCRIPTION
+**         Same but 'vector_self_map_new' but the vector itself gets
+**         re-assigned all the mapped elements; i.e it is changed in
+**         placed. No new vector is returned.
+*/
+
+void		vector_self_map(struct s_vector *self,
+				void *(*function)(void *, va_list ap), ...)
+{
+	va_list	ap;
+	void	*tmp;
+	size_t	i;
+
+	if (!self->vector)
+		return ;
+	va_start(ap, function);
+	i = 0;
+	while (i < self->length)
+	{
+		tmp = function(self->vector[i], ap);
+		self->free(self->vector[i]);
+		self->vector[i] = tmp;
+		++i;
+	}
+	va_end(ap);
+	return ;
 }

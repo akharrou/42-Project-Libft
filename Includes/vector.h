@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/30 19:32:16 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/01 13:46:12 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,7 @@ struct s_vector		vector_from(void *iterable, size_t length, size_t width);
 struct s_vector		vector_filter(void *iterable, size_t length, size_t width,
 						void *(*function)(void *));
 struct s_vector		vector_map(void *iterable, size_t length, size_t width,
-						int (*function)(void *));
+						void *(*function)(void *));
 
 struct s_vector		vector_copy(struct s_vector vector);
 struct s_vector		vector_reverse(struct s_vector vector);
@@ -162,6 +162,8 @@ void				vector_iter(struct s_vector *self,
 						void (*function)(void *));
 void				vector_viter(struct s_vector *self,
 						void (*function)(void *, va_list ap), ...);
+void				vector_self_map(struct s_vector *self,
+						void *(*function)(void *, va_list ap), ...);
 
 int					vector_isfull(struct s_vector *self);
 int					vector_isempty(struct s_vector *self);
