@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getdir.c                                        :+:      :+:    :+:   */
+/*   ft_getdirentsent.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:36:57 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/30 17:44:40 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/01 15:32:37 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         ft_getdir -- get a vector with all directory entries in the
+**         ft_getdirents -- get a vector with all directory entries in the
 **                      directory that a directory descriptor points to
 **
 **    SYNOPSIS
 **         #include <libft.h>
 **
 **         t_vector
-**         ft_getdir(DIR *dirdes);
+**         ft_getdirents(DIR *dirdes);
 **
 **    PARAMETERS
 **         DIR *dirdes     Directory descriptor.
@@ -39,7 +39,7 @@
 
 #include "../Includes/unistd_42.h"
 
-t_vector			ft_getdir(DIR *dirdes)
+t_vector			ft_getdirents(DIR *dirdes)
 {
 	struct dirent	*direntry;
 	t_vector		directory;

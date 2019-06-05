@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:08:45 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/30 19:22:53 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/01 15:24:28 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ t_vector		vector_constructor(size_t capacity, void (*custom_free)(void *))
 	instance = (struct s_vector) {
 		.vector = NULL, .length = 0, .capacity = 0,
 		.insert = &vector_insert,
-		.push = &vector_push, .enque = &vector_enque,
+		.push = &vector_push, .enque = &vector_enque, .map = &vector_selfmap,
 		.append = &vector_append, .appendleft = &vector_appendleft,
 		.extend = &vector_extend, .extendleft = &vector_extendleft,
 		.get = &vector_get, .getby_ref = &vector_getby_ref,
-		.search = &vector_search, .find = &vector_find,
+		.search = &vector_search, .find = &vector_find, .remap = &vector_remap,
 		.pop = &vector_pop, .popleft = &vector_popleft, .deque = &vector_deque,
 		.free = &vector_free, .remove = &vector_remove, .clear = &vector_clear,
 		.isempty = &vector_isempty, .isfull = &vector_isfull,
@@ -76,12 +76,14 @@ t_vector		vector_constructor(size_t capacity, void (*custom_free)(void *))
 const struct s_vector_class vector =
 {
 	.constructor = &vector_constructor,
+	\
 	.instance = &vector_instance,
 	.init = &vector_init,
 	.empty = &vector_empty,
 	// .from = &vector_from,
 	// .filter = &vector_filter,
 	.map = &vector_map,
+	\
 	.destructor = &vector_destructor,
 	\
 	.copy = &vector_copy,

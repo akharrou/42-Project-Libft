@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:12:47 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/30 17:57:34 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/01 15:34:54 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@
 **  Filesystem Function(s).
 */
 
-t_vector	ft_getdir(DIR *dirdes);
-t_vector	ft_getdirentries(const char dirname[PATHMAX + 1])
+t_vector	ft_getdirents(DIR *dirdes);
+t_vector	ft_getdirentries(const char dirname[MAX_PATHLEN + 1]);
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **

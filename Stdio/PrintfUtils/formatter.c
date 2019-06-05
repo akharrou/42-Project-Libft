@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 18:29:48 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/24 16:00:20 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/01 19:36:12 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ char			**parse_style(const char *format, int8_t *i)
 			format = ft_strndup(
 				format + (*i) + 1,
 				closing_bracket - (format + (*i) + 1));
-			styles = ft_strsplit(format, ' ');
+			styles = ft_strsplit(format, " ");
 		}
 		(*i) += ft_strlen(format) + 2;
 		free((void *)format);

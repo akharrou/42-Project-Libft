@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:36:48 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/30 17:57:12 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/01 15:34:54 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@
 #include "../Includes/unistd_42.h"
 #include "../Includes/macros_42.h"
 
-t_vector		ft_getdirentries(const char dirname[PATHMAX + 1])
+t_vector		ft_getdirentries(const char dirname[MAX_PATHLEN + 1])
 {
 	t_vector	directory;
 	DIR			*dirdes;
@@ -47,7 +47,7 @@ t_vector		ft_getdirentries(const char dirname[PATHMAX + 1])
 	dirdes = opendir(dirname);
 	if (dirdes != NULL)
 	{
-		directory = ft_getdir(dirdes);
+		directory = ft_getdirents(dirdes);
 		closedir(dirdes);
 	}
 	else

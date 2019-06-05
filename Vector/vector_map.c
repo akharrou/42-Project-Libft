@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 19:23:07 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/01 14:01:16 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/01 15:23:57 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 **
 **         t_vector
 **         vector_map(void *iterable, size_t length, size_t width,
-				void *(*function)(void *));
+**             void *(*function)(void *));
 **
 **    PARAMETERS
 **
@@ -73,7 +73,7 @@ t_vector	vector_map(void *iterable, size_t length, size_t width,
 **         additional arguments as a 'va_list'
 */
 
-t_vector	vector_self_map_new(struct s_vector *self,
+t_vector	vector_selfmap(struct s_vector *self,
 				void *(*function)(void *, va_list ap), ...)
 {
 	t_vector	instance;
@@ -102,7 +102,7 @@ t_vector	vector_self_map_new(struct s_vector *self,
 **         placed. No new vector is returned.
 */
 
-void		vector_self_map(struct s_vector *self,
+void		vector_remap(struct s_vector *self,
 				void *(*function)(void *, va_list ap), ...)
 {
 	va_list	ap;

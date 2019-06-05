@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/01 13:46:12 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/01 15:24:18 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,11 @@ typedef struct		s_vector
 	void			(*viter)(struct s_vector *self,
 						void (*function)(void *, va_list ap), ...);
 	\
+	struct s_vector	(*map)(struct s_vector *self,
+						void *(*function)(void *, va_list ap), ...);
+	void			(*remap)(struct s_vector *self,
+						void *(*function)(void *, va_list ap), ...);
+	\
 	int				(*isfull)(struct s_vector *self);
 	int				(*isempty)(struct s_vector *self);
 	int				(*isvoid)(struct s_vector *self);
@@ -95,7 +100,7 @@ extern const struct	s_vector_class
 	struct s_vector	(*filter)(void *iterable, size_t length, size_t width,
 						int (*function)(void *)); /* TODO */
 	struct s_vector	(*map)(void *iterable, size_t length, size_t width,
-						void *(*function)(void *)); /* TODO */
+						void *(*function)(void *));
 	void			(*destructor)(struct s_vector *instance);
 	\
 	struct s_vector	(*copy)(struct s_vector instance);
@@ -162,7 +167,10 @@ void				vector_iter(struct s_vector *self,
 						void (*function)(void *));
 void				vector_viter(struct s_vector *self,
 						void (*function)(void *, va_list ap), ...);
-void				vector_self_map(struct s_vector *self,
+
+void				vector_remap(struct s_vector *self,
+						void *(*function)(void *, va_list ap), ...);
+t_vector			vector_selfmap(struct s_vector *self,
 						void *(*function)(void *, va_list ap), ...);
 
 int					vector_isfull(struct s_vector *self);

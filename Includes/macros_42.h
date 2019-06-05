@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 09:07:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/30 19:19:28 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/01 15:48:00 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,20 @@
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
+** File Types.
+*/
+
+# define UNKNOWN_FILE    DT_UNKNOWN
+# define REGULAR_FILE    DT_REG
+# define DIRECTORY       DT_DIR
+# define SYMBOLIC_LINK   DT_LNK
+# define NAMED_PIPE      DT_FIFO
+# define SOCKET          DT_SOCK
+# define BLOCK_FILE      DT_BLK
+# define CHARACTER_FILE  DT_CHR
+
+/*
+** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
 ** Limit Constant(s).
 */
 
@@ -67,11 +81,11 @@
 # endif
 
 # ifndef MAX_NAMELEN
-#  define MAX_NAMELEN (256)
+#  define MAX_NAMELEN (__DARWIN_MAXNAMLEN)
 # endif
 
 # ifndef MAX_PATHLEN
-#  define MAX_PATHLEN (4096)
+#  define MAX_PATHLEN (__DARWIN_MAXPATHLEN)
 # endif
 
 # ifndef MAX_FDS
