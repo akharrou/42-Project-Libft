@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 13:50:28 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/05 14:15:11 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/05 14:21:34 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,14 @@
 **
 **    PARAMETERS
 **
-**         char *str             String to which to we will join all the
-**                               other strings.
+**         char *str             String to which will be joined all the
+**                               strings passed as additional arguments.
 **
 **         int n                 Number of strings passed as additional
 **                               arguments to join to 'str'.
 **
-**         ...                   (Additional arguments);
+**         ...                   (Additional arguments); strings to be
+**                               joined to 'str'.
 **
 **    DESCRIPTION
 **         Joins to the end of 'str', 'n' strings, given as additional
@@ -79,13 +80,14 @@ char		*ft_vstrjoin(char *str, int n, ...)
 **
 **    PARAMETERS
 **
-**         char *str             String to which to we will join all the
-**                               other strings.
+**         char *str             String to which will be joined all the
+**                               strings passed as additional arguments.
 **
 **         int n                 Number of strings passed as additional
 **                               arguments to join to 'str'.
 **
-**         ...                   (Additional arguments);
+**         ...                   (Additional arguments); strings to be
+**                               joined to 'str'.
 **
 **    DESCRIPTION
 **         Joins to the end of 'str', 'n' strings, given as additional
@@ -109,9 +111,9 @@ char		*ft_vstrjoin(char *str, int n, ...)
 char		*ft_vstrjoinfre(char *str, int free_str, int n, ...)
 {
 	va_list	ap;
-	int		i;
-	int		free_arg;
 	char	*tmpstr;
+	int		free_arg;
+	int		i;
 
 	if (str)
 	{
