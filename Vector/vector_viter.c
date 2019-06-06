@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 18:45:41 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/06 03:27:46 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/06 03:30:08 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,16 +52,16 @@
 void		vector_viter(struct s_vector *self,
 				void (*function)(void *, va_list ap), ...)
 {
-	size_t	i;
+	va_list tmp_ap;
 	va_list ap;
-	va_list tmp;
+	size_t	i;
 
 	va_start(ap, function);
 	i = 0;
 	while (i < self->length)
 	{
-		va_copy(tmp, ap);
-		function(self->vector[i], tmp);
+		va_copy(tmp_ap, ap);
+		function(self->vector[i], tmp_ap);
 		++i;
 	}
 	va_end(ap);
