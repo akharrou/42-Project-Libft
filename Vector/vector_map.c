@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 19:23:07 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/05 16:59:47 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/06 03:28:59 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ t_vector	vector_selfmap(struct s_vector *self,
 				void *(*function)(void *, va_list ap), ...)
 {
 	t_vector	instance;
+	va_list		tmp_ap;
 	va_list		ap;
 	size_t		i;
 
@@ -87,7 +88,8 @@ t_vector	vector_selfmap(struct s_vector *self,
 	i = 0;
 	while (i < self->length)
 	{
-		instance.vector[i] = function(self->vector[i], ap);
+		va_copy(tmp_ap, ap);
+		instance.vector[i] = function(self->vector[i], tmp_ap);
 		++i;
 	}
 	va_end(ap);
@@ -104,6 +106,7 @@ t_vector	vector_selfmap(struct s_vector *self,
 void		vector_remap(struct s_vector *self,
 				void *(*function)(void *, va_list ap), ...)
 {
+	va_list	tmp_ap;
 	va_list	ap;
 	void	*tmp;
 	size_t	i;
@@ -114,7 +117,8 @@ void		vector_remap(struct s_vector *self,
 	i = 0;
 	while (i < self->length)
 	{
-		tmp = function(self->vector[i], ap);
+		va_copy(tmp_ap, ap);
+		tmp = function(self->vector[i], tmp_ap);
 		self->free(self->vector[i]);
 		self->vector[i] = tmp;
 		++i;
