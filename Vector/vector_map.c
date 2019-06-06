@@ -6,13 +6,13 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 19:23:07 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/01 15:23:57 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/05 16:59:47 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **    NAME
-**         vector_map -- instantiate a vector as the mapping of an iterable
+**         vector_map -- instantiate a vector from the mapping of an iterable
 **                       (i.e array of any type)
 **
 **    SYNOPSIS
@@ -77,7 +77,6 @@ t_vector	vector_selfmap(struct s_vector *self,
 				void *(*function)(void *, va_list ap), ...)
 {
 	t_vector	instance;
-	void		*tmp;
 	va_list		ap;
 	size_t		i;
 

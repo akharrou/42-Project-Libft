@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:16:15 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/29 19:32:20 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/05 17:00:32 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@
 void		*vector_getby_ref(struct s_vector *self, void *ref,
 				int (*cmp)(void *ref, void *data))
 {
-	void	*data;
 	ssize_t	i;
 
 	i = self->search(self, ref, cmp);

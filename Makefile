@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/06/05 14:15:55 by akharrou         ###   ########.fr        #
+#    Updated: 2019/06/05 18:07:44 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -260,9 +260,8 @@ STRING      =   String/ft_strlen.c                                            \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
-UNISTD      =   \
+UNISTD      =   Unistd/ft_getdirentries.c                                     \
                 Unistd/ft_getdirents.c                                        \
-                Unistd/ft_getdirentries.c                                     \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
@@ -296,23 +295,23 @@ CTYPE       =   Ctype/ft_isupper.c                                            \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
-MATH        =   Math/ft_sqrt.c                                               \
-                Math/ft_pow.c                                                \
-                Math/ft_powl.c                                               \
-                Math/ft_powll.c                                              \
-                Math/ft_max.c                                                \
-                Math/ft_max_d.c                                              \
-                Math/ft_max_l.c                                              \
-                Math/ft_min.c                                                \
-                Math/ft_min_d.c                                              \
-                Math/ft_min_l.c                                              \
-                Math/ft_sum.c                                                \
-                Math/ft_sum_d.c                                              \
-                Math/ft_sum_l.c                                              \
-                Math/ft_sum_ld.c                                             \
-                Math/ft_sum_generic.c                                        \
-                Math/ft_round.c                                              \
-                Math/ft_round_with_prior.c                                   \
+MATH        =   Math/ft_sqrt.c                                                \
+                Math/ft_pow.c                                                 \
+                Math/ft_powl.c                                                \
+                Math/ft_powll.c                                               \
+                Math/ft_max.c                                                 \
+                Math/ft_max_d.c                                               \
+                Math/ft_max_l.c                                               \
+                Math/ft_min.c                                                 \
+                Math/ft_min_d.c                                               \
+                Math/ft_min_l.c                                               \
+                Math/ft_sum.c                                                 \
+                Math/ft_sum_d.c                                               \
+                Math/ft_sum_l.c                                               \
+                Math/ft_sum_ld.c                                              \
+                Math/ft_sum_generic.c                                         \
+                Math/ft_round.c                                               \
+                Math/ft_round_with_prior.c                                    \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
@@ -340,6 +339,8 @@ VECTOR      =   Vector/vector_constructor.c                                   \
                 Vector/vector_empty.c                                         \
                 Vector/vector_instance.c                                      \
                 Vector/vector_map.c                                           \
+                Vector/vector_from.c                                          \
+                Vector/vector_filter.c                                        \
                                                                               \
                 Vector/vector_copy.c                                          \
                 Vector/vector_reverse.c                                       \
@@ -354,6 +355,8 @@ VECTOR      =   Vector/vector_constructor.c                                   \
                 Vector/vector_insert.c                                        \
                 Vector/vector_extend.c                                        \
                 Vector/vector_extendleft.c                                    \
+                Vector/vector_find.c                                          \
+                Vector/vector_search.c                                        \
                 Vector/vector_get.c                                           \
                 Vector/vector_getby_ref.c                                     \
                 Vector/vector_pop.c                                           \
@@ -362,6 +365,7 @@ VECTOR      =   Vector/vector_constructor.c                                   \
                 Vector/vector_clear.c                                         \
                 Vector/vector_remove.c                                        \
                 Vector/vector_free.c                                          \
+                Vector/vector_count.c                                         \
                 Vector/vector_isfull.c                                        \
                 Vector/vector_isempty.c                                       \
                 Vector/vector_isvoid.c                                        \

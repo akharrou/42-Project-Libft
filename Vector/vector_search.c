@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 19:21:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/29 19:29:50 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/05 18:06:48 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,12 @@ ssize_t		vector_search(struct s_vector *self, void *ref,
 {
 	ssize_t	i;
 
-	i = -1;
-	while (++i < self->length)
+	i = 0;
+	while (i < (ssize_t)self->length)
+	{
 		if (cmp(ref, self->vector[i]) == 0)
 			return (i);
+		++i;
+	}
 	return (-1);
 }

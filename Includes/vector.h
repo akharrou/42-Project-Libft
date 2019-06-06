@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/01 15:24:18 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/05 17:57:49 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ typedef struct		s_vector
 	int				(*extend)(struct s_vector *self, size_t n, ...);
 	int				(*extendleft)(struct s_vector *self, size_t n, ...);
 	\
-	ssize_t			(*find)(struct s_vector *self, int (*function)(void *)); /* TODO */
+	ssize_t			(*find)(struct s_vector *self, int (*filter)(void *));
 	ssize_t			(*search)(struct s_vector *self, void *ref,
 						int (*cmp)(void *, void *));
 	\
@@ -76,6 +76,7 @@ typedef struct		s_vector
 	void			(*remap)(struct s_vector *self,
 						void *(*function)(void *, va_list ap), ...);
 	\
+	size_t			(*count)(struct s_vector *self, int (*filter)(void *));
 	int				(*isfull)(struct s_vector *self);
 	int				(*isempty)(struct s_vector *self);
 	int				(*isvoid)(struct s_vector *self);
@@ -96,9 +97,9 @@ extern const struct	s_vector_class
 	struct s_vector	(*instance)(void);
 	struct s_vector	(*init)(void (*custom_free)(void *));
 	struct s_vector	(*empty)(void (*custom_free)(void *));
-	struct s_vector	(*from)(void *iterable, size_t length, size_t width); /* TODO : implement this */
+	struct s_vector	(*from)(void *iterable, size_t length, size_t width);
 	struct s_vector	(*filter)(void *iterable, size_t length, size_t width,
-						int (*function)(void *)); /* TODO */
+						int (*filter)(void *));
 	struct s_vector	(*map)(void *iterable, size_t length, size_t width,
 						void *(*function)(void *));
 	void			(*destructor)(struct s_vector *instance);
@@ -124,7 +125,7 @@ struct s_vector		vector_empty(void (*custom_free)(void *));
 struct s_vector		vector_init(void (*custom_free)(void *));
 struct s_vector		vector_from(void *iterable, size_t length, size_t width);
 struct s_vector		vector_filter(void *iterable, size_t length, size_t width,
-						void *(*function)(void *));
+						int (*filter)(void *));
 struct s_vector		vector_map(void *iterable, size_t length, size_t width,
 						void *(*function)(void *));
 
@@ -173,6 +174,7 @@ void				vector_remap(struct s_vector *self,
 t_vector			vector_selfmap(struct s_vector *self,
 						void *(*function)(void *, va_list ap), ...);
 
+size_t				vector_count(struct s_vector *self, int (*filter)(void *));
 int					vector_isfull(struct s_vector *self);
 int					vector_isempty(struct s_vector *self);
 int					vector_isvoid(struct s_vector *self);
