@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 17:40:15 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/05 17:52:04 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/06 23:18:10 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ struct s_vector		vector_from(void *iterable, size_t length, size_t width)
 		instance.vector[i] = ft_memdup(iterable + (i * width), width);
 		++i;
 	}
+	instance.length = length;
 	return (instance);
 }
