@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 09:07:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/01 15:48:00 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/07 02:26:33 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 # include <limits.h>
 # include <float.h>
+# include <dirent.h>
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
@@ -176,6 +177,10 @@
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
 ** Convenient Macro(s).
 */
+
+# ifndef PASS
+#  define PASS (1)
+# endif
 
 # ifndef INT
 #  define INT(c, base) (ft_strchr(base, c) - base)

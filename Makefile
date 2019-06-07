@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/06/05 18:19:09 by akharrou         ###   ########.fr        #
+#    Updated: 2019/06/07 02:27:09 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -262,6 +262,7 @@ STRING      =   String/ft_strlen.c                                            \
 
 UNISTD      =   Unistd/ft_getdirentries.c                                     \
                 Unistd/ft_getdirents.c                                        \
+                Unistd/ft_basename.c                                          \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
