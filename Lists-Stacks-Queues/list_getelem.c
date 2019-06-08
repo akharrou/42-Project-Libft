@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_getelem.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 19:29:18 by akharrou          #+#    #+#             */
-/*   Updated: 2019/03/04 13:17:20 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/08 14:05:49 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 **
 **         t_list *
 **         list_getelem(t_list *head, const void *item_ref,
-**             int (*cmp)(void *, void *));
+**             int (*cmp)(const void *, const void *));
 **
 **    PARAMETERS
 **
@@ -46,7 +46,7 @@
 #include "../Includes/list.h"
 
 t_list	*list_getelem(t_list *head, const void *item_ref,
-			int (*cmp)(void *, void *))
+			int (*cmp)(const void *, const void *))
 {
 	if (head && cmp && item_ref)
 	{

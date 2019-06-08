@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 18:25:15 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/25 16:29:56 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/08 14:06:07 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 **
 **         int
 **         ft_insertion_sort(void *base, size_t length, size_t width,
-**             int (*cmp)(void *, void *));
+**             int (*cmp)(const void *, const void *));
 **
 **    PARAMETERS
 **
@@ -48,7 +48,7 @@
 #include "../Includes/stdlib_42.h"
 
 int			ft_insertion_sort(void *base, size_t length, size_t width,
-				int (*cmp)(void *, void *))
+				int (*cmp)(const void *, const void *))
 {
 	void	*cur;
 	size_t	start;

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/16 22:38:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/26 11:33:26 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/08 16:29:57 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 **
 **         int
 **         ft_mergesort(void *base, size_t length, size_t width,
-**             int (*cmp)(void *, void *));
+**             int (*cmp)(const void *, const void *));
 **
 **    PARAMETERS
 **
@@ -48,7 +48,7 @@
 #include "../Includes/stdlib_42.h"
 
 static int	merge(void *base[2], size_t length[2], size_t width,
-				int (*cmp)(void *, void *))
+				int (*cmp)(const void *, const void *))
 {
 	void	*tmp;
 	size_t	i;
@@ -75,7 +75,7 @@ static int	merge(void *base[2], size_t length[2], size_t width,
 }
 
 int			ft_mergesort(void *base, size_t length, size_t width,
-				int (*cmp)(void *, void *))
+				int (*cmp)(const void *, const void *))
 {
 	size_t	half_lengths[2];
 	void	*half_bases[2];
@@ -85,7 +85,7 @@ int			ft_mergesort(void *base, size_t length, size_t width,
 	if (length > 1)
 	{
 		half_lengths[0] = (length / 2);
-		half_lengths[1] = (length / 2) + (length % 2);
+		half_lengths[1] = (length - half_lengths[0]);
 		half_bases[0] = base;
 		half_bases[1] = base + (half_lengths[0] * width);
 		ret1 = ft_mergesort(half_bases[0], half_lengths[0], width, cmp);

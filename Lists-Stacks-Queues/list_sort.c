@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_sort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 19:26:23 by akharrou          #+#    #+#             */
-/*   Updated: 2019/03/04 13:17:20 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/08 14:05:49 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 **         #include <../libft.h>
 **
 **         void
-**         list_sort(t_list **head, int (*cmp)(void *, void *));
+**         list_sort(t_list **head, int (*cmp)(const void *, const void *));
 **
 **    PARAMETERS
 **
@@ -43,7 +43,7 @@
 
 #include "../Includes/list.h"
 
-void	list_sort(t_list **head, int (*cmp)(void *, void *))
+void	list_sort(t_list **head, int (*cmp)(const void *, const void *))
 {
 	unsigned int	i;
 	unsigned int	size;

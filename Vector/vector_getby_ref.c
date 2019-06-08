@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:16:15 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/05 17:00:32 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/08 14:48:49 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 **         void *
 **         vector_getby_ref( struct s_vector *self,
 **                           void *ref,
-**                           int (*cmp)(void *ref, void *data) );
+**                           int (*cmp)(constvoid *ref, constvoid *data) );
 **
 **    PARAMETERS
 **
@@ -48,7 +48,7 @@
 #include "../Includes/vector.h"
 
 void		*vector_getby_ref(struct s_vector *self, void *ref,
-				int (*cmp)(void *ref, void *data))
+				int (*cmp)(const void *ref, const void *data))
 {
 	ssize_t	i;
 

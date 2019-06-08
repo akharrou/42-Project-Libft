@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 19:21:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/05 18:06:48 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/08 14:46:23 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 **
 **         ssize_t
 **         vector_search(struct s_vector *self, void *ref,
-**             int (*cmp)(void *ref, void *data));
+**             int (*cmp)(const void *ref, const void *data));
 **
 **    PARAMETERS
 **
@@ -29,7 +29,7 @@
 **                                              used to find the data element
 **                                              in the vector.
 **
-**         int (*cmp)(void *ref, void *data)    Comparasion function that
+**         int (*cmp)(const void *ref, const void *data)    Comparasion function that
 **                                              checks returns the integer
 **                                              0 if the reference does
 **                                              correspond to the data.
@@ -45,7 +45,7 @@
 #include "../Includes/vector.h"
 
 ssize_t		vector_search(struct s_vector *self, void *ref,
-				int (*cmp)(void *ref, void *data))
+				int (*cmp)(const void *ref, const void *data))
 {
 	ssize_t	i;
 

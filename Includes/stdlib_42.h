@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:35:17 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/27 09:00:03 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/08 14:05:49 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,19 +50,19 @@ void			ft_memswap(void *a, void *b, void *tmp, size_t width);
 */
 
 int				ft_quicksort(void *base, size_t length, size_t width,
-					int (*cmp)(void *, void *));
+					int (*cmp)(const void *, const void *));
 
 int				ft_mergesort(void *base, size_t length, size_t width,
-					int (*cmp)(void *, void *));
+					int (*cmp)(const void *, const void *));
 
 int				ft_selection_sort(void *base, size_t length, size_t width,
-					int (*cmp)(void *, void *));
+					int (*cmp)(const void *, const void *));
 
 int				ft_insertion_sort(void *base, size_t length, size_t width,
-					int (*cmp)(void *, void *));
+					int (*cmp)(const void *, const void *));
 
 int				ft_bubble_sort(void *base, size_t length, size_t width,
-					int (*cmp)(void *, void *));
+					int (*cmp)(const void *, const void *));
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_pop_item.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 07:33:51 by akharrou          #+#    #+#             */
-/*   Updated: 2019/03/04 13:17:20 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/08 14:05:49 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 **
 **         void *
 **         list_pop_item(t_list **head, const void *item_ref,
-**             int (*cmp)(void *, void *));
+**             int (*cmp)(const void *, const void *));
 **
 **    PARAMETERS
 **
@@ -51,7 +51,7 @@
 #include "../Includes/list.h"
 
 void	*list_pop_item(t_list **head, const void *item_ref,
-			int (*cmp)(void *, void *))
+			int (*cmp)(const void *, const void *))
 {
 	void	*item;
 	t_list	*current;

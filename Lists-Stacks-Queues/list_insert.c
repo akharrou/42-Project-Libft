@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_insert.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 19:25:52 by akharrou          #+#    #+#             */
-/*   Updated: 2019/03/04 13:17:20 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/08 14:05:49 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 **
 **         int
 **         list_insert(t_list **head, const void *item,
-**             int (*cmp)(void *, void *));
+**             int (*cmp)(const void *, const void *));
 **
 **    PARAMETERS
 **
@@ -53,7 +53,7 @@
 #include "../Includes/list.h"
 
 static void		list_insert_elem(t_list **head, t_list **new_elem,
-					int (*cmp)(void *, void *))
+					int (*cmp)(const void *, const void *))
 {
 	t_list	*current;
 	t_list	*previous;
@@ -81,7 +81,7 @@ static void		list_insert_elem(t_list **head, t_list **new_elem,
 }
 
 int				list_insert(t_list **head, const void *item,
-					int (*cmp)(void *, void *))
+					int (*cmp)(const void *, const void *))
 {
 	t_list	*new_elem;
 

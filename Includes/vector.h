@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:58:03 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/05 18:18:31 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/08 14:49:42 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,11 @@ typedef struct		s_vector
 	\
 	ssize_t			(*find)(struct s_vector *self, int (*filter)(void *));
 	ssize_t			(*search)(struct s_vector *self, void *ref,
-						int (*cmp)(void *, void *));
+						int (*cmp)(const void *, const void *));
 	\
 	void			*(*get)(struct s_vector *self, size_t i);
 	void			*(*getby_ref)(struct s_vector *self, void *ref,
-						int (*cmp)(void *a, void *b));
+						int (*cmp)(const void *a, const void *b));
 	\
 	void			*(*pop)(struct s_vector *self);
 	void			*(*popleft)(struct s_vector *self);
@@ -151,11 +151,11 @@ int					vector_extendleft(struct s_vector *self, size_t n, ...);
 ssize_t				vector_find(struct s_vector *self,
 						int (*function)(void *));
 ssize_t				vector_search(struct s_vector *self, void *ref,
-						int (*cmp)(void *ref, void *data));
+						int (*cmp)(const void *ref, const void *data));
 
 void				*vector_get(struct s_vector *self, size_t i);
 void				*vector_getby_ref(struct s_vector *self, void *ref,
-						int (*cmp)(void *ref, void *data));
+						int (*cmp)(const void *ref, const void *data));
 
 void				*vector_pop(struct s_vector *self);
 void				*vector_popleft(struct s_vector *self);

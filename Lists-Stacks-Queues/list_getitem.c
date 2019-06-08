@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_getitem.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akharrou <akharrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/23 17:26:10 by akharrou          #+#    #+#             */
-/*   Updated: 2019/03/04 13:17:20 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/08 14:05:49 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@
 #include "../Includes/list.h"
 
 void	*list_getitem(t_list *head, const void *item_ref,
-			int (*cmp)(void *, void *))
+			int (*cmp)(const void *, const void *))
 {
 	t_list	*elem;
 
