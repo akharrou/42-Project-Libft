@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/06/07 02:27:09 by akharrou         ###   ########.fr        #
+#    Updated: 2019/06/07 19:12:01 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -209,6 +209,8 @@ STRING      =   String/ft_strlen.c                                            \
                 String/ft_strrev.c                                            \
                 String/ft_strcpy.c                                            \
                 String/ft_strncpy.c                                           \
+                String/ft_vstrcpy.c                                           \
+                String/ft_vstrncpy.c                                          \
                 String/ft_strlcpy.c                                           \
                 String/ft_strcpy_until.c                                      \
                 String/ft_astrcpy.c                                           \
