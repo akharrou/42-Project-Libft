@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 11:36:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/08 16:33:53 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/08 18:25:16 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,9 @@ int		ft_quicksort(void *base, size_t length, size_t width,
 		return (-1);
 	i = 1;
 	j = length - 1;
-	while (i < j)
+	while (i <= j)
 	{
-		while (i < j && cmp(base, base + (i * width)) > 0)
+		while (i <= j && cmp(base, base + (i * width)) > 0)
 			++i;
 		while (i <= j && cmp(base, base + (j * width)) <= 0)
 			--j;
