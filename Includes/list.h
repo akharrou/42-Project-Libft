@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/03 21:40:33 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/08 14:05:49 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/09 22:45:22 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,8 @@ void			list_iter(t_list *head, void (*f)(void *item));
 void			list_iteri(t_list *head,
 				void (*f)(unsigned int i, void *item));
 unsigned int	list_count(t_list *head);
-void			list_sort(t_list **head, int (*cmp)(const void *, const void *));
+void			list_sort(t_list **head,
+				int (*cmp)(const void *, const void *));
 int				list_reverse(t_list **head);
 int				list_map(t_list **dest, t_list *src,
 				t_list *(*f)(t_list *elem));

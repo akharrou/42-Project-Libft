@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 19:21:54 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/08 14:46:23 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/09 22:49:07 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,20 @@
 **
 **    PARAMETERS
 **
-**         struct s_vector *self                Pointer to a vector instance.
+**         struct s_vector *self                           Pointer to a vector
+**                                                         instance.
 **
-**         void *ref                            Reference data that can be
-**                                              used to find the data element
-**                                              in the vector.
+**         void *ref                                       Reference data that
+**                                                         can be used to find
+**                                                         the data element in
+**                                                         the vector.
 **
-**         int (*cmp)(const void *ref, const void *data)    Comparasion function that
-**                                              checks returns the integer
-**                                              0 if the reference does
-**                                              correspond to the data.
+**         int (*cmp)(const void *ref, const void *data)   Comparasion function
+**                                                         that checks returns
+**                                                         the integer 0 if the
+**                                                         reference does
+**                                                         correspond to the
+**                                                         data.
 **
 **    DESCRIPTION
 **         Trys to find a data element based on a provided reference

@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 18:59:14 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/07 19:20:15 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/09 22:47:39 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,3 @@ char			*ft_vstrncpy(char *dest, int n, int strs, ...)
 	va_end(ap);
 	return ((char *)dest);
 }
-

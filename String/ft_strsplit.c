@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 07:25:43 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/01 19:57:14 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/09 22:47:30 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char		**ft_strsplit(char const *s, const char *charset)
 	return (strtab);
 }
 
-void	freestrtab(char ***strtab)
+void		freestrtab(char ***strtab)
 {
 	size_t	i;
 
