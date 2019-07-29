@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:12:47 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/07 02:29:25 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/06/10 17:41:35 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@
 
 t_vector	ft_getdirents(DIR *dirdes);
 t_vector	ft_getdirentries(const char dirname[MAX_PATHLEN + 1]);
-void		ft_basename(const char *path, char *dest);
+char		*ft_basename(char *dest, const char *path);
 
 /*
 ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
