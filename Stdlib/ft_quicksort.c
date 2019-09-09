@@ -76,3 +76,5 @@ int		ft_quicksort(void *base, size_t length, size_t width,
 		return (-1);
 	return (0);
 }
+
+/* Great explanation : https://www.youtube.com/watch?v=7h1s2SojIRw */
