@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/08/07 21:16:12 by akharrou         ###   ########.fr        #
+#    Updated: 2019/10/07 12:13:35 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,8 @@ HEADERS     =   Includes/libft.h                                              \
                 Includes/macros_42.h                                          \
                 Includes/ctype_42.h                                           \
                 Includes/math_42.h                                            \
+                Includes/bitfield.h                                           \
+                Includes/bitset.h                                             \
                                                                               \
                 Includes/bigint.h                                             \
                 Includes/vector.h                                             \
