@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/04 18:14:42 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/05 20:51:41 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/11/02 21:32:26 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,29 @@
 
 #include "../Includes/bigint.h"
 
-t_bigint	arithmetic_dispatcher(char operation, t_bigint *operand_1,
-				t_bigint *operand_2, char *base)
+t_bigint	arithmetic_dispatcher(char operation, t_bigint *lhs,
+				t_bigint *rhs, char *base)
 {
 	t_bigint	result;
 	int8_t		sign;
 
-	bigint_normalizer(operand_1, operand_2);
-	if ((*operand_2)[0] == '-')
+	bigint_normalizer(lhs, rhs);
+	if ((*rhs)[0] == '-')
 		operation = (operation == '+') ? '-' : '+';
 	sign = (operation == '+') ? 1 : -1;
-	ft_swap_str(operand_1, operand_2);
-	if ((*operand_2)[0] == '-')
+	ft_swap_str(lhs, rhs);
+	if ((*rhs)[0] == '-')
 		operation = (operation == '+') ? '-' : '+';
-	(*operand_1) = ft_strlstrip((*operand_1), "-");
-	(*operand_2) = ft_strlstrip((*operand_2), "-");
-	if (operation == '-' && bigint_compare(*operand_1, *operand_2) < 0)
+	(*lhs) = ft_strlstrip((*lhs), "-");
+	(*rhs) = ft_strlstrip((*rhs), "-");
+	if (operation == '-' && bigint_compare(*lhs, *rhs) < 0)
 	{
 		sign = -sign;
-		ft_swap_str(operand_1, operand_2);
+		ft_swap_str(lhs, rhs);
 	}
 	result = (operation == '+') ?
-		bigint_adder(*operand_1, *operand_2, base) :
-		bigint_subtracter(*operand_1, *operand_2, base);
+		bigint_adder(*lhs, *rhs, base) :
+		bigint_subtracter(*lhs, *rhs, base);
 	if (sign == -1 && ft_strcmp(result, "0") != 0)
 		result = ft_strprepend(result, "-", 1, 0);
 	return (result);

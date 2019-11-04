@@ -1,48 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bigint_div.c                                       :+:      :+:    :+:   */
+/*   bigint_pow.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/01 19:57:44 by akharrou          #+#    #+#             */
-/*   Updated: 2019/11/02 22:25:02 by akharrou         ###   ########.fr       */
+/*   Created: 2019/05/01 19:57:25 by akharrou          #+#    #+#             */
+/*   Updated: 2019/11/03 17:57:19 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/string_42.h"
 #include "../Includes/stdlib_42.h"
+#include "../Includes/string_42.h"
 #include "../Includes/macros_42.h"
-
 #include "../Includes/bigint.h"
 
-t_bigint		bigint_div(t_bigint num, intmax_t divider, char *base)
+t_bigint	bigint_pow(t_bigint num, intmax_t exponent, char *base)
 {
-	int8_t		intbase;
-	uintmax_t	carry;
-	uintmax_t	sum;
-	int32_t		i;
-
 	num = ft_strdup(num);
-	intbase = ft_strlen(base);
-	carry = 0;
-	i = 0;
-	while (num[i] && num[i] != '.')
-	{
-		sum = carry + INT(num[i], base);
-		num[i++] = base[sum / divider];
-		carry = sum % divider * intbase;
-	}
-	num = (num[i] != '.' && carry) ? ft_strappend(num, ".", 1, 0) : num;
-	i += (num[i] == '.');
-	while (num[i] || carry)
-	{
-		num = (carry && num[i] == '\0') ? ft_strappend(num, "0", 1, 0) : num;
-		sum = carry + INT(num[i], base);
-		num[i++] = base[sum / divider];
-		carry = sum % divider * intbase;
-	}
-	return (bigint_cleaner(num));
+	if (exponent > 0)
+		while (exponent-- > 0)
+			num = bigint_mulfre(num, exponent, base, 1);
+	else
+		while (exponent++ < 0)
+			num = bigint_divfre(num, exponent, base, 1);
+	return (num);
 }
 
 /*
@@ -53,19 +35,21 @@ t_bigint		bigint_div(t_bigint num, intmax_t divider, char *base)
 **    PARAMETERS
 **
 **         int free_num         Integer (boolean) to signal whether
-**                                 or not to free the variable(s).
+**                              or not to free the variable(s).
+**
+**                              If set to 1, the variable shall be free'd.
 **
 **    FREE'D PARAMETERS
 **
 **         - t_bigint num
 */
 
-t_bigint		bigint_divfre(t_bigint num, intmax_t divider, char *base,
-					int free_num)
+t_bigint	bigint_powfre(t_bigint num, intmax_t exponent, char *base,
+	int free_num)
 {
 	t_bigint	res;
 
-	res = bigint_div(num, divider, base);
+	res = bigint_pow(num, exponent, base);
 	if (free_num && num)
 		free((void *)num);
 	return (res);

@@ -6,16 +6,16 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/05 17:48:37 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/05 17:48:54 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/11/02 21:32:26 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/bigint.h"
 
-t_bigint	bigint_max(t_bigint operand_1, t_bigint operand_2)
+t_bigint	bigint_max(t_bigint lhs, t_bigint rhs)
 {
-	if (bigint_compare(operand_1, operand_2) >= 0)
-		return (operand_1);
+	if (bigint_compare(lhs, rhs) >= 0)
+		return (lhs);
 	else
-		return (operand_2);
+		return (rhs);
 }

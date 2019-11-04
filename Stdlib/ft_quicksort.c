@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 11:36:32 by akharrou          #+#    #+#             */
-/*   Updated: 2019/06/08 23:39:46 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/11/03 23:03:20 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,6 @@ int		ft_quicksort(void *base, size_t length, size_t width,
 	return (0);
 }
 
-/* Great explanation : https://www.youtube.com/watch?v=7h1s2SojIRw */
+/*
+**  Great explanation : https://www.youtube.com/watch?v=7h1s2SojIRw
+*/

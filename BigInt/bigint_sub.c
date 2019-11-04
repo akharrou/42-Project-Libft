@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 19:31:36 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/06 12:27:12 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/11/02 22:27:20 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@
 
 #include "../Includes/bigint.h"
 
-t_bigint	bigint_subtracter(t_bigint operand_1, t_bigint operand_2,
+t_bigint	bigint_subtracter(t_bigint lhs, t_bigint rhs,
 				char *base)
 {
 	t_bigint	result;
 	int8_t		intbase;
-	int32_t		carry;
-	int32_t		sum;
+	uintmax_t	carry;
+	intmax_t	sum;
 	int32_t		i;
 
-	result = ft_strdup(operand_1);
+	result = ft_strdup(lhs);
 	intbase = ft_strlen(base);
 	i = ft_strlen(result);
 	carry = 0;
@@ -34,7 +34,7 @@ t_bigint	bigint_subtracter(t_bigint operand_1, t_bigint operand_2,
 	{
 		if (result[i] == '.')
 			--i;
-		sum = -carry + INT(operand_1[i], base) - INT(operand_2[i], base);
+		sum = -carry + INT(lhs[i], base) - INT(rhs[i], base);
 		carry = sum < 0;
 		if (sum < 0)
 			sum += intbase;
@@ -44,19 +44,19 @@ t_bigint	bigint_subtracter(t_bigint operand_1, t_bigint operand_2,
 	return (result);
 }
 
-t_bigint	bigint_sub(t_bigint operand_1, t_bigint operand_2, char *base)
+t_bigint	bigint_sub(t_bigint lhs, t_bigint rhs, char *base)
 {
-	t_bigint	operand_1_copy;
-	t_bigint	operand_2_copy;
+	t_bigint	lhs_copy;
+	t_bigint	rhs_copy;
 	t_bigint	result;
 
-	operand_1_copy = ft_strdup(operand_1);
-	operand_2_copy = ft_strdup(operand_2);
-	if (!operand_1_copy || !operand_2_copy)
+	lhs_copy = ft_strdup(lhs);
+	rhs_copy = ft_strdup(rhs);
+	if (!lhs_copy || !rhs_copy)
 		return (NULL);
-	result = arithmetic_dispatcher('-', &operand_1_copy, &operand_2_copy, base);
-	free(operand_1_copy);
-	free(operand_2_copy);
+	result = arithmetic_dispatcher('-', &lhs_copy, &rhs_copy, base);
+	free(lhs_copy);
+	free(rhs_copy);
 	return (result);
 }
 
@@ -78,19 +78,19 @@ t_bigint	bigint_sub(t_bigint operand_1, t_bigint operand_2, char *base)
 **
 **    FREE'D PARAMETERS
 **
-**         - t_bigint operand_1
-**         - t_bigint operand_2
+**         - t_bigint lhs
+**         - t_bigint rhs
 */
 
-t_bigint	bigint_subfre(t_bigint operand_1, t_bigint operand_2, char *base,
+t_bigint	bigint_subfre(t_bigint lhs, t_bigint rhs, char *base,
 				int free_op)
 {
 	t_bigint	res;
 
-	res = bigint_sub(operand_1, operand_2, base);
-	if (free_op & 1 && operand_1)
-		free(operand_1);
-	if (free_op & 2 && operand_2)
-		free(operand_2);
+	res = bigint_sub(lhs, rhs, base);
+	if (free_op & 1 && lhs)
+		free(lhs);
+	if (free_op & 2 && rhs)
+		free(rhs);
 	return (res);
 }

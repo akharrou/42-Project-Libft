@@ -6,7 +6,7 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/10/07 12:13:35 by akharrou         ###   ########.fr        #
+#    Updated: 2019/11/03 20:09:16 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -322,6 +322,7 @@ BIGINT      =   BigInt/bigint_add.c                                           \
                 BigInt/bigint_sub.c                                           \
                 BigInt/bigint_mul.c                                           \
                 BigInt/bigint_div.c                                           \
+                BigInt/bigint_pow.c                                           \
                                                                               \
                 BigInt/bigint_round.c                                         \
                 BigInt/bigint_max.c                                           \

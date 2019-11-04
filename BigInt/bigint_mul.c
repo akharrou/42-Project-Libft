@@ -6,7 +6,7 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 19:57:25 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/06 12:14:14 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/11/02 22:24:31 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 
 #include "../Includes/bigint.h"
 
-t_bigint	bigint_mul(t_bigint num, int multiplier, char *base)
+t_bigint	bigint_mul(t_bigint num, intmax_t multiplier, char *base)
 {
 	int8_t		tmp;
 	int8_t		intbase;
-	int32_t		carry;
+	uintmax_t	carry;
 	int32_t		i;
 
 	num = ft_strdup(num);
@@ -55,7 +55,7 @@ t_bigint	bigint_mul(t_bigint num, int multiplier, char *base)
 **         - t_bigint num
 */
 
-t_bigint	bigint_mulfre(t_bigint num, int multiplier, char *base,
+t_bigint	bigint_mulfre(t_bigint num, intmax_t multiplier, char *base,
 				int free_num)
 {
 	t_bigint	res;

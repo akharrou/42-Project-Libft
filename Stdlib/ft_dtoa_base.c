@@ -6,14 +6,15 @@
 /*   By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/06 18:58:00 by akharrou          #+#    #+#             */
-/*   Updated: 2019/05/07 10:57:47 by akharrou         ###   ########.fr       */
+/*   Updated: 2019/11/03 22:36:14 by akharrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/stdlib_42.h"
-#include "../Includes/string_42.h"
 #include "../Includes/stdint_42.h"
+#include "../Includes/string_42.h"
 #include "../Includes/macros_42.h"
+#include "../Includes/math_42.h"
 #include "../Includes/bigint.h"
 
 #define BIAS           1023
@@ -31,7 +32,7 @@
 char			*ft_dtoa_base(double n, char *base, int width, int precision)
 {
 	t_double	num;
-	char		*res;
+	t_bigint	res;
 
 	num.sign = *(uintmax_t *)&n >> (TOTAL_SIZE - 1);
 	num.exponent = (short)((*(uintmax_t *)&n << 1 >> 53) - BIAS - MANT_SIZE);
