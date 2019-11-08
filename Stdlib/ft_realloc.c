@@ -68,22 +68,49 @@
 
 #include "../Includes/stdlib_42.h"
 #include "../Includes/string_42.h"
-
-void		*ft_realloc(void *ptr, size_t init_size, size_t new_size)
+   if (newLength == 0)
+   {
+      free(ptr);
+      return NULL;
+   }
+   else if (!ptr)
+   {
+      return malloc(newLength);
+   }
+   else if (newLength <= originalLength)
+   {
+      return ptr;
+   }
+   else
+   {
+      assert((ptr) && (newLength > originalLength));
+      void *ptrNew = malloc(newLength);
+      if (ptrNew)
+      {
+          memcpy(ptrNew, ptr, originalLength);
+          free(ptr);
+      }
+      return ptrNew;
+    }
+void		*ft_realloc(void *ptr, size_t original_size, size_t new_size)
 {
 	char	*new_memblock;
 
-	new_memblock = (void *)malloc(new_size);
-	if (!new_memblock)
-		return (NULL);
-	if (ptr != NULL)
+	if (new_size == 0)
 	{
-		new_memblock = ft_memcpy(new_memblock, ptr, init_size);
-		bzero(new_memblock + init_size, new_size - init_size);
 		free(ptr);
-		ptr = NULL;
+		return (NULL);
 	}
-	else
-		bzero(new_memblock, new_size);
+	else if (new_size <= original_size)
+		return (ptr);
+	new_memblock = (void *)malloc(new_size);
+	if (ptr)
+	{
+		if (!new_memblock)
+			return (NULL);
+		ft_memcpy(new_memblock, ptr, original_size);
+		bzero(new_memblock + original_size, new_size - original_size);
+		free(ptr);
+	}
 	return (new_memblock);
 }
