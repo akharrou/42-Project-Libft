@@ -68,30 +68,7 @@
 
 #include "../Includes/stdlib_42.h"
 #include "../Includes/string_42.h"
-   if (newLength == 0)
-   {
-      free(ptr);
-      return NULL;
-   }
-   else if (!ptr)
-   {
-      return malloc(newLength);
-   }
-   else if (newLength <= originalLength)
-   {
-      return ptr;
-   }
-   else
-   {
-      assert((ptr) && (newLength > originalLength));
-      void *ptrNew = malloc(newLength);
-      if (ptrNew)
-      {
-          memcpy(ptrNew, ptr, originalLength);
-          free(ptr);
-      }
-      return ptrNew;
-    }
+
 void		*ft_realloc(void *ptr, size_t original_size, size_t new_size)
 {
 	char	*new_memblock;
