@@ -78,7 +78,7 @@ void		*ft_realloc(void *ptr, size_t original_size, size_t new_size)
 		free(ptr);
 		return (NULL);
 	}
-	else if (new_size <= original_size)
+	if (new_size <= original_size)
 		return (ptr);
 	new_memblock = malloc(new_size);
 	if (ptr)
