@@ -15,7 +15,7 @@ CFLAGS      =   -Wall -Wextra -Werror
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
-OPTIM_FLAGS =   -O3 -march=native                                             \
+OPTIM_FLAGS =   -O3 -march=native
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
