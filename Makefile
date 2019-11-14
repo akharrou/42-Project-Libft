@@ -19,9 +19,8 @@ OPTIM_FLAGS =   -O3 -march=native
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
-DEBUG_FLAGS =   -O0 -g
-DEBUG_FLAGS +=  -fsanitize=address
-DEBUG_FLAGS +=  -fsanitize=undefined
+DEBUG_FLAGS =   -O0 -g -fsanitize=address -fsanitize=undefined
+
 # DEBUG_FLAGS +=  -fsanitize=bounds
 # DEBUG_FLAGS +=  -fsanitize=nullability-arg
 # DEBUG_FLAGS +=  -fsanitize=nullability-return
