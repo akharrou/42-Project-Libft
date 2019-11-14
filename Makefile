@@ -6,12 +6,12 @@
 #    By: akharrou <akharrou@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/17 16:23:01 by akharrou          #+#    #+#              #
-#    Updated: 2019/11/03 20:09:16 by akharrou         ###   ########.fr        #
+#    Updated: 2019/11/13 21:37:16 by akharrou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC          =   gcc
-CFLAGS      =   -Wall -Wextra -Werror $(DEBUG_FLAGS)
+CFLAGS      =   -Wall -Wextra -Werror
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
@@ -19,17 +19,16 @@ OPTIM_FLAGS =   -O3 -march=native                                             \
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
-DEBUG_FLAGS =   -O0 -g                                                      \
-                                                                            \
-                # -fsanitize=address                                          \
-                # -fsanitize=undefined                                        \
-                # -fsanitize=bounds                                           \
-                # -fsanitize=nullability-arg                                  \
-                # -fsanitize=nullability-return                               \
-                # -fsanitize=nullability-assign                               \
-                # -fsanitize-address-use-after-scope                          \
-                # -fsanitize=integer                                          \
-                # -fsanitize=object-size                                      \
+DEBUG_FLAGS =   -O0 -g
+DEBUG_FLAGS +=  -fsanitize=address
+DEBUG_FLAGS +=  -fsanitize=undefined
+# DEBUG_FLAGS +=  -fsanitize=bounds
+# DEBUG_FLAGS +=  -fsanitize=nullability-arg
+# DEBUG_FLAGS +=  -fsanitize=nullability-return
+# DEBUG_FLAGS +=  -fsanitize=nullability-assign
+# DEBUG_FLAGS +=  -fsanitize-address-use-after-scope
+# DEBUG_FLAGS +=  -fsanitize=integer
+# DEBUG_FLAGS +=  -fsanitize=object-size
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
@@ -485,7 +484,13 @@ CRYPT       =                                                                 \
 
 # Main — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
+all: CFLAGS += $(OPTIM_FLAGS)
 all: $(NAME)
+
+debug: CFLAGS += $(DEBUG_FLAGS)
+debug: $(NAME)
+
+# Compilation — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
 $(NAME): $(OBJECTS)
 	@ar -rcs $(NAME) $(OBJECTS)
@@ -495,6 +500,7 @@ $(NAME): $(OBJECTS)
 %.o: %.c $(HEADERS)
 	@$(CC) $(CFLAGS) -pipe -c $< -o $@
 	@echo "Compiling => " $<
+
 
 # House Keeping — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
@@ -527,6 +533,6 @@ na: nh nc
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
 
-.PHONY: all clean fclean re nc nh na
+.PHONY: all debug clean fclean re nc nh na
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
