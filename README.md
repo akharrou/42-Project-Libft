@@ -1,6 +1,6 @@
 # 42Libft
 
-![logo]()
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/42_Logo.svg" alt="42 Silicon Valley" width="150" height="150">
 
 ![Standard](https://img.shields.io/badge/Standard-ANSI%20C89-red.svg)
 ![Norminette](https://img.shields.io/badge/Norminette-Checked-lightred.svg)
