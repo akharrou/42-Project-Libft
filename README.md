@@ -143,8 +143,3 @@ Copy/Move the `Includes/` Directory & the `libft.a` Executable into the Root of 
 Compile your source code with the Library binary:
 
 	$> gcc libft.a <your_file.c>
-
-----
-## License <a name="license"></a>
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE/) for details.
